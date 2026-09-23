@@ -80,6 +80,7 @@
   --header-glass: oklch(30% 0.025 175 / 0.07);
   --header-glass-border: oklch(99% 0.004 90 / 0.16);
   --header-glass-foreground: oklch(99% 0.004 90);
+  --header-text-shadow: oklch(12% 0.018 180 / 0.85);
 }
 
 @layer base {
@@ -129,5 +130,9 @@
 @utility image-copy-readable {
   color: var(--primary-foreground);
   text-shadow: 0 1px 3px oklch(18% 0.02 180 / 0.9), 0 2px 12px oklch(18% 0.02 180 / 0.65);
+}
+
+@utility header-copy-readable {
+  text-shadow: 0 1px 3px var(--header-text-shadow), 0 2px 9px var(--header-text-shadow);
 }
 
