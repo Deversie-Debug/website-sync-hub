@@ -44,7 +44,9 @@ export function Header() {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+          hidden && !open ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
+        } ${
           scrolled && !open ? "border-b border-border bg-background/95 backdrop-blur-sm" : "bg-transparent"
         }`}
       >
