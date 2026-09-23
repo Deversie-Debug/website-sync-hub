@@ -34,8 +34,8 @@ function LocationPage() {
 
       <section className="mx-auto grid w-full max-w-7xl gap-10 px-6 py-20 lg:grid-cols-3 lg:px-8 lg:py-28">
         <div className="lg:col-span-2">
-          <p className="eyebrow hairline text-brass">Getting here</p>
-          <h2 className="mt-6 text-3xl sm:text-4xl">Arriving on the island</h2>
+          <p className="eyebrow hairline-center text-center tracking-[0.4em] text-brass">Getting here</p>
+          <h2 className="display-caps mx-auto mt-8 max-w-2xl text-center text-3xl sm:text-4xl">Arriving on the island</h2>
           <div className="mt-8 grid gap-8 sm:grid-cols-2">
             <div className="rounded-sm border border-border bg-card p-8">
               <h3 className="text-xl">By air</h3>
@@ -70,7 +70,7 @@ function LocationPage() {
 
       <section className="bg-secondary/60 py-20 lg:py-28">
         <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
-          <p className="eyebrow hairline text-brass">What's nearby</p>
+          <p className="eyebrow hairline-center text-center tracking-[0.4em] text-brass">What's nearby</p>
           <ul className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {nearby.map((n) => (
               <li key={n.name} className="rounded-sm border border-border bg-card p-8">
@@ -86,8 +86,8 @@ function LocationPage() {
       </section>
 
       <section className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
-        <p className="eyebrow hairline text-brass">Practical help</p>
-        <h2 className="mt-6 text-3xl sm:text-4xl">Cars, transfers and our sister property</h2>
+        <p className="eyebrow hairline-center text-center tracking-[0.4em] text-brass">Practical help</p>
+        <h2 className="display-caps mx-auto mt-8 max-w-2xl text-center text-3xl sm:text-4xl">Cars, transfers and our sister property</h2>
         <ul className="mt-8 grid gap-8 md:grid-cols-2">
           {partners.map((p) => (
             <li key={p.name} className="rounded-sm border border-border bg-card p-8">

@@ -107,8 +107,8 @@ function ContactPage() {
 
       <section className="bg-secondary/60 py-20 lg:py-28">
         <div className="mx-auto w-full max-w-4xl px-6 lg:px-8">
-          <p className="eyebrow hairline text-brass">Questions</p>
-          <h2 className="mt-6 text-3xl sm:text-4xl">Frequently asked</h2>
+          <p className="eyebrow hairline-center text-center tracking-[0.4em] text-brass">Questions</p>
+          <h2 className="display-caps mx-auto mt-8 max-w-2xl text-center text-3xl sm:text-4xl">Frequently asked</h2>
           <ul className="mt-10 space-y-4">
             {faqs.map((f) => (
               <li key={f.q} className="rounded-sm border border-border bg-card p-8">

@@ -72,8 +72,8 @@ function ExperiencesPage() {
 
       <section className="bg-secondary/60 py-20 lg:py-28">
         <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
-          <p className="eyebrow hairline text-brass">When to come</p>
-          <h2 className="mt-6 text-balance text-3xl sm:text-4xl lg:text-5xl">Choosing your month</h2>
+          <p className="eyebrow hairline-center text-center tracking-[0.4em] text-brass">When to come</p>
+          <h2 className="display-caps mx-auto mt-8 max-w-2xl text-center text-balance text-3xl sm:text-4xl lg:text-5xl">Choosing your month</h2>
           <ul className="mt-10 grid gap-8 lg:grid-cols-3">
             {seasons.map((s) => (
               <li key={s.period} className="rounded-sm border border-border bg-card p-8">
