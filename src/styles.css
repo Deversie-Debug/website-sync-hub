@@ -77,8 +77,8 @@
   --lightbox-backdrop: oklch(15% 0.012 180 / 0.94);
   --lightbox-control: oklch(99% 0.004 90 / 0.94);
   --lightbox-control-foreground: oklch(25% 0.018 170);
-  --header-glass: oklch(30% 0.025 175 / 0.24);
-  --header-glass-border: oklch(99% 0.004 90 / 0.28);
+  --header-glass: oklch(30% 0.025 175 / 0.13);
+  --header-glass-border: oklch(99% 0.004 90 / 0.22);
   --header-glass-foreground: oklch(99% 0.004 90);
 }
 
