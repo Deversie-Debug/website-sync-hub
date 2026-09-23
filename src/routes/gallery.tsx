@@ -1,0 +1,73 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
+import { PageHeader } from "@/components/site/PageHeader";
+import { galleryImages, galleryCategories, pageImages } from "@/lib/property";
+
+const title = "Gallery — Ionian Treasure Suites, Pessada";
+const description =
+  "Photographs of the swimming pool, garden, reception and the five suites at Ionian Treasure Suites in Pessada, Kefalonia.";
+
+export const Route = createFileRoute("/gallery")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:image", content: pageImages.gallery },
+      { name: "twitter:image", content: pageImages.gallery },
+    ],
+  }),
+  component: GalleryPage,
+});
+
+function GalleryPage() {
+  const [filter, setFilter] = useState("All");
+  const filters = ["All", ...galleryCategories];
+  const shown = filter === "All" ? galleryImages : galleryImages.filter((i) => i.category === filter);
+
+  return (
+    <>
+      <PageHeader
+        eyebrow="Gallery"
+        title="The pool, the garden, the suites"
+        description="Twenty photographs of the property as it is — taken across the terrace, the reception and each of the five suites."
+        image={pageImages.gallery}
+        imageAlt="Pool and suite facades in warm afternoon light"
+      />
+
+      <section className="mx-auto w-full max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
+        <div role="group" aria-label="Filter the gallery" className="flex flex-wrap gap-2">
+          {filters.map((f) => (
+            <button
+              key={f}
+              type="button"
+              aria-pressed={filter === f}
+              onClick={() => setFilter(f)}
+              className={
+                filter === f
+                  ? "rounded-sm border border-primary bg-primary px-4 py-2 text-sm text-primary-foreground"
+                  : "rounded-sm border border-border bg-card px-4 py-2 text-sm text-muted-foreground transition-colors hover:border-primary/50 hover:text-foreground"
+              }
+            >
+              {f}
+            </button>
+          ))}
+        </div>
+
+        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {shown.map((img) => (
+            <li key={img.src} className="overflow-hidden rounded-sm border border-border bg-card">
+              <img
+                src={img.src}
+                alt={img.alt}
+                loading="lazy"
+                className="aspect-4/3 w-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </li>
+          ))}
+        </ul>
+      </section>
+    </>
+  );
+}
