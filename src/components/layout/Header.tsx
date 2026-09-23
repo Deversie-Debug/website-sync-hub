@@ -73,8 +73,12 @@ export function Header() {
         </div>
       </header>
 
-      {open && (
-        <div className="fixed inset-0 z-[60] flex flex-col bg-background">
+      <div
+        aria-hidden={!open}
+        className={`fixed inset-0 z-[60] flex flex-col bg-background transition-all duration-500 ease-out ${
+          open ? "visible translate-y-0 opacity-100" : "invisible -translate-y-4 opacity-0 pointer-events-none"
+        }`}
+      >
           <div className="mx-auto grid h-20 w-full max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-6 lg:px-8">
             <span />
             <span className="display-caps text-center text-sm text-primary sm:text-base">
@@ -93,14 +97,15 @@ export function Header() {
           </div>
 
           <nav className="flex flex-1 flex-col items-center justify-center gap-6 px-6 text-center">
-            {nav.map((item) => (
+            {nav.map((item, i) => (
               <Link
+                style={{ transitionDelay: open ? `${150 + i * 50}ms` : "0ms" }}
                 key={item.to}
                 to={item.to}
                 onClick={() => setOpen(false)}
                 activeOptions={{ exact: item.to === "/" }}
                 activeProps={{ className: "text-brass" }}
-                className="display-caps text-xl text-primary transition-colors hover:text-brass sm:text-2xl"
+                className={`display-caps text-xl text-primary transition-all duration-500 hover:text-brass sm:text-2xl ${open ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"}`}
               >
                 {item.label}
               </Link>
@@ -111,8 +116,7 @@ export function Header() {
             <a href={`tel:${property.phoneHref}`}>{property.phone}</a>
             <a href={`mailto:${property.email}`}>{property.email}</a>
           </div>
-        </div>
-      )}
+      </div>
     </>
   );
 }
