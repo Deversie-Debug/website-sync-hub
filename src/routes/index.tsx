@@ -70,11 +70,11 @@ function Index() {
       </section>
 
       <section className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
-        <p className="eyebrow hairline text-brass">Overview</p>
-        <h2 className="mt-6 max-w-2xl text-balance text-3xl sm:text-4xl lg:text-5xl">
+        <p className="eyebrow hairline-center mx-auto text-center tracking-[0.4em] text-brass">Overview</p>
+        <h2 className="display-caps mx-auto mt-8 max-w-2xl text-balance text-center text-2xl sm:text-3xl lg:text-4xl">
           A privileged corner of Kefalonia
         </h2>
-        <div className="mt-8 grid gap-8 lg:grid-cols-2 lg:gap-12">
+        <div className="mt-12 grid gap-8 lg:grid-cols-2 lg:gap-12">
           {intro.map((p) => (
             <p key={p} className="text-sm leading-relaxed text-muted-foreground">
               {p}
@@ -85,9 +85,11 @@ function Index() {
 
       <section className="bg-secondary/60 py-20 lg:py-28">
         <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
-          <p className="eyebrow hairline text-brass">What's included</p>
-          <h2 className="mt-6 text-3xl sm:text-4xl lg:text-5xl">Everything, already thought of</h2>
-          <ul className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <p className="eyebrow hairline-center text-center tracking-[0.4em] text-brass">What's included</p>
+          <h2 className="display-caps mt-8 text-center text-2xl sm:text-3xl lg:text-4xl">
+            Everything, already thought of
+          </h2>
+          <ul className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {included.map((item) => (
               <li key={item.title} className="rounded-sm border border-border bg-card p-8">
                 <h3 className="text-xl">{item.title}</h3>
@@ -96,8 +98,10 @@ function Index() {
             ))}
           </ul>
 
-          <p className="eyebrow mt-14 text-muted-foreground">All general facilities</p>
-          <ul className="mt-5 flex flex-wrap gap-3">
+          <p className="eyebrow mt-16 text-center tracking-[0.4em] text-muted-foreground">
+            All general facilities
+          </p>
+          <ul className="mt-6 flex flex-wrap justify-center gap-3">
             {facilities.map((f) => (
               <li
                 key={f}
@@ -111,17 +115,18 @@ function Index() {
       </section>
 
       <section className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
-        <div className="grid grid-cols-[minmax(0,1fr)_auto] items-end gap-8">
-          <div className="min-w-0">
-            <p className="eyebrow hairline text-brass">Accommodation</p>
-            <h2 className="mt-6 text-3xl sm:text-4xl lg:text-5xl">The five suites</h2>
-          </div>
-          <Link to="/suites" className="inline-flex items-center gap-2 text-sm hover:text-brass">
-            Compare all suites <ArrowRight className="size-4" aria-hidden="true" />
+        <div className="text-center">
+          <p className="eyebrow hairline-center tracking-[0.4em] text-brass">Accommodation</p>
+          <h2 className="display-caps mt-8 text-2xl sm:text-3xl lg:text-4xl">The five suites</h2>
+          <Link
+            to="/suites"
+            className="mt-6 inline-flex items-center gap-2 border-b border-brass pb-1 text-[0.7rem] uppercase tracking-[0.3em] text-brass"
+          >
+            Compare all suites <ArrowRight className="size-3.5" aria-hidden="true" />
           </Link>
         </div>
 
-        <ul className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {suites.map((suite) => (
             <li key={suite.id} className="flex flex-col overflow-hidden rounded-sm border border-border bg-card">
               <img src={suite.images[0]} alt={suite.name} className="aspect-4/3 w-full object-cover" />
