@@ -65,7 +65,7 @@ export function Header() {
             <span className="h-px w-4 bg-current" />
           </button>
 
-          <Link to="/" className="text-center leading-tight" onClick={() => setOpen(false)}>
+          <Link to="/" className="no-underline-anim text-center leading-tight" onClick={() => setOpen(false)}>
             <span className="display-caps block text-sm sm:text-base">Ionian Treasure</span>
             <span className="mt-1 block text-[0.55rem] uppercase tracking-[0.4em] opacity-80">
               Suites · Kefalonia
