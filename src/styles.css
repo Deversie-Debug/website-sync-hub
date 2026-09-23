@@ -68,7 +68,6 @@
   --sea-foreground: oklch(26% 0.03 200);
   --brass: oklch(60% 0.1 78);
   --brass-foreground: oklch(24% 0.02 80);
-  --hero-ink: oklch(26% 0.045 195);
 }
 
 @layer base {
@@ -115,12 +114,3 @@
   }
 }
 
-@utility hero-scrim {
-  background-image: linear-gradient(
-    100deg,
-    oklch(24% 0.04 195 / 0.9) 0%,
-    oklch(26% 0.045 195 / 0.78) 50%,
-    oklch(38% 0.06 195 / 0.55) 78%,
-    oklch(52% 0.068 195 / 0.4) 100%
-  );
-}

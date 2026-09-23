@@ -14,7 +14,6 @@ export function PageHeader({
   return (
     <section className="relative isolate overflow-hidden border-b border-border">
       <img src={image} alt={imageAlt} className="absolute inset-0 size-full object-cover" />
-      <div className="hero-scrim absolute inset-0" />
       <div className="relative mx-auto w-full max-w-7xl px-5 py-20 lg:px-8 lg:py-28">
         <p className="eyebrow text-brass">{eyebrow}</p>
         <h1 className="mt-5 max-w-3xl text-balance text-4xl text-primary-foreground sm:text-5xl lg:text-6xl">
