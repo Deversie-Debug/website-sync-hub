@@ -33,13 +33,13 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <>
-      <section className="relative isolate min-h-dvh overflow-hidden">
+      <section className="sticky top-0 isolate z-0 h-dvh min-h-dvh overflow-hidden">
         <img
           src={heroImage}
           alt="Sunbeds and parasols along the swimming pool"
           className="absolute inset-0 size-full object-cover"
         />
-        <div className="relative mx-auto grid min-h-dvh w-full max-w-7xl content-center justify-items-center px-6 pb-16 pt-28 text-center lg:px-8">
+        <div className="relative mx-auto grid h-dvh min-h-dvh w-full max-w-7xl content-center justify-items-center px-6 pb-16 pt-28 text-center lg:px-8">
           <div className="image-copy-readable max-w-2xl">
             <h1 className="display-caps text-4xl sm:text-5xl lg:text-6xl">
               <span className="block">Ionian</span>
@@ -68,6 +68,7 @@ function Index() {
           </div>
         </div>
       </section>
+      <div className="relative z-10 bg-background shadow-[0_-12px_30px_-12px_oklch(20%_0.02_180/0.25)]">
 
       <section className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
         <p className="eyebrow hairline-center mx-auto text-center tracking-[0.4em] text-brass">Overview</p>
@@ -253,6 +254,7 @@ function Index() {
           ))}
         </ul>
       </section>
+      </div>
     </>
   );
 }
