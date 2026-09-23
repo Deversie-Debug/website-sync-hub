@@ -50,8 +50,7 @@ The setup files at the top level must stay there because GitHub, Netlify, and th
 - `netlify.toml` — Netlify deployment settings
 - `package.json` and `bun.lock` — website packages and commands
 - `vite.config.ts` — website build settings
-- `tsconfig.json` and `eslint.config.js` — code checking settings
-- `bunfig.toml` — Bun settings
+- `tsconfig.json` — code checking settings
 
 ## Run locally
 
