@@ -131,4 +131,28 @@
   text-shadow: 0 1px 3px oklch(18% 0.02 180 / 0.9), 0 2px 12px oklch(18% 0.02 180 / 0.65);
 }
 
+@utility display-caps {
+  font-family: var(--font-display);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  line-height: 1.25;
+}
+
+@utility hairline-center {
+  position: relative;
+  padding-bottom: 1rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 2rem;
+    height: 1px;
+    background-color: var(--brass);
+  }
+}
+
 
