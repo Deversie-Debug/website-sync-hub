@@ -50,10 +50,10 @@ function BookPage() {
         imageAlt="Loungers and shade sails beside the pool"
       />
 
-      <section className="mx-auto w-full max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
-        <ul className="grid gap-6 lg:grid-cols-3">
+      <section className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
+        <ul className="grid gap-8 lg:grid-cols-3">
           {steps.map((s) => (
-            <li key={s.step} className="rounded-sm border border-border bg-card p-6">
+            <li key={s.step} className="rounded-sm border border-border bg-card p-8">
               <p className="eyebrow text-brass">Step {s.step}</p>
               <h2 className="mt-3 text-2xl">{s.title}</h2>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
@@ -69,7 +69,7 @@ function BookPage() {
             </div>
           </div>
 
-          <aside className="h-fit rounded-sm border border-border bg-card p-6">
+          <aside className="h-fit rounded-sm border border-border bg-card p-8">
             <p className="eyebrow text-brass">Good to know</p>
             <dl className="mt-5 space-y-4 text-sm">
               <div>
@@ -105,7 +105,7 @@ function BookPage() {
               href={property.reservationUrl}
               target="_blank"
               rel="noreferrer"
-              className="mt-6 inline-flex h-11 w-full items-center justify-center rounded-sm border border-input px-5 text-sm transition-colors hover:bg-accent"
+              className="mt-6 inline-flex h-11 w-full items-center justify-center rounded-sm border border-input px-6 text-sm transition-colors hover:bg-accent"
             >
               Secure reservation system
             </a>

@@ -39,7 +39,7 @@ function Index() {
           alt="Sunbeds and parasols along the swimming pool"
           className="absolute inset-0 size-full object-cover"
         />
-        <div className="relative mx-auto w-full max-w-7xl px-5 py-28 lg:px-8 lg:py-40">
+        <div className="relative mx-auto grid min-h-[34rem] w-full max-w-7xl content-center px-6 py-20 lg:min-h-[40rem] lg:px-8 lg:py-24">
           <p className="eyebrow text-brass">Pessada · Kefalonia · Ionian Islands</p>
           <h1 className="mt-6 max-w-3xl text-balance text-4xl text-primary-foreground sm:text-5xl lg:text-6xl">
             Five brand-new suites above the Ionian sea
@@ -48,16 +48,16 @@ function Index() {
             A quiet pool garden 600 metres from Pessada Beach, ten minutes from Argostoli, and
             entirely yours for two.
           </p>
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-10 grid gap-3 sm:flex sm:flex-wrap sm:gap-4">
             <Link
               to="/book"
-              className="inline-flex h-12 items-center rounded-sm bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+              className="inline-flex h-12 items-center justify-center rounded-sm bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
             >
               Check availability
             </Link>
             <Link
               to="/suites"
-              className="inline-flex h-12 items-center gap-2 rounded-sm border border-primary-foreground/40 px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary-foreground/10"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-sm border border-primary-foreground/40 px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary-foreground/10"
             >
               View the suites <ArrowRight className="size-4" aria-hidden="true" />
             </Link>
@@ -65,12 +65,12 @@ function Index() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-5 py-16 lg:px-8 lg:py-24">
+      <section className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
         <p className="eyebrow hairline text-brass">Overview</p>
         <h2 className="mt-6 max-w-2xl text-balance text-3xl sm:text-4xl lg:text-5xl">
           A privileged corner of Kefalonia
         </h2>
-        <div className="mt-8 grid gap-6 lg:grid-cols-2">
+        <div className="mt-8 grid gap-8 lg:grid-cols-2 lg:gap-12">
           {intro.map((p) => (
             <p key={p} className="text-sm leading-relaxed text-muted-foreground">
               {p}
@@ -79,13 +79,13 @@ function Index() {
         </div>
       </section>
 
-      <section className="bg-secondary/60 py-16 lg:py-24">
-        <div className="mx-auto w-full max-w-7xl px-5 lg:px-8">
+      <section className="bg-secondary/60 py-20 lg:py-28">
+        <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
           <p className="eyebrow hairline text-brass">What's included</p>
           <h2 className="mt-6 text-3xl sm:text-4xl lg:text-5xl">Everything, already thought of</h2>
-          <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {included.map((item) => (
-              <li key={item.title} className="rounded-sm border border-border bg-card p-6">
+              <li key={item.title} className="rounded-sm border border-border bg-card p-8">
                 <h3 className="text-xl">{item.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
               </li>
@@ -93,7 +93,7 @@ function Index() {
           </ul>
 
           <p className="eyebrow mt-14 text-muted-foreground">All general facilities</p>
-          <ul className="mt-5 flex flex-wrap gap-2">
+          <ul className="mt-5 flex flex-wrap gap-3">
             {facilities.map((f) => (
               <li
                 key={f}
@@ -106,9 +106,9 @@ function Index() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-5 py-16 lg:px-8 lg:py-24">
-        <div className="flex flex-wrap items-end justify-between gap-6">
-          <div>
+      <section className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
+        <div className="grid grid-cols-[minmax(0,1fr)_auto] items-end gap-8">
+          <div className="min-w-0">
             <p className="eyebrow hairline text-brass">Accommodation</p>
             <h2 className="mt-6 text-3xl sm:text-4xl lg:text-5xl">The five suites</h2>
           </div>
@@ -121,7 +121,7 @@ function Index() {
           {suites.map((suite) => (
             <li key={suite.id} className="flex flex-col overflow-hidden rounded-sm border border-border bg-card">
               <img src={suite.images[0]} alt={suite.name} className="aspect-4/3 w-full object-cover" />
-              <div className="flex flex-1 flex-col p-6">
+              <div className="flex flex-1 flex-col p-8">
                 <p className="eyebrow text-muted-foreground">
                   {suite.size} m² · Sleeps {suite.sleeps} · {suite.view}
                 </p>
@@ -129,7 +129,7 @@ function Index() {
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
                   {suite.blurb}
                 </p>
-                <div className="mt-6 flex items-center justify-between">
+                <div className="mt-6 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4">
                   <span className="text-sm text-muted-foreground">Rates on request</span>
                   <Link
                     to="/suites/$suiteId"
@@ -145,8 +145,8 @@ function Index() {
         </ul>
       </section>
 
-      <section className="bg-primary py-16 text-primary-foreground lg:py-20">
-        <div className="mx-auto flex w-full max-w-7xl flex-wrap items-end justify-between gap-8 px-5 lg:px-8">
+      <section className="bg-primary py-20 text-primary-foreground lg:py-28">
+        <div className="mx-auto grid w-full max-w-7xl gap-8 px-6 md:grid-cols-[minmax(0,1fr)_auto] md:items-end lg:px-8">
           <div className="max-w-xl">
             <p className="eyebrow text-brass">Book direct</p>
             <h2 className="mt-5 text-3xl sm:text-4xl">Our best rate is always the direct one</h2>
@@ -155,7 +155,7 @@ function Index() {
               and a quote. No booking fees, no payment taken online.
             </p>
           </div>
-          <div className="flex flex-wrap items-center gap-6">
+          <div className="grid gap-4 sm:flex sm:flex-wrap sm:items-center sm:gap-8">
             <Link
               to="/book"
               className="inline-flex h-12 items-center rounded-sm bg-primary-foreground px-6 text-sm font-medium text-primary transition-opacity hover:opacity-90"
@@ -169,9 +169,9 @@ function Index() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-5 py-16 lg:px-8 lg:py-24">
-        <div className="flex flex-wrap items-end justify-between gap-6">
-          <div>
+      <section className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
+        <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
+          <div className="min-w-0">
             <p className="eyebrow hairline text-brass">The island</p>
             <h2 className="mt-6 text-3xl sm:text-4xl lg:text-5xl">
               Beaches, ferries and Argostoli
@@ -186,10 +186,10 @@ function Index() {
           </Link>
         </div>
 
-        <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {nearby.map((n) => (
-            <li key={n.name} className="rounded-sm border border-border bg-card p-6">
-              <div className="flex items-baseline justify-between gap-4">
+            <li key={n.name} className="rounded-sm border border-border bg-card p-8">
+              <div className="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-4">
                 <h3 className="text-xl">{n.name}</h3>
                 <span className="text-xs text-brass">{n.distance}</span>
               </div>
@@ -199,10 +199,10 @@ function Index() {
         </ul>
       </section>
 
-      <section className="bg-secondary/60 py-16 lg:py-24">
-        <div className="mx-auto w-full max-w-7xl px-5 lg:px-8">
-          <div className="flex flex-wrap items-end justify-between gap-6">
-            <div>
+      <section className="bg-secondary/60 py-20 lg:py-28">
+        <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
+          <div className="grid grid-cols-[minmax(0,1fr)_auto] items-end gap-8">
+            <div className="min-w-0">
               <p className="eyebrow hairline text-brass">Gallery</p>
               <h2 className="mt-6 text-3xl sm:text-4xl lg:text-5xl">A look around</h2>
             </div>
@@ -225,11 +225,11 @@ function Index() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
+      <section className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
         <p className="eyebrow hairline text-brass">Also from us</p>
-        <ul className="mt-8 grid gap-6 md:grid-cols-2">
+        <ul className="mt-10 grid gap-8 md:grid-cols-2">
           {partners.map((p) => (
-            <li key={p.name} className="rounded-sm border border-border bg-card p-6">
+            <li key={p.name} className="rounded-sm border border-border bg-card p-8">
               <h3 className="text-xl">{p.name}</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.description}</p>
               <a

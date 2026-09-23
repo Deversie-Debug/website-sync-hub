@@ -32,44 +32,44 @@ function SuitesIndex() {
         imageAlt="Suite terrace with a view over the Ionian sea"
       />
 
-      <section className="mx-auto w-full max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
-        <ul className="grid gap-10">
+      <section className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
+        <ul className="grid gap-12">
           {suites.map((suite, i) => (
             <li
               key={suite.id}
-              className="grid gap-8 overflow-hidden rounded-sm border border-border bg-card lg:grid-cols-2"
+              className="grid overflow-hidden rounded-sm border border-border bg-card lg:grid-cols-2"
             >
               <img
                 src={suite.images[0]}
                 alt={suite.name}
                 loading={i === 0 ? "eager" : "lazy"}
-                className="h-full min-h-72 w-full object-cover"
+                className="aspect-4/3 h-full min-h-72 w-full object-cover lg:aspect-auto"
               />
-              <div className="p-6 lg:py-10 lg:pr-10">
+              <div className="flex flex-col justify-center p-8 lg:p-12">
                 <p className="eyebrow text-brass">Suite {suite.number}</p>
                 <h2 className="mt-3 text-3xl">{suite.name}</h2>
                 <p className="mt-3 text-sm text-muted-foreground">
                   Size: {suite.size} m² · Sleeps: {suite.sleeps} · View: {suite.view}
                 </p>
                 <p className="mt-5 text-sm leading-relaxed text-muted-foreground">{suite.blurb}</p>
-                <ul className="mt-5 flex flex-wrap gap-2">
+                <ul className="mt-5 flex flex-wrap gap-3">
                   {suite.highlights.map((h) => (
                     <li key={h} className="rounded-sm bg-accent px-3 py-1.5 text-xs text-accent-foreground">
                       {h}
                     </li>
                   ))}
                 </ul>
-                <div className="mt-7 flex flex-wrap gap-3">
+                <div className="mt-7 grid gap-3 sm:flex sm:flex-wrap">
                   <Link
                     to="/book"
-                    className="inline-flex h-11 items-center rounded-sm bg-primary px-5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+                    className="inline-flex h-11 items-center justify-center rounded-sm bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
                   >
                     Check availability
                   </Link>
                   <Link
                     to="/suites/$suiteId"
                     params={{ suiteId: suite.id }}
-                    className="inline-flex h-11 items-center gap-2 rounded-sm border border-input px-5 text-sm transition-colors hover:bg-accent"
+                    className="inline-flex h-11 items-center justify-center gap-2 rounded-sm border border-input px-6 text-sm transition-colors hover:bg-accent"
                   >
                     Suite details <ArrowRight className="size-4" aria-hidden="true" />
                   </Link>
@@ -80,13 +80,13 @@ function SuitesIndex() {
         </ul>
       </section>
 
-      <section className="bg-secondary/60 py-16 lg:py-20">
-        <div className="mx-auto w-full max-w-7xl px-5 lg:px-8">
+      <section className="bg-secondary/60 py-20 lg:py-28">
+        <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
           <p className="eyebrow hairline text-brass">In every suite</p>
           <h2 className="mt-6 text-3xl sm:text-4xl">Standard amenities</h2>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {Object.entries(amenityGroups).map(([group, items]) => (
-              <div key={group} className="rounded-sm border border-border bg-card p-6">
+              <div key={group} className="rounded-sm border border-border bg-card p-8">
                 <h3 className="text-xl">{group}</h3>
                 <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
                   {items.map((item) => (

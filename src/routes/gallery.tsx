@@ -39,8 +39,8 @@ function GalleryPage() {
         imageAlt="Pool and suite facades in warm afternoon light"
       />
 
-      <section className="mx-auto w-full max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
-        <div role="group" aria-label="Filter the gallery" className="flex flex-wrap gap-2">
+      <section className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
+        <div role="group" aria-label="Filter the gallery" className="flex flex-wrap gap-3">
           {filters.map((f) => (
             <button
               key={f}
@@ -58,7 +58,7 @@ function GalleryPage() {
           ))}
         </div>
 
-        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {shown.map((img, index) => (
             <li key={img.src} className="overflow-hidden rounded-sm border border-border bg-card">
               <button
