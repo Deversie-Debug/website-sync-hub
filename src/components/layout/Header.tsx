@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { useEffect, useRef, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Phone, X } from "lucide-react";
 import { property } from "@/content/property";
 
 const nav = [
@@ -10,100 +10,109 @@ const nav = [
   { to: "/experiences", label: "Island guide" },
   { to: "/location", label: "Location" },
   { to: "/contact", label: "Contact" },
+  { to: "/book", label: "Book direct" },
 ] as const;
 
 export function Header() {
   const [open, setOpen] = useState(false);
-  const [visible, setVisible] = useState(true);
-  const lastScrollY = useRef(0);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const updateVisibility = () => {
-      const currentScrollY = window.scrollY;
-      if (Math.abs(currentScrollY - lastScrollY.current) < 8) return;
-
-      const scrollingDown = currentScrollY > lastScrollY.current;
-
-      setVisible(currentScrollY < 80 || !scrollingDown);
-      lastScrollY.current = currentScrollY;
-    };
-
-    window.addEventListener("scroll", updateVisibility, { passive: true });
-    return () => window.removeEventListener("scroll", updateVisibility);
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  const tone = scrolled && !open ? "text-primary" : "text-primary-foreground";
+
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 border-b border-nav-border bg-nav text-nav-foreground transition-transform duration-300 motion-reduce:transition-none ${visible || open ? "translate-y-0" : "-translate-y-full"}`}
-    >
-      <div className="mx-auto grid h-16 w-full max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-6 px-6 lg:flex lg:px-8">
-        <Link to="/" className="flex min-w-0 flex-col leading-tight lg:mr-auto" onClick={() => setOpen(false)}>
-          <span className="eyebrow text-nav-foreground">Ionian Treasure</span>
-          <span className="font-display text-base text-nav-foreground/75">Suites · Pessada, Kefalonia</span>
-        </Link>
-
-        <nav className="hidden items-center gap-7 lg:flex">
-          {nav.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              activeOptions={{ exact: item.to === "/" }}
-              activeProps={{ className: "text-nav-foreground" }}
-              className="text-sm text-nav-foreground/70 transition-colors hover:text-nav-foreground"
-            >
-              {item.label}
-            </Link>
-          ))}
-          <a
-            href={`tel:${property.phoneHref}`}
-            className="text-sm text-nav-foreground/70 transition-colors hover:text-nav-foreground"
-          >
-            {property.phone}
-          </a>
-          <Link
-            to="/book"
-            className="inline-flex h-9 items-center rounded-sm bg-nav-foreground px-5 text-sm font-medium text-nav transition-opacity hover:opacity-90"
-          >
-            Book direct
-          </Link>
-        </nav>
-
-        <button
-          type="button"
-          aria-label={open ? "Close menu" : "Open menu"}
-          onClick={() => setOpen((v) => !v)}
-          className="inline-flex size-10 items-center justify-center rounded-sm border border-nav-border text-nav-foreground transition-colors hover:bg-nav-foreground/10 lg:hidden"
+    <>
+      <header
+        className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${
+          scrolled && !open ? "border-b border-border bg-background/95 backdrop-blur-sm" : "bg-transparent"
+        }`}
+      >
+        <div
+          className={`mx-auto grid h-20 w-full max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-6 lg:px-8 ${tone} ${
+            scrolled && !open ? "" : "image-copy-readable"
+          }`}
         >
-          {open ? <X className="size-5" /> : <Menu className="size-5" />}
-        </button>
-      </div>
+          <button
+            type="button"
+            aria-label="Open menu"
+            onClick={() => setOpen(true)}
+            className="flex w-10 flex-col gap-1.5"
+          >
+            <span className="h-px w-6 bg-current" />
+            <span className="h-px w-4 bg-current" />
+          </button>
+
+          <Link to="/" className="text-center leading-tight" onClick={() => setOpen(false)}>
+            <span className="display-caps block text-sm sm:text-base">Ionian Treasure</span>
+            <span className="mt-1 block text-[0.55rem] uppercase tracking-[0.4em] opacity-80">
+              Suites · Kefalonia
+            </span>
+          </Link>
+
+          <div className="flex items-center justify-end gap-4 text-[0.6rem] uppercase tracking-[0.2em]">
+            <a href={`tel:${property.phoneHref}`} aria-label={`Call ${property.phone}`}>
+              <Phone className="size-3.5" aria-hidden="true" />
+            </a>
+            <Link to="/book" className="hidden hover:opacity-70 sm:inline">
+              Book now
+            </Link>
+          </div>
+        </div>
+      </header>
 
       {open && (
-        <div className="border-t border-nav-border bg-nav lg:hidden">
-          <nav className="mx-auto flex w-full max-w-7xl flex-col gap-1 px-6 py-4">
+        <div className="fixed inset-0 z-[60] flex flex-col bg-background">
+          <div className="mx-auto grid h-20 w-full max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-6 lg:px-8">
+            <span />
+            <span className="display-caps text-center text-sm text-primary sm:text-base">
+              Ionian Treasure
+            </span>
+            <div className="flex justify-end">
+              <button
+                type="button"
+                aria-label="Close menu"
+                onClick={() => setOpen(false)}
+                className="text-primary"
+              >
+                <X className="size-6" aria-hidden="true" />
+              </button>
+            </div>
+          </div>
+
+          <nav className="flex flex-1 flex-col items-center justify-center gap-6 px-6 text-center">
             {nav.map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
                 onClick={() => setOpen(false)}
-                className="rounded-sm px-2 py-2.5 text-sm text-nav-foreground/80 transition-colors hover:bg-nav-foreground/10 hover:text-nav-foreground"
+                activeOptions={{ exact: item.to === "/" }}
+                activeProps={{ className: "text-brass" }}
+                className="display-caps text-xl text-primary transition-colors hover:text-brass sm:text-2xl"
               >
                 {item.label}
               </Link>
             ))}
-            <a href={`tel:${property.phoneHref}`} className="px-2 py-2.5 text-sm text-nav-foreground/80">
-              {property.phone}
-            </a>
-            <Link
-              to="/book"
-              onClick={() => setOpen(false)}
-              className="mt-2 inline-flex h-11 items-center justify-center rounded-sm bg-nav-foreground px-6 text-sm font-medium text-nav"
-            >
-              Book direct
-            </Link>
           </nav>
+
+          <div className="flex flex-col items-center gap-2 pb-12 text-xs tracking-[0.2em] text-muted-foreground">
+            <a href={`tel:${property.phoneHref}`}>{property.phone}</a>
+            <a href={`mailto:${property.email}`}>{property.email}</a>
+          </div>
         </div>
       )}
-    </header>
+    </>
   );
 }
