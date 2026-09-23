@@ -1,0 +1,17 @@
+# Netlify deployment for Ionian Treasure Suites
+# https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  # Netlify detects bun.lock and installs dependencies with `bun install`,
+  # so the build runs through bun too.
+  command = "bun run build"
+  # Vite writes the finished site here (static files + prerendered pages).
+  publish = "dist"
+
+[build.environment]
+  # Keep deploys reproducible.
+  BUN_VERSION = "1"
+
+# Server-side rendering runs as a Netlify Function written by the build
+# (.netlify/functions-internal). Static files are served first, the function
+# only handles requests that aren't a real file.
