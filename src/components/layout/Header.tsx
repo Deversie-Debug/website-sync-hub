@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { property } from "@/content/property";
 
@@ -14,9 +14,26 @@ const nav = [
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const updateVisibility = () => {
+      const currentScrollY = window.scrollY;
+      const scrollingDown = currentScrollY > lastScrollY.current;
+
+      setVisible(currentScrollY < 80 || !scrollingDown);
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", updateVisibility, { passive: true });
+    return () => window.removeEventListener("scroll", updateVisibility);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
+    <header
+      className={`sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur transition-transform duration-300 motion-reduce:transition-none ${visible || open ? "translate-y-0" : "-translate-y-full"}`}
+    >
       <div className="mx-auto grid w-full max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-6 px-6 py-4 lg:flex lg:px-8">
         <Link to="/" className="flex min-w-0 flex-col leading-tight lg:mr-auto" onClick={() => setOpen(false)}>
           <span className="eyebrow text-brass">Ionian Treasure</span>

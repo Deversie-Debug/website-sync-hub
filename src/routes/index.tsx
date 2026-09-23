@@ -33,34 +33,36 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <>
-      <section className="relative isolate overflow-hidden">
+      <section className="relative isolate min-h-[calc(100dvh-4.75rem)] overflow-hidden">
         <img
           src={heroImage}
           alt="Sunbeds and parasols along the swimming pool"
           className="absolute inset-0 size-full object-cover"
         />
-        <div className="relative mx-auto grid min-h-[34rem] w-full max-w-7xl content-center px-6 py-20 lg:min-h-[40rem] lg:px-8 lg:py-24">
-          <p className="eyebrow text-brass">Pessada · Kefalonia · Ionian Islands</p>
-          <h1 className="mt-6 max-w-3xl text-balance text-4xl text-primary-foreground sm:text-5xl lg:text-6xl">
-            Five brand-new suites above the Ionian sea
-          </h1>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-primary-foreground/85">
-            A quiet pool garden 600 metres from Pessada Beach, ten minutes from Argostoli, and
-            entirely yours for two.
-          </p>
-          <div className="mt-10 grid gap-3 sm:flex sm:flex-wrap sm:gap-4">
-            <Link
-              to="/book"
-              className="inline-flex h-12 items-center justify-center rounded-sm bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-            >
-              Check availability
-            </Link>
-            <Link
-              to="/suites"
-              className="inline-flex h-12 items-center justify-center gap-2 rounded-sm border border-primary-foreground/40 px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary-foreground/10"
-            >
-              View the suites <ArrowRight className="size-4" aria-hidden="true" />
-            </Link>
+        <div className="relative mx-auto grid min-h-[calc(100dvh-4.75rem)] w-full max-w-7xl content-center px-6 py-12 lg:px-8 lg:py-16">
+          <div className="max-w-3xl rounded-sm border border-border/70 bg-image-copy p-6 text-image-copy-foreground backdrop-blur-sm sm:p-8 lg:p-10">
+            <p className="eyebrow text-brass">Pessada · Kefalonia · Ionian Islands</p>
+            <h1 className="mt-5 text-balance text-4xl sm:text-5xl lg:text-6xl">
+              Five brand-new suites above the Ionian sea
+            </h1>
+            <p className="mt-5 max-w-xl text-base leading-relaxed">
+              A quiet pool garden 600 metres from Pessada Beach, ten minutes from Argostoli, and
+              entirely yours for two.
+            </p>
+            <div className="mt-8 grid gap-3 sm:flex sm:flex-wrap sm:gap-4">
+              <Link
+                to="/book"
+                className="inline-flex h-12 items-center justify-center rounded-sm bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+              >
+                Check availability
+              </Link>
+              <Link
+                to="/suites"
+                className="inline-flex h-12 items-center justify-center gap-2 rounded-sm border border-input bg-background/70 px-6 text-sm font-medium text-foreground transition-colors hover:bg-background"
+              >
+                View the suites <ArrowRight className="size-4" aria-hidden="true" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
