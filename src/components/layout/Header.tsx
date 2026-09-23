@@ -20,6 +20,8 @@ export function Header() {
   useEffect(() => {
     const updateVisibility = () => {
       const currentScrollY = window.scrollY;
+      if (Math.abs(currentScrollY - lastScrollY.current) < 8) return;
+
       const scrollingDown = currentScrollY > lastScrollY.current;
 
       setVisible(currentScrollY < 80 || !scrollingDown);
