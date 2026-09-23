@@ -36,7 +36,7 @@ export function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 p-3 transition-transform duration-300 motion-reduce:transition-none sm:p-4 ${visible || open ? "translate-y-0" : "-translate-y-full"}`}
     >
-      <div className="mx-auto grid w-full max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-6 rounded-lg border border-header-glass-border bg-header-glass px-5 py-3 text-header-glass-foreground backdrop-blur-xl lg:flex lg:px-6">
+      <div className="mx-auto grid w-full max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-6 rounded-lg border border-header-glass-border bg-header-glass px-5 py-3 text-header-glass-foreground backdrop-blur-2xl lg:flex lg:px-6">
         <Link to="/" className="flex min-w-0 flex-col leading-tight lg:mr-auto" onClick={() => setOpen(false)}>
           <span className="eyebrow text-primary-foreground">Ionian Treasure</span>
           <span className="font-display text-lg text-primary-foreground/80">Suites · Pessada, Kefalonia</span>
@@ -79,7 +79,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="mx-auto mt-2 w-full max-w-7xl overflow-hidden rounded-lg border border-header-glass-border bg-header-glass text-header-glass-foreground backdrop-blur-xl lg:hidden">
+        <div className="mx-auto mt-2 w-full max-w-7xl overflow-hidden rounded-lg border border-header-glass-border bg-header-glass text-header-glass-foreground backdrop-blur-2xl lg:hidden">
           <nav className="flex flex-col gap-1 px-4 py-4">
             {nav.map((item) => (
               <Link
