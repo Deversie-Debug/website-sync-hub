@@ -1,0 +1,103 @@
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight } from "lucide-react";
+import { PageHeader } from "@/components/site/PageHeader";
+import { suites, amenityGroups, pageImages } from "@/lib/property";
+
+const title = "The Suites — Ionian Treasure Suites, Pessada";
+const description =
+  "Five brand-new 32 m² suites for two, each with a private entrance, terrace and fully equipped kitchen, around a quiet pool garden in Pessada, Kefalonia.";
+
+export const Route = createFileRoute("/suites/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:image", content: pageImages.suites },
+      { name: "twitter:image", content: pageImages.suites },
+    ],
+  }),
+  component: SuitesIndex,
+});
+
+function SuitesIndex() {
+  return (
+    <>
+      <PageHeader
+        eyebrow="Accommodation"
+        title="Five suites, one quiet pool garden"
+        description="Every suite is 32 m², brand new, and designed for two guests — with its own private entrance, terrace and fully equipped kitchen. What changes between them is the outlook and how close you sit to the water."
+        image={pageImages.suites}
+        imageAlt="Suite terrace with a view over the Ionian sea"
+      />
+
+      <section className="mx-auto w-full max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
+        <ul className="grid gap-10">
+          {suites.map((suite, i) => (
+            <li
+              key={suite.id}
+              className="grid gap-8 overflow-hidden rounded-sm border border-border bg-card lg:grid-cols-2"
+            >
+              <img
+                src={suite.images[0]}
+                alt={suite.name}
+                loading={i === 0 ? "eager" : "lazy"}
+                className="h-full min-h-72 w-full object-cover"
+              />
+              <div className="p-6 lg:py-10 lg:pr-10">
+                <p className="eyebrow text-brass">Suite {suite.number}</p>
+                <h2 className="mt-3 text-3xl">{suite.name}</h2>
+                <p className="mt-3 text-sm text-muted-foreground">
+                  Size: {suite.size} m² · Sleeps: {suite.sleeps} · View: {suite.view}
+                </p>
+                <p className="mt-5 text-sm leading-relaxed text-muted-foreground">{suite.blurb}</p>
+                <ul className="mt-5 flex flex-wrap gap-2">
+                  {suite.highlights.map((h) => (
+                    <li key={h} className="rounded-sm bg-secondary px-3 py-1.5 text-xs">
+                      {h}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-7 flex flex-wrap gap-3">
+                  <Link
+                    to="/book"
+                    className="inline-flex h-11 items-center rounded-sm bg-primary px-5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+                  >
+                    Check availability
+                  </Link>
+                  <Link
+                    to="/suites/$suiteId"
+                    params={{ suiteId: suite.id }}
+                    className="inline-flex h-11 items-center gap-2 rounded-sm border border-input px-5 text-sm transition-colors hover:bg-accent"
+                  >
+                    Suite details <ArrowRight className="size-4" aria-hidden="true" />
+                  </Link>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="bg-secondary/60 py-16 lg:py-20">
+        <div className="mx-auto w-full max-w-7xl px-5 lg:px-8">
+          <p className="eyebrow hairline text-brass">In every suite</p>
+          <h2 className="mt-6 text-3xl sm:text-4xl">Standard amenities</h2>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {Object.entries(amenityGroups).map(([group, items]) => (
+              <div key={group} className="rounded-sm border border-border bg-card p-6">
+                <h3 className="text-xl">{group}</h3>
+                <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+                  {items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
