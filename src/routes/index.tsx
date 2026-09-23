@@ -39,30 +39,32 @@ function Index() {
           alt="Sunbeds and parasols along the swimming pool"
           className="absolute inset-0 size-full object-cover"
         />
-        <div className="relative mx-auto grid min-h-dvh w-full max-w-7xl content-center px-6 pb-12 pt-24 lg:px-8 lg:pb-16 lg:pt-28">
-          <div className="image-copy-readable max-w-3xl">
-            <p className="eyebrow text-brass">Pessada · Kefalonia · Ionian Islands</p>
-            <h1 className="mt-5 text-balance text-4xl sm:text-5xl lg:text-6xl">
-              Five brand-new suites above the Ionian sea
+        <div className="relative mx-auto grid min-h-dvh w-full max-w-7xl content-center justify-items-center px-6 pb-16 pt-28 text-center lg:px-8">
+          <div className="image-copy-readable max-w-2xl">
+            <h1 className="display-caps text-4xl sm:text-5xl lg:text-6xl">
+              <span className="block">Ionian</span>
+              <span className="mt-3 block">Treasure</span>
             </h1>
-            <p className="mt-5 max-w-xl text-base leading-relaxed">
+            <p className="mt-8 text-[0.65rem] uppercase tracking-[0.5em]">Suites · Pessada, Kefalonia</p>
+            <p className="mx-auto mt-8 max-w-md text-sm leading-relaxed">
               A quiet pool garden 600 metres from Pessada Beach, ten minutes from Argostoli, and
               entirely yours for two.
             </p>
-            <div className="mt-8 grid gap-3 sm:flex sm:flex-wrap sm:gap-4">
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <Link
                 to="/book"
-                className="inline-flex h-12 items-center justify-center rounded-sm bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+                className="inline-flex h-12 items-center justify-center rounded-sm bg-primary px-8 text-[0.7rem] font-medium uppercase tracking-[0.25em] text-primary-foreground transition-colors hover:bg-primary/90"
               >
                 Check availability
               </Link>
               <Link
                 to="/suites"
-                className="inline-flex h-12 items-center justify-center gap-2 rounded-sm border border-primary-foreground/70 bg-background/15 px-6 text-sm font-medium text-primary-foreground backdrop-blur-sm transition-colors hover:bg-background/25"
+                className="inline-flex h-12 items-center justify-center gap-2 border-b border-current px-2 text-[0.7rem] font-medium uppercase tracking-[0.25em]"
               >
                 View the suites <ArrowRight className="size-4" aria-hidden="true" />
               </Link>
             </div>
+            <div className="mx-auto mt-14 h-16 w-px bg-current opacity-50" />
           </div>
         </div>
       </section>
