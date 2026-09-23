@@ -12,4 +12,7 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Deploy target for Netlify. This only applies outside the Lovable build
+  // environment, which keeps its own target — so the preview is unaffected.
+  nitro: { preset: "netlify" },
 });
