@@ -39,7 +39,7 @@ function Index() {
           alt="Sunbeds and parasols along the swimming pool"
           className="absolute inset-0 size-full object-cover"
         />
-        <div className="relative mx-auto grid min-h-dvh w-full max-w-7xl content-center px-6 pb-12 pt-28 lg:px-8 lg:pb-16 lg:pt-32">
+        <div className="relative mx-auto grid min-h-dvh w-full max-w-7xl content-center px-6 pb-12 pt-24 lg:px-8 lg:pb-16 lg:pt-28">
           <div className="image-copy-readable max-w-3xl">
             <p className="eyebrow text-brass">Pessada · Kefalonia · Ionian Islands</p>
             <h1 className="mt-5 text-balance text-4xl sm:text-5xl lg:text-6xl">

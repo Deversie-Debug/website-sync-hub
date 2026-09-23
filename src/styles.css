@@ -42,9 +42,9 @@
   --color-lightbox-backdrop: var(--lightbox-backdrop);
   --color-lightbox-control: var(--lightbox-control);
   --color-lightbox-control-foreground: var(--lightbox-control-foreground);
-  --color-header-glass: var(--header-glass);
-  --color-header-glass-border: var(--header-glass-border);
-  --color-header-glass-foreground: var(--header-glass-foreground);
+  --color-nav: var(--nav);
+  --color-nav-border: var(--nav-border);
+  --color-nav-foreground: var(--nav-foreground);
 }
 
 :root {
@@ -77,10 +77,9 @@
   --lightbox-backdrop: oklch(15% 0.012 180 / 0.94);
   --lightbox-control: oklch(99% 0.004 90 / 0.94);
   --lightbox-control-foreground: oklch(25% 0.018 170);
-  --header-glass: oklch(30% 0.025 175 / 0.07);
-  --header-glass-border: oklch(99% 0.004 90 / 0.16);
-  --header-glass-foreground: oklch(99% 0.004 90);
-  --header-text-shadow: oklch(12% 0.018 180 / 0.85);
+  --nav: oklch(27% 0.033 190);
+  --nav-border: oklch(99% 0.004 90 / 0.14);
+  --nav-foreground: oklch(97.5% 0.005 90);
 }
 
 @layer base {
@@ -132,7 +131,4 @@
   text-shadow: 0 1px 3px oklch(18% 0.02 180 / 0.9), 0 2px 12px oklch(18% 0.02 180 / 0.65);
 }
 
-@utility header-copy-readable {
-  text-shadow: 0 1px 3px var(--header-text-shadow), 0 2px 9px var(--header-text-shadow);
-}
 
