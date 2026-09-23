@@ -16,9 +16,17 @@ const nav = [
 export function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    let last = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 40);
+      if (y > last + 6 && y > 120) setHidden(true);
+      else if (y < last - 6 || y < 80) setHidden(false);
+      last = y;
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -36,7 +44,9 @@ export function Header() {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+          hidden && !open ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
+        } ${
           scrolled && !open ? "border-b border-border bg-background/95 backdrop-blur-sm" : "bg-transparent"
         }`}
       >
