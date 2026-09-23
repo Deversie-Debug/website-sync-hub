@@ -156,3 +156,7 @@
 }
 
 
+a:hover:not([class*="inline-flex"]):not([class*="rounded"]) {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
