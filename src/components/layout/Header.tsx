@@ -66,7 +66,7 @@ export function Header() {
             <a href={`tel:${property.phoneHref}`} aria-label={`Call ${property.phone}`}>
               <Phone className="size-3.5" aria-hidden="true" />
             </a>
-            <Link to="/book" className="hidden text-brass sm:inline">
+            <Link to="/book" className="hidden hover:opacity-70 sm:inline">
               Book now
             </Link>
           </div>
