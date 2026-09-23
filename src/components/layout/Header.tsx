@@ -34,12 +34,12 @@ export function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur transition-transform duration-300 motion-reduce:transition-none ${visible || open ? "translate-y-0" : "-translate-y-full"}`}
+      className={`fixed inset-x-0 top-0 z-50 p-3 transition-transform duration-300 motion-reduce:transition-none sm:p-4 ${visible || open ? "translate-y-0" : "-translate-y-full"}`}
     >
-      <div className="mx-auto grid w-full max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-6 px-6 py-4 lg:flex lg:px-8">
+      <div className="mx-auto grid w-full max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-6 rounded-lg border border-header-glass-border bg-header-glass px-5 py-3 text-header-glass-foreground backdrop-blur-xl lg:flex lg:px-6">
         <Link to="/" className="flex min-w-0 flex-col leading-tight lg:mr-auto" onClick={() => setOpen(false)}>
-          <span className="eyebrow text-brass">Ionian Treasure</span>
-          <span className="font-display text-lg">Suites · Pessada, Kefalonia</span>
+          <span className="eyebrow text-primary-foreground">Ionian Treasure</span>
+          <span className="font-display text-lg text-primary-foreground/80">Suites · Pessada, Kefalonia</span>
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex">
@@ -48,15 +48,15 @@ export function Header() {
               key={item.to}
               to={item.to}
               activeOptions={{ exact: item.to === "/" }}
-              activeProps={{ className: "text-foreground" }}
-              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              activeProps={{ className: "text-primary-foreground" }}
+              className="text-sm text-primary-foreground/75 transition-colors hover:text-primary-foreground"
             >
               {item.label}
             </Link>
           ))}
           <a
             href={`tel:${property.phoneHref}`}
-            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+            className="text-sm text-primary-foreground/75 transition-colors hover:text-primary-foreground"
           >
             {property.phone}
           </a>
@@ -72,26 +72,26 @@ export function Header() {
           type="button"
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((v) => !v)}
-          className="inline-flex size-10 items-center justify-center rounded-sm border border-border lg:hidden"
+          className="inline-flex size-11 items-center justify-center rounded-sm border border-header-glass-border text-primary-foreground transition-colors hover:bg-primary-foreground/10 lg:hidden"
         >
           {open ? <X className="size-5" /> : <Menu className="size-5" />}
         </button>
       </div>
 
       {open && (
-        <div className="border-t border-border bg-background lg:hidden">
-          <nav className="mx-auto flex w-full max-w-7xl flex-col gap-1 px-6 py-4">
+        <div className="mx-auto mt-2 w-full max-w-7xl overflow-hidden rounded-lg border border-header-glass-border bg-header-glass text-header-glass-foreground backdrop-blur-xl lg:hidden">
+          <nav className="flex flex-col gap-1 px-4 py-4">
             {nav.map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
                 onClick={() => setOpen(false)}
-                className="rounded-sm px-2 py-2.5 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                className="rounded-sm px-2 py-2.5 text-sm text-primary-foreground/80 transition-colors hover:bg-primary-foreground/10 hover:text-primary-foreground"
               >
                 {item.label}
               </Link>
             ))}
-            <a href={`tel:${property.phoneHref}`} className="px-2 py-2.5 text-sm text-muted-foreground">
+            <a href={`tel:${property.phoneHref}`} className="px-2 py-2.5 text-sm text-primary-foreground/80">
               {property.phone}
             </a>
             <Link
