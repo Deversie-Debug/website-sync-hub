@@ -42,6 +42,8 @@
   --color-lightbox-backdrop: var(--lightbox-backdrop);
   --color-lightbox-control: var(--lightbox-control);
   --color-lightbox-control-foreground: var(--lightbox-control-foreground);
+  --color-image-copy: var(--image-copy);
+  --color-image-copy-foreground: var(--image-copy-foreground);
 }
 
 :root {
@@ -74,6 +76,8 @@
   --lightbox-backdrop: oklch(15% 0.012 180 / 0.94);
   --lightbox-control: oklch(99% 0.004 90 / 0.94);
   --lightbox-control-foreground: oklch(25% 0.018 170);
+  --image-copy: oklch(99.2% 0.005 90 / 0.91);
+  --image-copy-foreground: oklch(27% 0.021 170);
 }
 
 @layer base {
