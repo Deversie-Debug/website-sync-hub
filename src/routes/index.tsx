@@ -209,16 +209,17 @@ function Index() {
 
       <section className="bg-secondary/60 py-20 lg:py-28">
         <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-[minmax(0,1fr)_auto] items-end gap-8">
-            <div className="min-w-0">
-              <p className="eyebrow hairline text-brass">Gallery</p>
-              <h2 className="mt-6 text-3xl sm:text-4xl lg:text-5xl">A look around</h2>
-            </div>
-            <Link to="/gallery" className="inline-flex items-center gap-2 text-sm hover:text-brass">
-              See all {galleryImages.length} photos <ArrowRight className="size-4" aria-hidden="true" />
+          <div className="text-center">
+            <p className="eyebrow hairline-center tracking-[0.4em] text-brass">Gallery</p>
+            <h2 className="display-caps mt-8 text-2xl sm:text-3xl lg:text-4xl">A look around</h2>
+            <Link
+              to="/gallery"
+              className="mt-6 inline-flex items-center gap-2 border-b border-brass pb-1 text-[0.7rem] uppercase tracking-[0.3em] text-brass"
+            >
+              See all {galleryImages.length} photos <ArrowRight className="size-3.5" aria-hidden="true" />
             </Link>
           </div>
-          <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {galleryImages.slice(0, 8).map((img) => (
               <li key={img.src}>
                 <img
@@ -234,8 +235,8 @@ function Index() {
       </section>
 
       <section className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
-        <p className="eyebrow hairline text-brass">Also from us</p>
-        <ul className="mt-10 grid gap-8 md:grid-cols-2">
+        <p className="eyebrow hairline-center text-center tracking-[0.4em] text-brass">Also from us</p>
+        <ul className="mt-12 grid gap-8 md:grid-cols-2">
           {partners.map((p) => (
             <li key={p.name} className="rounded-sm border border-border bg-card p-8">
               <h3 className="text-xl">{p.name}</h3>
