@@ -17,8 +17,8 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-6 px-6 py-4 lg:px-8">
-        <Link to="/" className="flex flex-col leading-tight" onClick={() => setOpen(false)}>
+      <div className="mx-auto grid w-full max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-6 px-6 py-4 lg:flex lg:px-8">
+        <Link to="/" className="flex min-w-0 flex-col leading-tight lg:mr-auto" onClick={() => setOpen(false)}>
           <span className="eyebrow text-brass">Ionian Treasure</span>
           <span className="font-display text-lg">Suites · Pessada, Kefalonia</span>
         </Link>

@@ -94,7 +94,7 @@ function SuiteDetail() {
       <section className="mx-auto grid w-full max-w-7xl gap-10 px-6 py-20 lg:grid-cols-3 lg:px-8 lg:py-28">
         <div className="lg:col-span-2">
           <p className="eyebrow hairline text-brass">About this suite</p>
-          <p className="mt-6 text-base leading-relaxed text-muted-foreground">{suite.blurb}</p>
+          <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground">{suite.blurb}</p>
           <ul className="mt-6 flex flex-wrap gap-3">
             {suite.highlights.map((h) => (
               <li key={h} className="rounded-sm bg-accent px-3 py-1.5 text-xs text-accent-foreground">

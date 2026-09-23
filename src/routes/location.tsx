@@ -74,7 +74,7 @@ function LocationPage() {
           <ul className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {nearby.map((n) => (
               <li key={n.name} className="rounded-sm border border-border bg-card p-8">
-                <div className="flex items-baseline justify-between gap-4">
+                <div className="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-4">
                   <h2 className="text-xl">{n.name}</h2>
                   <span className="text-xs text-brass">{n.distance}</span>
                 </div>

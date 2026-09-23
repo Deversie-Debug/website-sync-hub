@@ -13,8 +13,8 @@ const links = [
 export function Footer() {
   return (
     <footer className="border-t border-border bg-secondary/50">
-      <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-20 lg:grid-cols-3 lg:px-8">
-        <div>
+      <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-20 sm:grid-cols-2 lg:grid-cols-3 lg:px-8">
+        <div className="sm:col-span-2 lg:col-span-1">
           <p className="eyebrow text-brass">Ionian Treasure Suites</p>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
             Five brand-new suites with a swimming pool, garden and sea views in the village of
@@ -55,7 +55,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-border">
-        <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-4 px-6 py-8 text-xs text-muted-foreground lg:px-8">
+        <div className="mx-auto grid w-full max-w-7xl gap-4 px-6 py-8 text-xs text-muted-foreground sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center lg:px-8">
           <p>© {new Date().getFullYear()} {property.name}. All rights reserved.</p>
           <div className="flex flex-wrap gap-5">
             {partners.map((p) => (

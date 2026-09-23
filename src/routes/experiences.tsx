@@ -59,9 +59,9 @@ function ExperiencesPage() {
         <ul className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {shown.map((e) => (
             <li key={e.title} className="flex flex-col rounded-sm border border-border bg-card p-8">
-              <div className="flex items-baseline justify-between gap-4">
-                <p className="eyebrow text-brass">{e.category}</p>
-                <span className="text-xs text-muted-foreground">{e.distance}</span>
+              <div className="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-4">
+                <p className="eyebrow min-w-0 text-brass">{e.category}</p>
+                <span className="shrink-0 text-xs text-muted-foreground">{e.distance}</span>
               </div>
               <h2 className="mt-4 text-2xl leading-snug">{e.title}</h2>
               <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{e.text}</p>
@@ -83,7 +83,7 @@ function ExperiencesPage() {
               </li>
             ))}
           </ul>
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-10 grid gap-3 sm:flex sm:flex-wrap sm:gap-4">
             <Link
               to="/book"
               className="inline-flex h-12 items-center rounded-sm bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"

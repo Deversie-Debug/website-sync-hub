@@ -37,15 +37,15 @@ function SuitesIndex() {
           {suites.map((suite, i) => (
             <li
               key={suite.id}
-              className="grid gap-8 overflow-hidden rounded-sm border border-border bg-card lg:grid-cols-2"
+              className="grid overflow-hidden rounded-sm border border-border bg-card lg:grid-cols-2"
             >
               <img
                 src={suite.images[0]}
                 alt={suite.name}
                 loading={i === 0 ? "eager" : "lazy"}
-                className="h-full min-h-72 w-full object-cover"
+                className="aspect-4/3 h-full min-h-72 w-full object-cover lg:aspect-auto"
               />
-              <div className="p-8 lg:p-12">
+              <div className="flex flex-col justify-center p-8 lg:p-12">
                 <p className="eyebrow text-brass">Suite {suite.number}</p>
                 <h2 className="mt-3 text-3xl">{suite.name}</h2>
                 <p className="mt-3 text-sm text-muted-foreground">
@@ -59,17 +59,17 @@ function SuitesIndex() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-7 flex flex-wrap gap-3">
+                <div className="mt-7 grid gap-3 sm:flex sm:flex-wrap">
                   <Link
                     to="/book"
-                    className="inline-flex h-11 items-center rounded-sm bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+                    className="inline-flex h-11 items-center justify-center rounded-sm bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
                   >
                     Check availability
                   </Link>
                   <Link
                     to="/suites/$suiteId"
                     params={{ suiteId: suite.id }}
-                    className="inline-flex h-11 items-center gap-2 rounded-sm border border-input px-6 text-sm transition-colors hover:bg-accent"
+                    className="inline-flex h-11 items-center justify-center gap-2 rounded-sm border border-input px-6 text-sm transition-colors hover:bg-accent"
                   >
                     Suite details <ArrowRight className="size-4" aria-hidden="true" />
                   </Link>
