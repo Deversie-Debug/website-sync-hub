@@ -40,7 +40,7 @@ function Index() {
           className="absolute inset-0 size-full object-cover"
         />
         <div className="relative mx-auto grid min-h-[calc(100dvh-4.75rem)] w-full max-w-7xl content-center px-6 py-12 lg:px-8 lg:py-16">
-          <div className="max-w-3xl rounded-sm border border-border/70 bg-image-copy p-6 text-image-copy-foreground backdrop-blur-sm sm:p-8 lg:p-10">
+          <div className="image-copy-readable max-w-3xl">
             <p className="eyebrow text-brass">Pessada · Kefalonia · Ionian Islands</p>
             <h1 className="mt-5 text-balance text-4xl sm:text-5xl lg:text-6xl">
               Five brand-new suites above the Ionian sea
@@ -58,7 +58,7 @@ function Index() {
               </Link>
               <Link
                 to="/suites"
-                className="inline-flex h-12 items-center justify-center gap-2 rounded-sm border border-input bg-background/70 px-6 text-sm font-medium text-foreground transition-colors hover:bg-background"
+                className="inline-flex h-12 items-center justify-center gap-2 rounded-sm border border-primary-foreground/70 bg-background/15 px-6 text-sm font-medium text-primary-foreground backdrop-blur-sm transition-colors hover:bg-background/25"
               >
                 View the suites <ArrowRight className="size-4" aria-hidden="true" />
               </Link>
