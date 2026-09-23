@@ -133,11 +133,6 @@
 }
 
 @utility header-copy-readable {
-  text-shadow:
-    -1px -1px 1px var(--header-text-shadow),
-    1px -1px 1px var(--header-text-shadow),
-    -1px 1px 1px var(--header-text-shadow),
-    1px 1px 1px var(--header-text-shadow),
-    0 2px 8px var(--header-text-shadow);
+  text-shadow: 0 1px 3px var(--header-text-shadow), 0 2px 9px var(--header-text-shadow);
 }
 
