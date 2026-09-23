@@ -43,7 +43,7 @@ export function Header() {
       const delta = y - last;
       last = y;
       if (y < 120) {
-        if (current === "top" || delta < 0 || y < 20) set(current === "stuck" && y > 0 ? "stuck" : "top");
+        if (current !== "top" && delta < -4) set("stuck");
       } else if (delta > 4) {
         set("hidden");
       } else if (delta < -4) {
