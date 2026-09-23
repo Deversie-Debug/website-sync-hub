@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { PageHeader } from "@/components/site/PageHeader";
-import { galleryImages, galleryCategories, pageImages } from "@/lib/property";
+import { PageHeader } from "@/components/shared/PageHeader";
+import { galleryImages, galleryCategories, pageImages } from "@/content/property";
 
 const title = "Gallery — Ionian Treasure Suites, Pessada";
 const description =

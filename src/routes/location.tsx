@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ExternalLink, ArrowRight } from "lucide-react";
-import { PageHeader } from "@/components/site/PageHeader";
-import { property, nearby, partners, pageImages } from "@/lib/property";
+import { PageHeader } from "@/components/shared/PageHeader";
+import { property, nearby, partners, pageImages } from "@/content/property";
 
 const title = "Location & Beaches — Pessada, Kefalonia";
 const description =

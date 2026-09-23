@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
-import { PageHeader } from "@/components/site/PageHeader";
-import { experiences, experienceCategories, seasons, pageImages } from "@/lib/property";
+import { PageHeader } from "@/components/shared/PageHeader";
+import { experiences, experienceCategories, seasons, pageImages } from "@/content/property";
 
 const title = "Island Guide — Kefalonia from Pessada";
 const description =

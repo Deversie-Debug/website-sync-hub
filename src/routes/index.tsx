@@ -10,7 +10,7 @@ import {
   nearby,
   galleryImages,
   partners,
-} from "@/lib/property";
+} from "@/content/property";
 
 const title = "Ionian Treasure Suites — Pool Suites in Pessada, Kefalonia";
 const description =

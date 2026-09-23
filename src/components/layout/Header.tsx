@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { property } from "@/lib/property";
+import { property } from "@/content/property";
 
 const nav = [
   { to: "/", label: "Home" },

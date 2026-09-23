@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PageHeader } from "@/components/site/PageHeader";
-import { BookingForm } from "@/components/site/BookingForm";
-import { property, pageImages } from "@/lib/property";
+import { PageHeader } from "@/components/shared/PageHeader";
+import { BookingForm } from "@/components/booking/BookingForm";
+import { property, pageImages } from "@/content/property";
 
 const title = "Book Direct — Ionian Treasure Suites, Pessada";
 const description =
