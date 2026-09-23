@@ -28,7 +28,7 @@ export function Header() {
 
   return (
     <>
-      <header className={`fixed inset-x-0 top-0 bg-transparent ${open ? "z-50" : isHome ? "z-0" : "z-40"}`}>
+      <header className={`fixed inset-x-0 top-0 bg-transparent ${open ? "z-50" : isHome ? "z-[5]" : "z-40"}`}>
         <div
           className={`mx-auto grid h-20 w-full max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-6 lg:px-8 ${tone} image-copy-readable`}
         >
