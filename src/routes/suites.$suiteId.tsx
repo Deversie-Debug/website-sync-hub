@@ -58,11 +58,11 @@ function SuiteDetail() {
 
   return (
     <>
-      <section className="mx-auto w-full max-w-7xl px-6 pt-12 lg:px-8">
+      <section className="mx-auto w-full max-w-7xl px-6 pt-16 lg:px-8">
         <Link to="/suites" className="text-sm text-muted-foreground hover:text-foreground">
           ← All suites
         </Link>
-        <p className="eyebrow mt-8 text-brass">Suite {suite.number}</p>
+        <p className="eyebrow mt-10 text-brass">Suite {suite.number}</p>
         <h1 className="mt-4 text-4xl sm:text-5xl">{suite.name}</h1>
         <p className="mt-4 text-sm text-muted-foreground">
           {suite.size} m² · Sleeps {suite.sleeps} · {suite.view}
@@ -91,11 +91,11 @@ function SuiteDetail() {
         </ul>
       </section>
 
-      <section className="mx-auto grid w-full max-w-7xl gap-10 px-6 py-16 lg:grid-cols-3 lg:px-8 lg:py-20">
+      <section className="mx-auto grid w-full max-w-7xl gap-10 px-6 py-20 lg:grid-cols-3 lg:px-8 lg:py-28">
         <div className="lg:col-span-2">
           <p className="eyebrow hairline text-brass">About this suite</p>
           <p className="mt-6 text-base leading-relaxed text-muted-foreground">{suite.blurb}</p>
-          <ul className="mt-6 flex flex-wrap gap-2">
+          <ul className="mt-6 flex flex-wrap gap-3">
             {suite.highlights.map((h) => (
               <li key={h} className="rounded-sm bg-accent px-3 py-1.5 text-xs text-accent-foreground">
                 {h}
@@ -103,9 +103,9 @@ function SuiteDetail() {
             ))}
           </ul>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2">
+          <div className="mt-12 grid gap-8 sm:grid-cols-2">
             {Object.entries(amenityGroups).map(([group, items]) => (
-              <div key={group} className="rounded-sm border border-border bg-card p-6">
+              <div key={group} className="rounded-sm border border-border bg-card p-8">
                 <h2 className="text-xl">{group}</h2>
                 <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
                   {items.map((item) => (
@@ -117,7 +117,7 @@ function SuiteDetail() {
           </div>
         </div>
 
-        <aside className="h-fit rounded-sm border border-border bg-card p-6 lg:sticky lg:top-28">
+        <aside className="h-fit rounded-sm border border-border bg-card p-8 lg:sticky lg:top-28">
           <h2 className="text-2xl">Rates on request</h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
             Send us your dates and we reply personally, usually within 24 hours, with availability

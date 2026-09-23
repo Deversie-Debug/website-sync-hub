@@ -37,8 +37,8 @@ function ExperiencesPage() {
         imageAlt="The pool terrace and the hills above Pessada"
       />
 
-      <section className="mx-auto w-full max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
-        <div role="group" aria-label="Filter the guide" className="flex flex-wrap gap-2">
+      <section className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
+        <div role="group" aria-label="Filter the guide" className="flex flex-wrap gap-3">
           {filters.map((f) => (
             <button
               key={f}
@@ -56,9 +56,9 @@ function ExperiencesPage() {
           ))}
         </div>
 
-        <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {shown.map((e) => (
-            <li key={e.title} className="flex flex-col rounded-sm border border-border bg-card p-6">
+            <li key={e.title} className="flex flex-col rounded-sm border border-border bg-card p-8">
               <div className="flex items-baseline justify-between gap-4">
                 <p className="eyebrow text-brass">{e.category}</p>
                 <span className="text-xs text-muted-foreground">{e.distance}</span>
@@ -70,13 +70,13 @@ function ExperiencesPage() {
         </ul>
       </section>
 
-      <section className="bg-secondary/60 py-16 lg:py-20">
+      <section className="bg-secondary/60 py-20 lg:py-28">
         <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
           <p className="eyebrow hairline text-brass">When to come</p>
           <h2 className="mt-6 text-balance text-3xl sm:text-4xl lg:text-5xl">Choosing your month</h2>
-          <ul className="mt-10 grid gap-6 lg:grid-cols-3">
+          <ul className="mt-10 grid gap-8 lg:grid-cols-3">
             {seasons.map((s) => (
-              <li key={s.period} className="rounded-sm border border-border bg-card p-6">
+              <li key={s.period} className="rounded-sm border border-border bg-card p-8">
                 <h3 className="text-2xl">{s.period}</h3>
                 <p className="eyebrow mt-2 text-muted-foreground">{s.weather}</p>
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{s.note}</p>

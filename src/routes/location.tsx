@@ -32,19 +32,19 @@ function LocationPage() {
         imageAlt="Turquoise water of the swimming pool at midday"
       />
 
-      <section className="mx-auto grid w-full max-w-7xl gap-10 px-6 py-16 lg:grid-cols-3 lg:px-8 lg:py-20">
+      <section className="mx-auto grid w-full max-w-7xl gap-10 px-6 py-20 lg:grid-cols-3 lg:px-8 lg:py-28">
         <div className="lg:col-span-2">
           <p className="eyebrow hairline text-brass">Getting here</p>
           <h2 className="mt-6 text-3xl sm:text-4xl">Arriving on the island</h2>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2">
-            <div className="rounded-sm border border-border bg-card p-6">
+          <div className="mt-8 grid gap-8 sm:grid-cols-2">
+            <div className="rounded-sm border border-border bg-card p-8">
               <h3 className="text-xl">By air</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 Kefalonia International Airport (EFL) is a 20-minute drive away. We can arrange a
                 private transfer, or have a hire car waiting for you at arrivals.
               </p>
             </div>
-            <div className="rounded-sm border border-border bg-card p-6">
+            <div className="rounded-sm border border-border bg-card p-8">
               <h3 className="text-xl">By sea</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 Pessada's own small port runs seasonal crossings to Zakynthos, 1.2 km from the
@@ -54,7 +54,7 @@ function LocationPage() {
           </div>
         </div>
 
-        <aside className="h-fit rounded-sm border border-border bg-card p-6">
+        <aside className="h-fit rounded-sm border border-border bg-card p-8">
           <h2 className="text-2xl">{property.name}</h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{property.address}</p>
           <a
@@ -68,12 +68,12 @@ function LocationPage() {
         </aside>
       </section>
 
-      <section className="bg-secondary/60 py-16 lg:py-20">
+      <section className="bg-secondary/60 py-20 lg:py-28">
         <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
           <p className="eyebrow hairline text-brass">What's nearby</p>
-          <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {nearby.map((n) => (
-              <li key={n.name} className="rounded-sm border border-border bg-card p-6">
+              <li key={n.name} className="rounded-sm border border-border bg-card p-8">
                 <div className="flex items-baseline justify-between gap-4">
                   <h2 className="text-xl">{n.name}</h2>
                   <span className="text-xs text-brass">{n.distance}</span>
@@ -85,12 +85,12 @@ function LocationPage() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
+      <section className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
         <p className="eyebrow hairline text-brass">Practical help</p>
         <h2 className="mt-6 text-3xl sm:text-4xl">Cars, transfers and our sister property</h2>
-        <ul className="mt-8 grid gap-6 md:grid-cols-2">
+        <ul className="mt-8 grid gap-8 md:grid-cols-2">
           {partners.map((p) => (
-            <li key={p.name} className="rounded-sm border border-border bg-card p-6">
+            <li key={p.name} className="rounded-sm border border-border bg-card p-8">
               <h3 className="text-xl">{p.name}</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.description}</p>
               <a

@@ -13,7 +13,7 @@ const links = [
 export function Footer() {
   return (
     <footer className="border-t border-border bg-secondary/50">
-      <div className="mx-auto grid w-full max-w-7xl gap-10 px-6 py-14 lg:grid-cols-3 lg:px-8">
+      <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-20 lg:grid-cols-3 lg:px-8">
         <div>
           <p className="eyebrow text-brass">Ionian Treasure Suites</p>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
@@ -55,7 +55,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-border">
-        <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-4 px-6 py-6 text-xs text-muted-foreground lg:px-8">
+        <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-4 px-6 py-8 text-xs text-muted-foreground lg:px-8">
           <p>© {new Date().getFullYear()} {property.name}. All rights reserved.</p>
           <div className="flex flex-wrap gap-5">
             {partners.map((p) => (

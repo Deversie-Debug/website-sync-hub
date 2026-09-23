@@ -32,8 +32,8 @@ function SuitesIndex() {
         imageAlt="Suite terrace with a view over the Ionian sea"
       />
 
-      <section className="mx-auto w-full max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
-        <ul className="grid gap-10">
+      <section className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
+        <ul className="grid gap-12">
           {suites.map((suite, i) => (
             <li
               key={suite.id}
@@ -45,14 +45,14 @@ function SuitesIndex() {
                 loading={i === 0 ? "eager" : "lazy"}
                 className="h-full min-h-72 w-full object-cover"
               />
-              <div className="p-6 lg:py-10 lg:pr-10">
+              <div className="p-8 lg:p-12">
                 <p className="eyebrow text-brass">Suite {suite.number}</p>
                 <h2 className="mt-3 text-3xl">{suite.name}</h2>
                 <p className="mt-3 text-sm text-muted-foreground">
                   Size: {suite.size} m² · Sleeps: {suite.sleeps} · View: {suite.view}
                 </p>
                 <p className="mt-5 text-sm leading-relaxed text-muted-foreground">{suite.blurb}</p>
-                <ul className="mt-5 flex flex-wrap gap-2">
+                <ul className="mt-5 flex flex-wrap gap-3">
                   {suite.highlights.map((h) => (
                     <li key={h} className="rounded-sm bg-accent px-3 py-1.5 text-xs text-accent-foreground">
                       {h}
@@ -80,13 +80,13 @@ function SuitesIndex() {
         </ul>
       </section>
 
-      <section className="bg-secondary/60 py-16 lg:py-20">
+      <section className="bg-secondary/60 py-20 lg:py-28">
         <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
           <p className="eyebrow hairline text-brass">In every suite</p>
           <h2 className="mt-6 text-3xl sm:text-4xl">Standard amenities</h2>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {Object.entries(amenityGroups).map(([group, items]) => (
-              <div key={group} className="rounded-sm border border-border bg-card p-6">
+              <div key={group} className="rounded-sm border border-border bg-card p-8">
                 <h3 className="text-xl">{group}</h3>
                 <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
                   {items.map((item) => (
