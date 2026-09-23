@@ -155,19 +155,17 @@ function Index() {
       </section>
 
       <section className="bg-primary py-20 text-primary-foreground lg:py-28">
-        <div className="mx-auto grid w-full max-w-7xl gap-8 px-6 md:grid-cols-[minmax(0,1fr)_auto] md:items-end lg:px-8">
-          <div className="max-w-xl">
-            <p className="eyebrow text-brass">Book direct</p>
-            <h2 className="mt-5 text-3xl sm:text-4xl">Our best rate is always the direct one</h2>
-            <p className="mt-4 text-sm leading-relaxed text-primary-foreground/80">
-              Tell us your dates and we reply personally, usually within 24 hours, with availability
-              and a quote. No booking fees, no payment taken online.
-            </p>
-          </div>
-          <div className="grid gap-4 sm:flex sm:flex-wrap sm:items-center sm:gap-8">
+        <div className="mx-auto w-full max-w-2xl px-6 text-center lg:px-8">
+          <p className="eyebrow tracking-[0.4em] text-brass">Book direct</p>
+          <h2 className="display-caps mt-8 text-2xl sm:text-3xl">Our best rate is the direct one</h2>
+          <p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-primary-foreground/80">
+            Tell us your dates and we reply personally, usually within 24 hours, with availability
+            and a quote. No booking fees, no payment taken online.
+          </p>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-6">
             <Link
               to="/book"
-              className="inline-flex h-12 items-center rounded-sm bg-primary-foreground px-6 text-sm font-medium text-primary transition-opacity hover:opacity-90"
+              className="inline-flex h-12 items-center rounded-sm bg-primary-foreground px-8 text-[0.7rem] font-medium uppercase tracking-[0.25em] text-primary transition-opacity hover:opacity-90"
             >
               Start a booking
             </Link>
@@ -179,23 +177,24 @@ function Index() {
       </section>
 
       <section className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
-        <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
-          <div className="min-w-0">
-            <p className="eyebrow hairline text-brass">The island</p>
-            <h2 className="mt-6 text-3xl sm:text-4xl lg:text-5xl">
-              Beaches, ferries and Argostoli
-            </h2>
-            <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
-              Pessada sits on Kefalonia's sheltered south coast, with its own small port and easy
-              road access to the whole island.
-            </p>
-          </div>
-          <Link to="/location" className="inline-flex items-center gap-2 text-sm hover:text-brass">
-            Getting here & what's nearby <ArrowRight className="size-4" aria-hidden="true" />
+        <div className="text-center">
+          <p className="eyebrow hairline-center tracking-[0.4em] text-brass">The island</p>
+          <h2 className="display-caps mt-8 text-2xl sm:text-3xl lg:text-4xl">
+            Beaches, ferries and Argostoli
+          </h2>
+          <p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-muted-foreground">
+            Pessada sits on Kefalonia's sheltered south coast, with its own small port and easy
+            road access to the whole island.
+          </p>
+          <Link
+            to="/location"
+            className="mt-6 inline-flex items-center gap-2 border-b border-brass pb-1 text-[0.7rem] uppercase tracking-[0.3em] text-brass"
+          >
+            Getting here <ArrowRight className="size-3.5" aria-hidden="true" />
           </Link>
         </div>
 
-        <ul className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {nearby.map((n) => (
             <li key={n.name} className="rounded-sm border border-border bg-card p-8">
               <div className="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-4">
