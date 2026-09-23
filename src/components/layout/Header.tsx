@@ -25,19 +25,31 @@ export function Header() {
     };
   }, [open]);
 
+  const [animate, setAnimate] = useState(false);
+
   useEffect(() => {
     let last = window.scrollY;
+    let current: "top" | "stuck" | "hidden" = "top";
+    const set = (next: "top" | "stuck" | "hidden") => {
+      if (next === current) return;
+      // Only animate when the light bar is already in play; switching from the
+      // transparent top header straight to hidden should be instant (no flash).
+      setAnimate(current !== "top" && next !== "top");
+      current = next;
+      setMode(next);
+    };
     const onScroll = () => {
       const y = window.scrollY;
       const delta = y - last;
       last = y;
       if (y < 120) {
-        setMode("top");
+        if (current === "top" || delta < 0 || y < 20) set(current === "stuck" && y > 0 ? "stuck" : "top");
       } else if (delta > 4) {
-        setMode("hidden");
+        set("hidden");
       } else if (delta < -4) {
-        setMode("stuck");
+        set("stuck");
       }
+      if (y <= 0) set("top");
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -50,7 +62,7 @@ export function Header() {
   return (
     <>
       <header
-        className={`inset-x-0 top-0 transition-all duration-500 ease-out ${
+        className={`inset-x-0 top-0 ${animate ? "transition-[transform,opacity] duration-400 ease-out" : ""} ${
           atTop
             ? "absolute bg-transparent"
             : `fixed border-b border-border bg-background/95 backdrop-blur-sm ${
