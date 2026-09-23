@@ -77,7 +77,7 @@
   --lightbox-backdrop: oklch(15% 0.012 180 / 0.94);
   --lightbox-control: oklch(99% 0.004 90 / 0.94);
   --lightbox-control-foreground: oklch(25% 0.018 170);
-  --nav: oklch(27% 0.033 190);
+  --nav: oklch(52% 0.068 195);
   --nav-border: oklch(99% 0.004 90 / 0.14);
   --nav-foreground: oklch(97.5% 0.005 90);
 }
