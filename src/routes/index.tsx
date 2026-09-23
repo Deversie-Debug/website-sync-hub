@@ -98,7 +98,7 @@ function Index() {
             {facilities.map((f) => (
               <li
                 key={f}
-                className="rounded-sm border border-border bg-card px-3 py-1.5 text-xs text-muted-foreground"
+                className="rounded-sm border border-input bg-card px-3 py-1.5 text-xs text-muted-foreground"
               >
                 {f}
               </li>
