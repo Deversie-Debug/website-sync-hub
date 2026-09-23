@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
-import { suites, amenityGroups, property } from "@/lib/property";
+import { suites, amenityGroups, property } from "@/content/property";
 
 export const Route = createFileRoute("/suites/$suiteId")({
   loader: ({ params }) => {

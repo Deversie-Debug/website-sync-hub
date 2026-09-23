@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { property, partners } from "@/lib/property";
+import { property, partners } from "@/content/property";
 
 const links = [
   { to: "/suites", label: "The suites" },

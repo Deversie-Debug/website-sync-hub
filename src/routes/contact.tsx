@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ExternalLink } from "lucide-react";
-import { PageHeader } from "@/components/site/PageHeader";
-import { BookingForm } from "@/components/site/BookingForm";
-import { property, faqs, pageImages } from "@/lib/property";
+import { PageHeader } from "@/components/shared/PageHeader";
+import { BookingForm } from "@/components/booking/BookingForm";
+import { property, faqs, pageImages } from "@/content/property";
 
 const title = "Contact & FAQ — Ionian Treasure Suites, Pessada";
 const description =

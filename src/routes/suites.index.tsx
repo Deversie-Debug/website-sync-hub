@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
-import { PageHeader } from "@/components/site/PageHeader";
-import { suites, amenityGroups, pageImages } from "@/lib/property";
+import { PageHeader } from "@/components/shared/PageHeader";
+import { suites, amenityGroups, pageImages } from "@/content/property";
 
 const title = "The Suites — Ionian Treasure Suites, Pessada";
 const description =

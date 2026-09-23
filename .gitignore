@@ -33,3 +33,6 @@ dist-ssr
 
 # Netlify build output
 .netlify/
+
+# Generated TypeScript cache
+*.tsbuildinfo

@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from "react";
-import { property, suites } from "@/lib/property";
+import { property, suites } from "@/content/property";
 
 const requestOptions = [
   "Confirm availability and send rates",
