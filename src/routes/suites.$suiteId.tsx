@@ -83,7 +83,7 @@ function SuiteDetail() {
                   src={src}
                   alt={`${suite.name} photo ${i + 1}`}
                   loading={i === 0 ? "eager" : "lazy"}
-                  className="aspect-16/10 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="aspect-16/10 w-full object-cover transition-transform duration-500 group-hover:scale-[1.01]"
                 />
               </button>
             </li>

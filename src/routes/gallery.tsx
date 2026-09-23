@@ -71,7 +71,7 @@ function GalleryPage() {
                   src={img.src}
                   alt={img.alt}
                   loading="lazy"
-                  className="aspect-4/3 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="aspect-4/3 w-full object-cover transition-transform duration-500 group-hover:scale-[1.01]"
                 />
               </button>
             </li>
