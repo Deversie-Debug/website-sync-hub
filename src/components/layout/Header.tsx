@@ -15,6 +15,7 @@ const nav = [
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [mode, setMode] = useState<"top" | "stuck" | "hidden">("top");
   const isHome = useLocation({ select: (l) => l.pathname === "/" });
 
   useEffect(() => {
@@ -24,13 +25,41 @@ export function Header() {
     };
   }, [open]);
 
-  const tone = "text-primary-foreground";
+  useEffect(() => {
+    let last = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      const delta = y - last;
+      last = y;
+      if (y < 120) {
+        setMode("top");
+      } else if (delta > 4) {
+        setMode("hidden");
+      } else if (delta < -4) {
+        setMode("stuck");
+      }
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const atTop = mode === "top";
+  const tone = atTop ? "text-primary-foreground image-copy-readable" : "text-primary";
 
   return (
     <>
-      <header className={`fixed inset-x-0 top-0 bg-transparent ${open ? "z-50" : isHome ? "z-[5]" : "z-40"}`}>
+      <header
+        className={`inset-x-0 top-0 transition-all duration-500 ease-out ${
+          atTop
+            ? "absolute bg-transparent"
+            : `fixed border-b border-border bg-background/95 backdrop-blur-sm ${
+                mode === "hidden" && !open ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
+              }`
+        } ${open ? "z-50" : atTop && isHome ? "z-[5]" : "z-40"}`}
+      >
         <div
-          className={`mx-auto grid h-20 w-full max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-6 lg:px-8 ${tone} image-copy-readable`}
+          className={`mx-auto grid h-20 w-full max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-6 lg:px-8 ${tone}`}
         >
 
           <button
