@@ -1,5 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
+import { useState } from "react";
+import { ImageLightbox } from "@/components/shared/ImageLightbox";
 import { suites, amenityGroups, property } from "@/content/property";
 
 export const Route = createFileRoute("/suites/$suiteId")({
@@ -48,6 +50,11 @@ function SuiteNotFound() {
 
 function SuiteDetail() {
   const { suite } = Route.useLoaderData();
+  const [activeImage, setActiveImage] = useState<number | null>(null);
+  const lightboxImages = suite.images.map((src, index) => ({
+    src,
+    alt: `${suite.name} photo ${index + 1}`,
+  }));
 
   return (
     <>
@@ -66,12 +73,19 @@ function SuiteDetail() {
         <ul className="grid gap-4 sm:grid-cols-2">
           {suite.images.map((src, i) => (
             <li key={src} className={i === 0 ? "sm:col-span-2" : undefined}>
-              <img
-                src={src}
-                alt={`${suite.name} photo ${i + 1}`}
-                loading={i === 0 ? "eager" : "lazy"}
-                className="aspect-16/10 w-full rounded-sm object-cover"
-              />
+              <button
+                type="button"
+                aria-label={`Open ${suite.name} photo ${i + 1}`}
+                onClick={() => setActiveImage(i)}
+                className="group block w-full cursor-zoom-in overflow-hidden rounded-sm text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+              >
+                <img
+                  src={src}
+                  alt={`${suite.name} photo ${i + 1}`}
+                  loading={i === 0 ? "eager" : "lazy"}
+                  className="aspect-16/10 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </button>
             </li>
           ))}
         </ul>
@@ -126,6 +140,15 @@ function SuiteDetail() {
           </a>
         </aside>
       </section>
+
+      {activeImage !== null && (
+        <ImageLightbox
+          images={lightboxImages}
+          activeIndex={activeImage}
+          onChange={setActiveImage}
+          onClose={() => setActiveImage(null)}
+        />
+      )}
     </>
   );
 }

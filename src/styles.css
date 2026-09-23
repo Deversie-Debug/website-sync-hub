@@ -39,6 +39,9 @@
   --color-sea-foreground: var(--sea-foreground);
   --color-brass: var(--brass);
   --color-brass-foreground: var(--brass-foreground);
+  --color-lightbox-backdrop: var(--lightbox-backdrop);
+  --color-lightbox-control: var(--lightbox-control);
+  --color-lightbox-control-foreground: var(--lightbox-control-foreground);
 }
 
 :root {
@@ -68,6 +71,9 @@
   --sea-foreground: oklch(26% 0.03 200);
   --brass: oklch(60% 0.1 78);
   --brass-foreground: oklch(24% 0.02 80);
+  --lightbox-backdrop: oklch(15% 0.012 180 / 0.94);
+  --lightbox-control: oklch(99% 0.004 90 / 0.94);
+  --lightbox-control-foreground: oklch(25% 0.018 170);
 }
 
 @layer base {

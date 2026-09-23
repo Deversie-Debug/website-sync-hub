@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import { ImageLightbox } from "@/components/shared/ImageLightbox";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { galleryImages, galleryCategories, pageImages } from "@/content/property";
 
@@ -23,8 +24,10 @@ export const Route = createFileRoute("/gallery")({
 
 function GalleryPage() {
   const [filter, setFilter] = useState("All");
+  const [activeImage, setActiveImage] = useState<number | null>(null);
   const filters = ["All", ...galleryCategories];
   const shown = filter === "All" ? galleryImages : galleryImages.filter((i) => i.category === filter);
+  const lightboxImages = shown.map(({ src, alt }) => ({ src, alt }));
 
   return (
     <>
@@ -56,18 +59,34 @@ function GalleryPage() {
         </div>
 
         <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {shown.map((img) => (
+          {shown.map((img, index) => (
             <li key={img.src} className="overflow-hidden rounded-sm border border-border bg-card">
-              <img
-                src={img.src}
-                alt={img.alt}
-                loading="lazy"
-                className="aspect-4/3 w-full object-cover transition-transform duration-500 hover:scale-105"
-              />
+              <button
+                type="button"
+                aria-label={`Open photo: ${img.alt}`}
+                onClick={() => setActiveImage(index)}
+                className="group block w-full cursor-zoom-in overflow-hidden text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  className="aspect-4/3 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </button>
             </li>
           ))}
         </ul>
       </section>
+
+      {activeImage !== null && (
+        <ImageLightbox
+          images={lightboxImages}
+          activeIndex={activeImage}
+          onChange={setActiveImage}
+          onClose={() => setActiveImage(null)}
+        />
+      )}
     </>
   );
 }
