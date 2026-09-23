@@ -32,7 +32,7 @@ function LocationPage() {
         imageAlt="Turquoise water of the swimming pool at midday"
       />
 
-      <section className="mx-auto grid w-full max-w-7xl gap-10 px-5 py-16 lg:grid-cols-3 lg:px-8 lg:py-20">
+      <section className="mx-auto grid w-full max-w-7xl gap-10 px-6 py-16 lg:grid-cols-3 lg:px-8 lg:py-20">
         <div className="lg:col-span-2">
           <p className="eyebrow hairline text-brass">Getting here</p>
           <h2 className="mt-6 text-3xl sm:text-4xl">Arriving on the island</h2>
@@ -69,7 +69,7 @@ function LocationPage() {
       </section>
 
       <section className="bg-secondary/60 py-16 lg:py-20">
-        <div className="mx-auto w-full max-w-7xl px-5 lg:px-8">
+        <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
           <p className="eyebrow hairline text-brass">What's nearby</p>
           <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {nearby.map((n) => (
@@ -85,7 +85,7 @@ function LocationPage() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
+      <section className="mx-auto w-full max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
         <p className="eyebrow hairline text-brass">Practical help</p>
         <h2 className="mt-6 text-3xl sm:text-4xl">Cars, transfers and our sister property</h2>
         <ul className="mt-8 grid gap-6 md:grid-cols-2">

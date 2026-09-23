@@ -50,7 +50,7 @@ function BookPage() {
         imageAlt="Loungers and shade sails beside the pool"
       />
 
-      <section className="mx-auto w-full max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
+      <section className="mx-auto w-full max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
         <ul className="grid gap-6 lg:grid-cols-3">
           {steps.map((s) => (
             <li key={s.step} className="rounded-sm border border-border bg-card p-6">
@@ -105,7 +105,7 @@ function BookPage() {
               href={property.reservationUrl}
               target="_blank"
               rel="noreferrer"
-              className="mt-6 inline-flex h-11 w-full items-center justify-center rounded-sm border border-input px-5 text-sm transition-colors hover:bg-accent"
+              className="mt-6 inline-flex h-11 w-full items-center justify-center rounded-sm border border-input px-6 text-sm transition-colors hover:bg-accent"
             >
               Secure reservation system
             </a>

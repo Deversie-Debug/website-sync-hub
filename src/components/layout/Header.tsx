@@ -17,7 +17,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-6 px-5 py-4 lg:px-8">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-6 px-6 py-4 lg:px-8">
         <Link to="/" className="flex flex-col leading-tight" onClick={() => setOpen(false)}>
           <span className="eyebrow text-brass">Ionian Treasure</span>
           <span className="font-display text-lg">Suites · Pessada, Kefalonia</span>
@@ -43,7 +43,7 @@ export function Header() {
           </a>
           <Link
             to="/book"
-            className="inline-flex h-10 items-center rounded-sm bg-primary px-5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="inline-flex h-10 items-center rounded-sm bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Book direct
           </Link>
@@ -61,7 +61,7 @@ export function Header() {
 
       {open && (
         <div className="border-t border-border bg-background lg:hidden">
-          <nav className="mx-auto flex w-full max-w-7xl flex-col gap-1 px-5 py-4">
+          <nav className="mx-auto flex w-full max-w-7xl flex-col gap-1 px-6 py-4">
             {nav.map((item) => (
               <Link
                 key={item.to}
@@ -78,7 +78,7 @@ export function Header() {
             <Link
               to="/book"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex h-11 items-center justify-center rounded-sm bg-primary px-5 text-sm font-medium text-primary-foreground"
+              className="mt-2 inline-flex h-11 items-center justify-center rounded-sm bg-primary px-6 text-sm font-medium text-primary-foreground"
             >
               Book direct
             </Link>

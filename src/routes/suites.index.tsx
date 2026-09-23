@@ -32,7 +32,7 @@ function SuitesIndex() {
         imageAlt="Suite terrace with a view over the Ionian sea"
       />
 
-      <section className="mx-auto w-full max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
+      <section className="mx-auto w-full max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
         <ul className="grid gap-10">
           {suites.map((suite, i) => (
             <li
@@ -62,14 +62,14 @@ function SuitesIndex() {
                 <div className="mt-7 flex flex-wrap gap-3">
                   <Link
                     to="/book"
-                    className="inline-flex h-11 items-center rounded-sm bg-primary px-5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+                    className="inline-flex h-11 items-center rounded-sm bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
                   >
                     Check availability
                   </Link>
                   <Link
                     to="/suites/$suiteId"
                     params={{ suiteId: suite.id }}
-                    className="inline-flex h-11 items-center gap-2 rounded-sm border border-input px-5 text-sm transition-colors hover:bg-accent"
+                    className="inline-flex h-11 items-center gap-2 rounded-sm border border-input px-6 text-sm transition-colors hover:bg-accent"
                   >
                     Suite details <ArrowRight className="size-4" aria-hidden="true" />
                   </Link>
@@ -81,7 +81,7 @@ function SuitesIndex() {
       </section>
 
       <section className="bg-secondary/60 py-16 lg:py-20">
-        <div className="mx-auto w-full max-w-7xl px-5 lg:px-8">
+        <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
           <p className="eyebrow hairline text-brass">In every suite</p>
           <h2 className="mt-6 text-3xl sm:text-4xl">Standard amenities</h2>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

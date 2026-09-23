@@ -33,7 +33,7 @@ function ContactPage() {
         imageAlt="Reception lounge of Ionian Treasure Suites"
       />
 
-      <section className="mx-auto grid w-full max-w-7xl gap-10 px-5 py-16 lg:grid-cols-3 lg:px-8 lg:py-20">
+      <section className="mx-auto grid w-full max-w-7xl gap-10 px-6 py-16 lg:grid-cols-3 lg:px-8 lg:py-20">
         <aside className="h-fit rounded-sm border border-border bg-card p-6">
           <p className="eyebrow text-brass">Reach us</p>
           <dl className="mt-5 space-y-4 text-sm">
@@ -79,7 +79,7 @@ function ContactPage() {
           </p>
           <Link
             to="/book"
-            className="mt-4 inline-flex h-11 w-full items-center justify-center rounded-sm bg-primary px-5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="mt-4 inline-flex h-11 w-full items-center justify-center rounded-sm bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Booking page
           </Link>
@@ -87,7 +87,7 @@ function ContactPage() {
             href={property.reservationUrl}
             target="_blank"
             rel="noreferrer"
-            className="mt-3 inline-flex h-11 w-full items-center justify-center rounded-sm border border-input px-5 text-sm transition-colors hover:bg-accent"
+            className="mt-3 inline-flex h-11 w-full items-center justify-center rounded-sm border border-input px-6 text-sm transition-colors hover:bg-accent"
           >
             Secure reservation system
           </a>
@@ -106,7 +106,7 @@ function ContactPage() {
       </section>
 
       <section className="bg-secondary/60 py-16 lg:py-20">
-        <div className="mx-auto w-full max-w-4xl px-5 lg:px-8">
+        <div className="mx-auto w-full max-w-4xl px-6 lg:px-8">
           <p className="eyebrow hairline text-brass">Questions</p>
           <h2 className="mt-6 text-3xl sm:text-4xl">Frequently asked</h2>
           <ul className="mt-10 space-y-4">

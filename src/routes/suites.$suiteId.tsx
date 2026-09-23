@@ -33,14 +33,14 @@ export const Route = createFileRoute("/suites/$suiteId")({
 
 function SuiteNotFound() {
   return (
-    <div className="mx-auto w-full max-w-3xl px-5 py-24 text-center">
+    <div className="mx-auto w-full max-w-3xl px-6 py-24 text-center">
       <h1 className="text-3xl">We couldn't find that suite</h1>
       <p className="mt-4 text-sm text-muted-foreground">
         Have a look at all five suites instead.
       </p>
       <Link
         to="/suites"
-        className="mt-8 inline-flex h-11 items-center rounded-sm bg-primary px-5 text-sm text-primary-foreground"
+        className="mt-8 inline-flex h-11 items-center rounded-sm bg-primary px-6 text-sm text-primary-foreground"
       >
         View the suites
       </Link>
@@ -58,7 +58,7 @@ function SuiteDetail() {
 
   return (
     <>
-      <section className="mx-auto w-full max-w-7xl px-5 pt-12 lg:px-8">
+      <section className="mx-auto w-full max-w-7xl px-6 pt-12 lg:px-8">
         <Link to="/suites" className="text-sm text-muted-foreground hover:text-foreground">
           ← All suites
         </Link>
@@ -69,7 +69,7 @@ function SuiteDetail() {
         </p>
       </section>
 
-      <section className="mx-auto mt-10 w-full max-w-7xl px-5 lg:px-8">
+      <section className="mx-auto mt-10 w-full max-w-7xl px-6 lg:px-8">
         <ul className="grid gap-4 sm:grid-cols-2">
           {suite.images.map((src, i) => (
             <li key={src} className={i === 0 ? "sm:col-span-2" : undefined}>
@@ -91,7 +91,7 @@ function SuiteDetail() {
         </ul>
       </section>
 
-      <section className="mx-auto grid w-full max-w-7xl gap-10 px-5 py-16 lg:grid-cols-3 lg:px-8 lg:py-20">
+      <section className="mx-auto grid w-full max-w-7xl gap-10 px-6 py-16 lg:grid-cols-3 lg:px-8 lg:py-20">
         <div className="lg:col-span-2">
           <p className="eyebrow hairline text-brass">About this suite</p>
           <p className="mt-6 text-base leading-relaxed text-muted-foreground">{suite.blurb}</p>
@@ -125,7 +125,7 @@ function SuiteDetail() {
           </p>
           <Link
             to="/book"
-            className="mt-6 inline-flex h-12 w-full items-center justify-center gap-2 rounded-sm bg-primary px-5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="mt-6 inline-flex h-12 w-full items-center justify-center gap-2 rounded-sm bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Check availability <ArrowRight className="size-4" aria-hidden="true" />
           </Link>

@@ -39,7 +39,7 @@ function Index() {
           alt="Sunbeds and parasols along the swimming pool"
           className="absolute inset-0 size-full object-cover"
         />
-        <div className="relative mx-auto w-full max-w-7xl px-5 py-28 lg:px-8 lg:py-40">
+        <div className="relative mx-auto w-full max-w-7xl px-6 py-28 lg:px-8 lg:py-40">
           <p className="eyebrow text-brass">Pessada · Kefalonia · Ionian Islands</p>
           <h1 className="mt-6 max-w-3xl text-balance text-4xl text-primary-foreground sm:text-5xl lg:text-6xl">
             Five brand-new suites above the Ionian sea
@@ -65,7 +65,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-5 py-16 lg:px-8 lg:py-24">
+      <section className="mx-auto w-full max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
         <p className="eyebrow hairline text-brass">Overview</p>
         <h2 className="mt-6 max-w-2xl text-balance text-3xl sm:text-4xl lg:text-5xl">
           A privileged corner of Kefalonia
@@ -79,11 +79,11 @@ function Index() {
         </div>
       </section>
 
-      <section className="bg-secondary/60 py-16 lg:py-24">
-        <div className="mx-auto w-full max-w-7xl px-5 lg:px-8">
+      <section className="bg-secondary/60 py-20 lg:py-28">
+        <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
           <p className="eyebrow hairline text-brass">What's included</p>
           <h2 className="mt-6 text-3xl sm:text-4xl lg:text-5xl">Everything, already thought of</h2>
-          <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {included.map((item) => (
               <li key={item.title} className="rounded-sm border border-border bg-card p-6">
                 <h3 className="text-xl">{item.title}</h3>
@@ -106,7 +106,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-5 py-16 lg:px-8 lg:py-24">
+      <section className="mx-auto w-full max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
             <p className="eyebrow hairline text-brass">Accommodation</p>
@@ -145,8 +145,8 @@ function Index() {
         </ul>
       </section>
 
-      <section className="bg-primary py-16 text-primary-foreground lg:py-20">
-        <div className="mx-auto flex w-full max-w-7xl flex-wrap items-end justify-between gap-8 px-5 lg:px-8">
+      <section className="bg-primary py-20 text-primary-foreground lg:py-28">
+        <div className="mx-auto flex w-full max-w-7xl flex-wrap items-end justify-between gap-8 px-6 lg:px-8">
           <div className="max-w-xl">
             <p className="eyebrow text-brass">Book direct</p>
             <h2 className="mt-5 text-3xl sm:text-4xl">Our best rate is always the direct one</h2>
@@ -169,7 +169,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-5 py-16 lg:px-8 lg:py-24">
+      <section className="mx-auto w-full max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
             <p className="eyebrow hairline text-brass">The island</p>
@@ -186,7 +186,7 @@ function Index() {
           </Link>
         </div>
 
-        <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {nearby.map((n) => (
             <li key={n.name} className="rounded-sm border border-border bg-card p-6">
               <div className="flex items-baseline justify-between gap-4">
@@ -199,8 +199,8 @@ function Index() {
         </ul>
       </section>
 
-      <section className="bg-secondary/60 py-16 lg:py-24">
-        <div className="mx-auto w-full max-w-7xl px-5 lg:px-8">
+      <section className="bg-secondary/60 py-20 lg:py-28">
+        <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div>
               <p className="eyebrow hairline text-brass">Gallery</p>
@@ -225,9 +225,9 @@ function Index() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
+      <section className="mx-auto w-full max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
         <p className="eyebrow hairline text-brass">Also from us</p>
-        <ul className="mt-8 grid gap-6 md:grid-cols-2">
+        <ul className="mt-10 grid gap-8 md:grid-cols-2">
           {partners.map((p) => (
             <li key={p.name} className="rounded-sm border border-border bg-card p-6">
               <h3 className="text-xl">{p.name}</h3>

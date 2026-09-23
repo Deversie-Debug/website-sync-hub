@@ -39,7 +39,7 @@ function GalleryPage() {
         imageAlt="Pool and suite facades in warm afternoon light"
       />
 
-      <section className="mx-auto w-full max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
+      <section className="mx-auto w-full max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
         <div role="group" aria-label="Filter the gallery" className="flex flex-wrap gap-2">
           {filters.map((f) => (
             <button

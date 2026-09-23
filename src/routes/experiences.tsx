@@ -37,7 +37,7 @@ function ExperiencesPage() {
         imageAlt="The pool terrace and the hills above Pessada"
       />
 
-      <section className="mx-auto w-full max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
+      <section className="mx-auto w-full max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
         <div role="group" aria-label="Filter the guide" className="flex flex-wrap gap-2">
           {filters.map((f) => (
             <button
@@ -71,7 +71,7 @@ function ExperiencesPage() {
       </section>
 
       <section className="bg-secondary/60 py-16 lg:py-20">
-        <div className="mx-auto w-full max-w-7xl px-5 lg:px-8">
+        <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
           <p className="eyebrow hairline text-brass">When to come</p>
           <h2 className="mt-6 text-balance text-3xl sm:text-4xl lg:text-5xl">Choosing your month</h2>
           <ul className="mt-10 grid gap-6 lg:grid-cols-3">
