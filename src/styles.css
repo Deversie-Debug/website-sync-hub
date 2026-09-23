@@ -131,7 +131,4 @@
   text-shadow: 0 1px 3px oklch(18% 0.02 180 / 0.9), 0 2px 12px oklch(18% 0.02 180 / 0.65);
 }
 
-@utility header-copy-readable {
-  text-shadow: 0 1px 3px var(--header-text-shadow), 0 2px 9px var(--header-text-shadow);
-}
 
