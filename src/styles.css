@@ -43,31 +43,32 @@
 
 :root {
   --radius: 0.25rem;
-  --background: oklch(98.5% 0.008 90);
-  --foreground: oklch(24% 0.021 165);
+  --background: oklch(99.2% 0.005 90);
+  --foreground: oklch(32% 0.019 165);
   --card: oklch(100% 0 0);
-  --card-foreground: oklch(24% 0.021 165);
+  --card-foreground: oklch(32% 0.019 165);
   --popover: oklch(100% 0 0);
-  --popover-foreground: oklch(24% 0.021 165);
-  --primary: oklch(42% 0.068 195);
-  --primary-foreground: oklch(98.5% 0.008 90);
-  --secondary: oklch(94.5% 0.017 88);
-  --secondary-foreground: oklch(30% 0.024 170);
-  --muted: oklch(95.5% 0.013 88);
-  --muted-foreground: oklch(50% 0.018 160);
-  --accent: oklch(93% 0.028 87);
-  --accent-foreground: oklch(30% 0.024 170);
-  --destructive: oklch(55% 0.19 27);
-  --destructive-foreground: oklch(98.5% 0.008 90);
-  --border: oklch(90% 0.014 88);
-  --input: oklch(88% 0.016 88);
-  --ring: oklch(42% 0.068 195);
-  --sand: oklch(90% 0.032 84);
-  --sand-foreground: oklch(28% 0.024 170);
-  --sea: oklch(62% 0.086 205);
-  --sea-foreground: oklch(15% 0.02 200);
-  --brass: oklch(66% 0.098 78);
-  --brass-foreground: oklch(20% 0.02 80);
+  --popover-foreground: oklch(32% 0.019 165);
+  --primary: oklch(52% 0.068 195);
+  --primary-foreground: oklch(99% 0.004 90);
+  --secondary: oklch(96.5% 0.011 88);
+  --secondary-foreground: oklch(36% 0.02 170);
+  --muted: oklch(96.8% 0.009 88);
+  --muted-foreground: oklch(55% 0.016 160);
+  --accent: oklch(94.5% 0.022 87);
+  --accent-foreground: oklch(34% 0.021 170);
+  --destructive: oklch(58% 0.18 27);
+  --destructive-foreground: oklch(99% 0.004 90);
+  --border: oklch(91.5% 0.011 88);
+  --input: oklch(89.5% 0.013 88);
+  --ring: oklch(52% 0.068 195);
+  --sand: oklch(93% 0.026 84);
+  --sand-foreground: oklch(32% 0.022 170);
+  --sea: oklch(68% 0.078 205);
+  --sea-foreground: oklch(26% 0.03 200);
+  --brass: oklch(60% 0.1 78);
+  --brass-foreground: oklch(24% 0.02 80);
+  --hero-ink: oklch(26% 0.045 195);
 }
 
 @layer base {
@@ -112,4 +113,14 @@
     height: 1px;
     background-color: var(--brass);
   }
+}
+
+@utility hero-scrim {
+  background-image: linear-gradient(
+    100deg,
+    oklch(24% 0.04 195 / 0.9) 0%,
+    oklch(26% 0.045 195 / 0.78) 50%,
+    oklch(38% 0.06 195 / 0.55) 78%,
+    oklch(52% 0.068 195 / 0.4) 100%
+  );
 }

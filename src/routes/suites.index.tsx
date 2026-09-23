@@ -54,7 +54,7 @@ function SuitesIndex() {
                 <p className="mt-5 text-sm leading-relaxed text-muted-foreground">{suite.blurb}</p>
                 <ul className="mt-5 flex flex-wrap gap-2">
                   {suite.highlights.map((h) => (
-                    <li key={h} className="rounded-sm bg-secondary px-3 py-1.5 text-xs">
+                    <li key={h} className="rounded-sm bg-accent px-3 py-1.5 text-xs text-accent-foreground">
                       {h}
                     </li>
                   ))}
