@@ -333,17 +333,22 @@ a:hover .menu-link-label {
 
 .welcome-mark {
   position: absolute;
-  top: 29%;
+  top: 22%;
   left: 50%;
   z-index: 3;
   display: flex;
+  width: min(82vw, 20rem);
+  padding: 2rem 2.25rem 2.25rem;
   transform: translateX(-50%);
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.35rem;
+  border: 1px solid color-mix(in oklab, var(--primary-foreground) 26%, transparent);
+  border-radius: 3rem;
+  background-color: color-mix(in oklab, var(--primary-foreground) 7%, transparent);
+  backdrop-filter: blur(24px) saturate(125%);
+  box-shadow: 0 1.25rem 3.5rem color-mix(in oklab, var(--foreground) 18%, transparent), inset 0 0 0 1px color-mix(in oklab, var(--primary-foreground) 8%, transparent);
   text-align: center;
-  filter: drop-shadow(0 1px 2px color-mix(in oklab, var(--foreground) 16%, transparent));
   transition: opacity 300ms ease, transform 500ms var(--ease-smooth);
 }
 
@@ -351,7 +356,6 @@ a:hover .menu-link-label {
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translateY(-2rem);
 }
 
 .welcome-handle {
@@ -374,7 +378,7 @@ a:hover .menu-link-label {
 
 .welcome-copy {
   display: flex;
-  transform: translateY(-2rem);
+  margin-top: 0.75rem;
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -382,7 +386,7 @@ a:hover .menu-link-label {
 
 .welcome-enter {
   display: flex;
-  margin-top: 2rem;
+  margin-top: 2.75rem;
   flex-direction: column;
   align-items: center;
   gap: 0.65rem;
