@@ -14,10 +14,12 @@ export const Route = createFileRoute("/contact")({
       { title },
       { name: "description", content: description },
       { property: "og:title", content: title },
+      { property: "og:url", content: "https://ioniantreasuresuites.com/contact" },
       { property: "og:description", content: description },
       { property: "og:image", content: pageImages.contact },
       { name: "twitter:image", content: pageImages.contact },
     ],
+    links: [{ rel: "canonical", href: "https://ioniantreasuresuites.com/contact" }],
   }),
   component: ContactPage,
 });

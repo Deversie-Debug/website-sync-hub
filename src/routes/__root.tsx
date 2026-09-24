@@ -81,6 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "author", content: "Ionian Treasure Suites" },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Ionian Treasure Suites" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
@@ -92,6 +93,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@300;400;500;600&display=swap",
       },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Hotel",
+          name: "Ionian Treasure Suites",
+          url: "https://ioniantreasuresuites.com",
+          telephone: "+30 22861 86603",
+          email: "info@ioniantreasuresuites.com",
+          address: { "@type": "PostalAddress", addressLocality: "Pessada", addressRegion: "Kefalonia", postalCode: "28100", addressCountry: "GR" },
+          amenityFeature: [{ "@type": "LocationFeatureSpecification", name: "Swimming pool", value: true }],
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,

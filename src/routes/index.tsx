@@ -23,10 +23,12 @@ export const Route = createFileRoute("/")({
       { title },
       { name: "description", content: description },
       { property: "og:title", content: title },
+      { property: "og:url", content: "https://ioniantreasuresuites.com/" },
       { property: "og:description", content: description },
       { property: "og:image", content: property.coverImage },
       { name: "twitter:image", content: property.coverImage },
     ],
+    links: [{ rel: "canonical", href: "https://ioniantreasuresuites.com/" }],
   }),
   component: Index,
 });
