@@ -44,7 +44,7 @@ function Index() {
   return (
     <>
       <section className="sticky top-0 isolate z-0 h-dvh min-h-dvh overflow-hidden">
-        <img
+        <img fetchPriority="high" decoding="async"
           src={heroImage}
           alt="Sunbeds and parasols along the swimming pool"
           className="absolute inset-0 size-full object-cover"
@@ -124,7 +124,7 @@ function Index() {
         <ul className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {suites.map((suite) => (
             <li key={suite.id} className="flex flex-col overflow-hidden rounded-sm border border-border bg-card">
-              <img src={suite.images[0]} alt={suite.name} className="aspect-4/3 w-full object-cover" />
+              <img loading="lazy" decoding="async" src={suite.images[0]} alt={suite.name} className="aspect-4/3 w-full object-cover" />
               <div className="flex flex-1 flex-col p-8">
                 <p className="eyebrow text-muted-foreground">
                   {suite.size} m² · Sleeps {suite.sleeps} · {suite.view}
@@ -217,10 +217,9 @@ function Index() {
           <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {galleryImages.slice(0, 8).map((img) => (
               <li key={img.src}>
-                <img
+                <img loading="lazy" decoding="async"
                   src={img.src}
                   alt={img.alt}
-                  loading="lazy"
                   className="aspect-square w-full rounded-sm object-cover"
                 />
               </li>

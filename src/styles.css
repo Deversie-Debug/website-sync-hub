@@ -263,3 +263,14 @@ a.no-underline-anim:hover {
 a:hover .menu-link-label {
   background-size: 100% 1px;
 }
+
+/* Scroll reveal (class added by JS only, so content stays visible without it) */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 900ms var(--ease-smooth), transform 900ms var(--ease-smooth);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}

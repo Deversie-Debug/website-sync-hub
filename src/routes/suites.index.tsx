@@ -41,7 +41,7 @@ function SuitesIndex() {
               key={suite.id}
               className="grid overflow-hidden rounded-sm border border-border bg-card lg:grid-cols-2"
             >
-              <img
+              <img decoding="async"
                 src={suite.images[0]}
                 alt={suite.name}
                 loading={i === 0 ? "eager" : "lazy"}

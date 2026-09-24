@@ -13,26 +13,25 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../system/lovable-error-reporting";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { SiteExtras } from "@/components/shared/SiteExtras";
 
 function NotFoundComponent() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="max-w-md text-center">
-        <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
+    <section className="flex min-h-[80vh] items-center justify-center bg-background px-6 pt-32 pb-20">
+      <div className="max-w-lg text-center">
+        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brass">Error 404</p>
+        <h1 className="display-caps mt-5 text-4xl text-foreground sm:text-5xl">Lost at sea</h1>
+        <span className="hairline-center mt-6 block" />
+        <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+          The page you were looking for has drifted away. Let us guide you back to the shores of
+          Pessada.
         </p>
-        <div className="mt-6">
-          <Link
-            to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            Go home
-          </Link>
+        <div className="mt-10 flex flex-wrap justify-center gap-8">
+          <Link to="/" className="text-sm font-bold uppercase text-brass">Return home</Link>
+          <Link to="/suites" className="text-sm font-bold uppercase text-brass">View suites</Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
@@ -141,6 +140,7 @@ function RootComponent() {
         <Outlet />
       </main>
       <Footer />
+      <SiteExtras />
     </QueryClientProvider>
   );
 }
