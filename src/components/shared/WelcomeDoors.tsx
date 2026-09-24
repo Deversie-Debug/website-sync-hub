@@ -55,7 +55,6 @@ export function WelcomeDoors() {
       </span>
       <span className="welcome-door welcome-door-right">
         <span className="welcome-glass-lines" aria-hidden="true" />
-        {emblem}
         <span className="welcome-handle welcome-handle-right" aria-hidden="true" />
       </span>
       <span className="welcome-copy" aria-hidden="true">
