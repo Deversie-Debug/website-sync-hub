@@ -52,7 +52,7 @@ export function Header() {
         } ${open ? "z-50" : overHomeHero ? "z-[5]" : "z-40"}`}
       >
         <div
-          className={`mx-auto grid h-20 w-full max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-6 lg:px-8 ${tone}`}
+          className={`mx-auto grid h-24 w-full max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-6 lg:px-8 ${tone}`}
         >
 
           <button
@@ -69,7 +69,7 @@ export function Header() {
             <img
               src={logo}
               alt="Ionian Treasure"
-              className={`size-16 object-contain transition-[filter] duration-300 ${
+              className={`size-20 object-contain transition-[filter] duration-300 sm:size-24 ${
                 overHomeHero ? "brightness-0 invert" : "brightness-0"
               }`}
             />
@@ -92,9 +92,9 @@ export function Header() {
           open ? "visible translate-y-0 opacity-100" : "invisible -translate-y-4 opacity-0 pointer-events-none"
         }`}
       >
-          <div className="mx-auto grid h-20 w-full max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-6 lg:px-8">
+          <div className="mx-auto grid h-24 w-full max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-6 lg:px-8">
             <span />
-            <img src={logo} alt="Ionian Treasure" className="size-16 object-contain brightness-0" />
+            <img src={logo} alt="Ionian Treasure" className="size-20 object-contain brightness-0 sm:size-24" />
             <div className="flex justify-end">
               <button
                 type="button"
