@@ -45,7 +45,7 @@ function Index() {
   return (
     <>
       <WelcomeDoors />
-      <section className="sticky top-0 isolate z-0 h-dvh min-h-dvh overflow-hidden">
+      <section className="sticky top-0 isolate z-0 h-svh min-h-svh overflow-hidden sm:h-dvh sm:min-h-dvh">
         <img fetchPriority="high" decoding="async"
           src={heroImage}
           alt="Sunbeds and parasols along the swimming pool"

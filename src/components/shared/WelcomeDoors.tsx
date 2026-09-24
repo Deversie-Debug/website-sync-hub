@@ -33,11 +33,11 @@ export function WelcomeDoors() {
     if (opening) return;
     sessionStorage.setItem(WELCOME_KEY, "true");
     setOpening(true);
+    document.documentElement.style.overflow = previousRootOverflow.current;
+    document.body.style.overflow = previousOverflow.current;
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     closeTimer.current = setTimeout(() => {
       setVisible(false);
-      document.documentElement.style.overflow = previousRootOverflow.current;
-      document.body.style.overflow = previousOverflow.current;
     }, reducedMotion ? 100 : 1850);
   };
 
