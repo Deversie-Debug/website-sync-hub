@@ -95,10 +95,10 @@ function BookPage() {
             <p className="mt-8 text-sm text-muted-foreground">
               Prefer to talk? Call or email {property.operator} directly.
             </p>
-            <a href={`tel:${property.phoneHref}`} className="mt-3 block text-sm text-brass hover:underline">
+            <a href={`tel:${property.phoneHref}`} className="mt-3 block w-fit text-sm text-brass">
               {property.phone}
             </a>
-            <a href={`mailto:${property.email}`} className="mt-1 block text-sm text-brass hover:underline">
+            <a href={`mailto:${property.email}`} className="mt-1 block w-fit text-sm text-brass">
               {property.email}
             </a>
             <a

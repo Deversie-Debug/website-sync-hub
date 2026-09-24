@@ -61,7 +61,7 @@ function LocationPage() {
             href={property.mapsUrl}
             target="_blank"
             rel="noreferrer"
-            className="mt-5 inline-flex items-center gap-2 text-sm text-brass hover:underline"
+            className="mt-5 inline-flex items-center gap-2 text-sm text-brass"
           >
             Open in Google Maps <ExternalLink className="size-4" aria-hidden="true" />
           </a>
@@ -97,7 +97,7 @@ function LocationPage() {
                 href={p.url}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-4 inline-flex items-center gap-2 text-sm text-brass hover:underline"
+                className="mt-4 inline-flex items-center gap-2 text-sm text-brass"
               >
                 Visit site <ExternalLink className="size-4" aria-hidden="true" />
               </a>

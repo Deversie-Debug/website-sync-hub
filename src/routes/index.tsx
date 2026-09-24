@@ -113,7 +113,7 @@ function Index() {
           <h2 className="display-caps mt-8 text-2xl sm:text-3xl lg:text-4xl">The five suites</h2>
           <Link
             to="/suites"
-            className="mt-6 inline-flex items-center gap-2 border-b border-brass pb-1 text-[0.7rem] uppercase tracking-[0.3em] text-brass"
+            className="mt-6 inline-flex items-center gap-2 text-[0.7rem] uppercase tracking-[0.3em] text-brass"
           >
             Compare all suites <ArrowRight className="size-3.5" aria-hidden="true" />
           </Link>
@@ -162,7 +162,7 @@ function Index() {
             >
               Start a booking
             </Link>
-            <a href={`tel:${property.phoneHref}`} className="text-sm underline-offset-4 hover:underline">
+            <a href={`tel:${property.phoneHref}`} className="text-sm">
               {property.phone}
             </a>
           </div>
@@ -181,7 +181,7 @@ function Index() {
           </p>
           <Link
             to="/location"
-            className="mt-6 inline-flex items-center gap-2 border-b border-brass pb-1 text-[0.7rem] uppercase tracking-[0.3em] text-brass"
+            className="mt-6 inline-flex items-center gap-2 text-[0.7rem] uppercase tracking-[0.3em] text-brass"
           >
             Getting here <ArrowRight className="size-3.5" aria-hidden="true" />
           </Link>
@@ -207,7 +207,7 @@ function Index() {
             <h2 className="display-caps mt-8 text-2xl sm:text-3xl lg:text-4xl">A look around</h2>
             <Link
               to="/gallery"
-              className="mt-6 inline-flex items-center gap-2 border-b border-brass pb-1 text-[0.7rem] uppercase tracking-[0.3em] text-brass"
+              className="mt-6 inline-flex items-center gap-2 text-[0.7rem] uppercase tracking-[0.3em] text-brass"
             >
               See all {galleryImages.length} photos <ArrowRight className="size-3.5" aria-hidden="true" />
             </Link>
@@ -238,7 +238,7 @@ function Index() {
                 href={p.url}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-4 inline-flex items-center gap-2 text-sm text-brass hover:underline"
+                className="mt-4 inline-flex items-center gap-2 text-sm text-brass"
               >
                 Visit site <ArrowRight className="size-4" aria-hidden="true" />
               </a>
