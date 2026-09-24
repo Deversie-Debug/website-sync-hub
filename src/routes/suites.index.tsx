@@ -13,10 +13,12 @@ export const Route = createFileRoute("/suites/")({
       { title },
       { name: "description", content: description },
       { property: "og:title", content: title },
+      { property: "og:url", content: "https://ioniantreasuresuites.com/suites" },
       { property: "og:description", content: description },
       { property: "og:image", content: pageImages.suites },
       { name: "twitter:image", content: pageImages.suites },
     ],
+    links: [{ rel: "canonical", href: "https://ioniantreasuresuites.com/suites" }],
   }),
   component: SuitesIndex,
 });

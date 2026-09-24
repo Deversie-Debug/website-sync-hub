@@ -21,10 +21,12 @@ export const Route = createFileRoute("/suites/$suiteId")({
         { title },
         { name: "description", content: suite.blurb },
         { property: "og:title", content: title },
+        { property: "og:url", content: `https://ioniantreasuresuites.com/suites/${suite.id}` },
         { property: "og:description", content: suite.blurb },
         { property: "og:image", content: suite.images[0] },
         { name: "twitter:image", content: suite.images[0] },
       ],
+      links: [{ rel: "canonical", href: `https://ioniantreasuresuites.com/suites/${suite.id}` }],
     };
   },
   notFoundComponent: SuiteNotFound,
