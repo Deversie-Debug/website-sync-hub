@@ -60,7 +60,7 @@ export type Suite = {
   images: string[];
 };
 
-const WH = "https://cdn.webhotelier.net/photos/w=1600";
+const WH = "https://cdn.webhotelier.net/photos/w=1920";
 
 export const suites: Suite[] = [
   {
@@ -131,15 +131,15 @@ export const galleryImages = [
   { src: `${CDN}/00150pool.20240710120737.jpg`, alt: "Loungers and shade sails beside the pool", category: "Pool & grounds" },
   { src: `${CDN}/00160pool.20240710120719.jpg`, alt: "Pool and suite facades in warm afternoon light", category: "Pool & grounds" },
   { src: `${CDN}/00210pool.20240710120715.jpg`, alt: "Garden planting framing the pool deck", category: "Pool & grounds" },
-  { src: `https://cdn.webhotelier.net/photos/w=1600/ioniantr-junior/L1960283.jpg`, alt: "Junior Suite interior", category: "Suites" },
-  { src: `https://cdn.webhotelier.net/photos/w=1600/ioniantr-junior/L1960284.jpg`, alt: "Junior Suite sitting area", category: "Suites" },
-  { src: `https://cdn.webhotelier.net/photos/w=1600/ioniantr-junior/L1960286.jpg`, alt: "Junior Suite with pool view", category: "Suites" },
-  { src: `https://cdn.webhotelier.net/photos/w=1600/ioniantr-super/L1960288.jpg`, alt: "Superior Suite interior", category: "Suites" },
-  { src: `https://cdn.webhotelier.net/photos/w=1600/ioniantr-super/L1960291.jpg`, alt: "Superior Suite private pool", category: "Suites" },
-  { src: `https://cdn.webhotelier.net/photos/w=1600/ioniantr-super/L1960294.jpg`, alt: "Superior Suite details", category: "Suites" },
-  { src: `https://cdn.webhotelier.net/photos/w=1600/ioniantr-twobed/L1960300.jpg`, alt: "Two Bedroom Suite interior", category: "Suites" },
-  { src: `https://cdn.webhotelier.net/photos/w=1600/ioniantr-twobed/L1960303.jpg`, alt: "Two Bedroom Suite bedroom", category: "Suites" },
-  { src: `https://cdn.webhotelier.net/photos/w=1600/ioniantr-twobed/L1960306.jpg`, alt: "Two Bedroom Suite private pool", category: "Suites" },
+  { src: `https://cdn.webhotelier.net/photos/w=1920/ioniantr-junior/L1960283.jpg`, alt: "Junior Suite interior", category: "Suites" },
+  { src: `https://cdn.webhotelier.net/photos/w=1920/ioniantr-junior/L1960284.jpg`, alt: "Junior Suite sitting area", category: "Suites" },
+  { src: `https://cdn.webhotelier.net/photos/w=1920/ioniantr-junior/L1960286.jpg`, alt: "Junior Suite with pool view", category: "Suites" },
+  { src: `https://cdn.webhotelier.net/photos/w=1920/ioniantr-super/L1960288.jpg`, alt: "Superior Suite interior", category: "Suites" },
+  { src: `https://cdn.webhotelier.net/photos/w=1920/ioniantr-super/L1960291.jpg`, alt: "Superior Suite private pool", category: "Suites" },
+  { src: `https://cdn.webhotelier.net/photos/w=1920/ioniantr-super/L1960294.jpg`, alt: "Superior Suite details", category: "Suites" },
+  { src: `https://cdn.webhotelier.net/photos/w=1920/ioniantr-twobed/L1960300.jpg`, alt: "Two Bedroom Suite interior", category: "Suites" },
+  { src: `https://cdn.webhotelier.net/photos/w=1920/ioniantr-twobed/L1960303.jpg`, alt: "Two Bedroom Suite bedroom", category: "Suites" },
+  { src: `https://cdn.webhotelier.net/photos/w=1920/ioniantr-twobed/L1960306.jpg`, alt: "Two Bedroom Suite private pool", category: "Suites" },
   { src: `${CDN}/02010reception.20240718100720.jpg`, alt: "Reception lounge of Ionian Treasure Suites", category: "Reception" },
   { src: `${CDN}/02090reception.20240718100740.jpg`, alt: "Seating in the reception area", category: "Reception" },
   { src: `${CDN}/02160reception.20240718100741.jpg`, alt: "Reception desk and stone detailing", category: "Reception" },
