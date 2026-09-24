@@ -41,7 +41,11 @@ function Index() {
         />
         <div className="absolute inset-0 bg-hero-wash" aria-hidden="true" />
         <a
-          href="#overview"
+          href="/"
+          onClick={(event) => {
+            event.preventDefault();
+            document.getElementById("overview")?.scrollIntoView({ behavior: "smooth" });
+          }}
           aria-label="Scroll to explore Ionian Treasure Suites"
           className="absolute bottom-9 left-1/2 z-[2] -translate-x-1/2 pb-1 text-[0.65rem] font-medium uppercase tracking-[0.3em] text-primary-foreground image-copy-readable"
         >
