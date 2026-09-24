@@ -217,6 +217,13 @@ a:hover:not([class*="inline-flex"]):not([class*="rounded"]):not(.no-underline-an
   background-size: 100% 1px;
 }
 
+a.no-underline-anim,
+a.no-underline-anim:hover {
+  background-image: none;
+  padding-bottom: 0;
+  text-decoration: none;
+}
+
 .book-now-link {
   background-image: linear-gradient(currentColor, currentColor);
   background-repeat: no-repeat;
@@ -231,6 +238,7 @@ a:hover:not([class*="inline-flex"]):not([class*="rounded"]):not(.no-underline-an
 }
 
 .menu-link-label {
+  display: inline-block;
   background-image: linear-gradient(currentColor, currentColor);
   background-repeat: no-repeat;
   background-position: 0 100%;
