@@ -5,7 +5,7 @@ import { suites, amenityGroups, pageImages } from "@/content/property";
 
 const title = "The Suites — Ionian Treasure Suites, Pessada";
 const description =
-  "Nine brand-new suites in three types — Junior Suites with shared pool, Superior Suites and Two Bedroom Suites with private pools — in Pessada, Kefalonia.";
+  "Nine suites in three types — Junior Suites with shared pool, Superior Suites and Two Bedroom Suites with private pools — in Pessada, Kefalonia.";
 
 export const Route = createFileRoute("/suites/")({
   head: () => ({

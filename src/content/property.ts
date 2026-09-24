@@ -41,7 +41,7 @@ export const facilities = [
   "Wi-Fi internet access",
 ];
 
-export const amenityGroups: Record<string, string[]] = {
+export const amenityGroups: Record<string, string[]> = {
   Comfort: ["Air conditioning", "Sitting area", "Sofa bed", "Flat-screen TV"],
   Connectivity: ["Free Wi-Fi internet access", "ADSL internet connection"],
   Bathroom: ["Bathroom with shower", "Bath amenities", "Bathrobes and slippers", "Hairdryer"],
