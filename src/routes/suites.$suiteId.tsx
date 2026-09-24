@@ -81,7 +81,7 @@ function SuiteDetail() {
                 onClick={() => setActiveImage(i)}
                 className="group block w-full cursor-zoom-in overflow-hidden rounded-sm text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
               >
-                <img loading="lazy" decoding="async"
+                <img decoding="async"
                   src={src}
                   alt={`${suite.name} photo ${i + 1}`}
                   loading={i === 0 ? "eager" : "lazy"}
