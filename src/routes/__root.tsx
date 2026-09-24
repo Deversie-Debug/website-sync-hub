@@ -139,6 +139,7 @@ function RootComponent() {
         <Outlet />
       </main>
       <Footer />
+      <SiteExtras />
     </QueryClientProvider>
   );
 }
