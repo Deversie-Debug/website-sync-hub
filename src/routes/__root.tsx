@@ -14,6 +14,7 @@ import { reportLovableError } from "../system/lovable-error-reporting";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SiteExtras } from "@/components/shared/SiteExtras";
+import { property } from "@/content/property";
 
 function NotFoundComponent() {
   return (
@@ -99,10 +100,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Hotel",
-          name: "Ionian Treasure Suites",
+          name: property.name,
           url: "https://ioniantreasuresuites.com",
-          telephone: "+30 698 995 3758",
-          email: "info@ioniantreasuresuites.com",
+          image: property.coverImage,
+          telephone: property.phone,
+          email: property.email,
+          numberOfRooms: property.suiteCount,
           address: { "@type": "PostalAddress", addressLocality: "Pessada", addressRegion: "Kefalonia", postalCode: "28100", addressCountry: "GR" },
           amenityFeature: ["Swimming pool", "Concierge", "Free Wi-Fi", "Air conditioning"].map((name) => ({ "@type": "LocationFeatureSpecification", name, value: true })),
         }),
