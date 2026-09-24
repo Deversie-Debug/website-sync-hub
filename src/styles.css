@@ -467,8 +467,89 @@ body:has(.welcome-doors) {
 }
 
 @media (max-width: 639px) {
+  .welcome-door {
+    background-color: color-mix(in oklab, var(--primary-foreground) 28%, transparent);
+    backdrop-filter: blur(12px) saturate(120%);
+  }
+
+  .welcome-mark {
+    top: max(11svh, 4.75rem);
+    width: min(88vw, 18rem);
+  }
+
+  .welcome-emblem {
+    filter:
+      drop-shadow(0 0.12rem 0.18rem color-mix(in oklab, var(--foreground) 72%, transparent))
+      drop-shadow(0 0.45rem 0.9rem color-mix(in oklab, var(--foreground) 52%, transparent))
+      drop-shadow(0 1rem 2rem color-mix(in oklab, var(--foreground) 32%, transparent));
+  }
+
+  .welcome-emblem .logo-mask {
+    width: 7.5rem;
+    height: 6.5rem;
+  }
+
+  .welcome-copy {
+    margin-top: 0.6rem;
+    text-shadow:
+      0 0.08rem 0.12rem color-mix(in oklab, var(--foreground) 82%, transparent),
+      0 0.3rem 0.75rem color-mix(in oklab, var(--foreground) 58%, transparent),
+      0 0.8rem 1.6rem color-mix(in oklab, var(--foreground) 36%, transparent);
+  }
+
+  .welcome-copy > span:first-child {
+    font-size: 0.72rem;
+  }
+
+  .welcome-copy > span:last-child {
+    margin-top: 0.55rem;
+    font-size: 0.56rem;
+    opacity: 0.88;
+  }
+
+  .welcome-handle {
+    top: 46%;
+    height: 4.25rem;
+  }
+
   .welcome-handle-left { right: 0.8rem; }
   .welcome-handle-right { left: 0.8rem; }
+
+  .welcome-enter {
+    top: 65%;
+    gap: 0.75rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-shadow:
+      0 0.08rem 0.12rem color-mix(in oklab, var(--foreground) 82%, transparent),
+      0 0.3rem 0.75rem color-mix(in oklab, var(--foreground) 58%, transparent),
+      0 0.8rem 1.6rem color-mix(in oklab, var(--foreground) 36%, transparent);
+  }
+
+  .welcome-enter-line {
+    width: 3.25rem;
+    box-shadow: 0 0.2rem 0.55rem color-mix(in oklab, var(--foreground) 42%, transparent);
+  }
+}
+
+@media (max-width: 639px) and (max-height: 680px) {
+  .welcome-mark {
+    top: 7svh;
+  }
+
+  .welcome-emblem .logo-mask {
+    width: 6.5rem;
+    height: 5.5rem;
+  }
+
+  .welcome-handle {
+    top: 44%;
+    height: 3.75rem;
+  }
+
+  .welcome-enter {
+    top: 64%;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
