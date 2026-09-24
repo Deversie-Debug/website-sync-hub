@@ -442,7 +442,6 @@ body:has(.welcome-doors) {
 .welcome-doors.is-opening .welcome-mark {
   opacity: 0;
   transform: translate3d(-50%, 0.75rem, 0) scale(0.985);
-  backdrop-filter: blur(12px) saturate(110%);
 }
 
 @keyframes welcome-line {
