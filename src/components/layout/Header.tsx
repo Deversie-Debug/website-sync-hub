@@ -2,6 +2,7 @@ import { Link, useLocation } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Phone, X } from "lucide-react";
 import { property } from "@/content/property";
+import logo from "@/assets/ionian-treasure-symbol.png";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -64,7 +65,15 @@ export function Header() {
             <span className="h-0.5 w-5 bg-current" />
           </button>
 
-          <span aria-hidden="true" />
+          <Link to="/" className="no-underline-anim" onClick={() => setOpen(false)}>
+            <img
+              src={logo}
+              alt="Ionian Treasure"
+              className={`size-16 object-contain transition-[filter] duration-300 ${
+                overHomeHero ? "brightness-0 invert" : "brightness-0"
+              }`}
+            />
+          </Link>
 
           <div className="flex items-center justify-end gap-4 text-[0.6rem] uppercase tracking-[0.2em]">
             <a href={`tel:${property.phoneHref}`} aria-label={`Call ${property.phone}`}>
@@ -85,7 +94,7 @@ export function Header() {
       >
           <div className="mx-auto grid h-20 w-full max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-6 lg:px-8">
             <span />
-            <span aria-hidden="true" />
+            <img src={logo} alt="Ionian Treasure" className="size-16 object-contain brightness-0" />
             <div className="flex justify-end">
               <button
                 type="button"
