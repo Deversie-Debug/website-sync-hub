@@ -368,7 +368,7 @@ a:hover .menu-link-label {
 
 .welcome-copy {
   position: absolute;
-  top: 61%;
+  top: 57%;
   left: 25%;
   z-index: 2;
   display: flex;
@@ -381,7 +381,7 @@ a:hover .menu-link-label {
 
 .welcome-enter {
   position: absolute;
-  top: 71%;
+  top: 67%;
   left: 25%;
   z-index: 2;
   display: flex;
