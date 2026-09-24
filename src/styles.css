@@ -303,8 +303,7 @@ a:hover .menu-link-label {
   backdrop-filter: blur(15px) saturate(115%);
   transition:
     transform 1750ms cubic-bezier(0.65, 0, 0.2, 1),
-    opacity 1400ms cubic-bezier(0.4, 0, 0.2, 1),
-    backdrop-filter 1400ms cubic-bezier(0.4, 0, 0.2, 1);
+    opacity 1400ms cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform, opacity;
 }
 
@@ -422,15 +421,13 @@ a:hover .menu-link-label {
 }
 
 .welcome-doors.is-opening .welcome-door-left {
-  transform: translate3d(-101%, 0, 0) rotateY(-5deg);
+  transform: translate3d(-101%, 0, 0);
   opacity: 0.7;
-  backdrop-filter: blur(8px) saturate(108%);
 }
 
 .welcome-doors.is-opening .welcome-door-right {
-  transform: translate3d(101%, 0, 0) rotateY(5deg);
+  transform: translate3d(101%, 0, 0);
   opacity: 0.7;
-  backdrop-filter: blur(8px) saturate(108%);
 }
 
 .welcome-doors.is-opening .welcome-mark {
