@@ -66,7 +66,13 @@ export function Header() {
           </button>
 
           <Link to="/" className="no-underline-anim text-center leading-tight" onClick={() => setOpen(false)}>
-            <img src={logo} alt="Ionian Treasure" className="h-16 w-28 object-contain sm:w-32" />
+            <img
+              src={logo}
+              alt="Ionian Treasure"
+              className={`h-16 w-28 object-contain transition-[filter] duration-300 sm:w-32 ${
+                overHomeHero ? "brightness-0 invert" : "brightness-0"
+              }`}
+            />
           </Link>
 
           <div className="flex items-center justify-end gap-4 text-[0.6rem] uppercase tracking-[0.2em]">
@@ -88,7 +94,7 @@ export function Header() {
       >
           <div className="mx-auto grid h-20 w-full max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-6 lg:px-8">
             <span />
-            <img src={logo} alt="Ionian Treasure" className="h-16 w-28 object-contain sm:w-32" />
+            <img src={logo} alt="Ionian Treasure" className="h-16 w-28 object-contain brightness-0 sm:w-32" />
             <div className="flex justify-end">
               <button
                 type="button"
