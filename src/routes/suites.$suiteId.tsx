@@ -60,7 +60,7 @@ function SuiteDetail() {
 
   return (
     <>
-      <section className="mx-auto w-full max-w-7xl px-6 pt-16 lg:px-8">
+      <section className="mx-auto w-full max-w-7xl px-6 pt-32 sm:pt-36 lg:px-8">
         <Link to="/suites" className="text-sm text-muted-foreground hover:text-foreground">
           ← All suites
         </Link>
