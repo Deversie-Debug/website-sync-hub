@@ -345,11 +345,7 @@ a:hover .menu-link-label {
 }
 
 .welcome-door-left .welcome-emblem {
-  left: 100%;
-}
-
-.welcome-door-right .welcome-emblem {
-  left: 0;
+  left: 50%;
 }
 
 .welcome-handle {
@@ -373,7 +369,7 @@ a:hover .menu-link-label {
 .welcome-copy {
   position: absolute;
   top: 61%;
-  left: 50%;
+  left: 25%;
   z-index: 2;
   display: flex;
   transform: translateX(-50%);
@@ -386,7 +382,7 @@ a:hover .menu-link-label {
 .welcome-enter {
   position: absolute;
   top: 71%;
-  left: 50%;
+  left: 25%;
   z-index: 2;
   display: flex;
   transform: translateX(-50%);
