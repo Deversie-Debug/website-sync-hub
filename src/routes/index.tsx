@@ -16,7 +16,7 @@ import {
 
 const title = "Ionian Treasure Suites — Pool Suites in Pessada, Kefalonia";
 const description =
-  "Nine brand-new suites — some with private pools — in Pessada, Kefalonia, 600 m from the beach and 10 minutes from Argostoli. Book direct for our best rate.";
+  "Nine suites in Pessada, Kefalonia — Junior Suites with a shared pool, Superior and Two Bedroom Suites with private pools. Open April to October. Book direct.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
