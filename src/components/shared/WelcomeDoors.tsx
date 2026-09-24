@@ -35,12 +35,6 @@ export function WelcomeDoors() {
 
   if (!visible) return null;
 
-  const emblem = (
-    <span className="welcome-emblem" aria-hidden="true">
-      <span style={logoStyle} className="logo-mask block h-24 w-28 sm:h-32 sm:w-36" />
-    </span>
-  );
-
   return (
     <button
       type="button"
@@ -50,24 +44,28 @@ export function WelcomeDoors() {
     >
       <span className="welcome-door welcome-door-left">
         <span className="welcome-glass-lines" aria-hidden="true" />
-        {emblem}
         <span className="welcome-handle welcome-handle-left" aria-hidden="true" />
       </span>
       <span className="welcome-door welcome-door-right">
         <span className="welcome-glass-lines" aria-hidden="true" />
         <span className="welcome-handle welcome-handle-right" aria-hidden="true" />
       </span>
-      <span className="welcome-copy" aria-hidden="true">
-        <span className="whitespace-nowrap text-[0.65rem] font-medium uppercase tracking-[0.24em] sm:text-xs">
-          Ionian Treasure
+      <span className="welcome-mark" aria-hidden="true">
+        <span className="welcome-emblem">
+          <span style={logoStyle} className="logo-mask block h-24 w-28 sm:h-32 sm:w-36" />
         </span>
-        <span className="mt-2 whitespace-nowrap text-[0.52rem] uppercase tracking-[0.35em] opacity-75 sm:text-[0.6rem]">
-          Suites · Kefalonia
+        <span className="welcome-copy">
+          <span className="whitespace-nowrap text-[0.65rem] font-medium uppercase tracking-[0.24em] sm:text-xs">
+            Ionian Treasure
+          </span>
+          <span className="mt-2 whitespace-nowrap text-[0.52rem] uppercase tracking-[0.35em] opacity-75 sm:text-[0.6rem]">
+            Suites · Kefalonia
+          </span>
         </span>
-      </span>
-      <span className="welcome-enter" aria-hidden="true">
-        <span>Enter</span>
-        <span className="welcome-enter-line" />
+        <span className="welcome-enter">
+          <span>Enter</span>
+          <span className="welcome-enter-line" />
+        </span>
       </span>
     </button>
   );
