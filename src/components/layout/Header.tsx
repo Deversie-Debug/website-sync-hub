@@ -99,19 +99,19 @@ export function Header() {
 
       <div
         aria-hidden={!open}
-        className={`fixed inset-0 z-[60] flex flex-col bg-background transition-all duration-500 ease-out ${
+        className={`fixed inset-0 z-[60] flex flex-col bg-background text-brass transition-all duration-500 ease-out ${
           open ? "visible translate-y-0 opacity-100" : "invisible -translate-y-4 opacity-0 pointer-events-none"
         }`}
       >
           <div className="grid h-28 w-full grid-cols-[1fr_auto_1fr] items-center border-b border-border px-6 lg:px-10">
             <span />
-            <BrandLogo className="h-20 w-36 text-primary sm:h-24 sm:w-44" />
+            <BrandLogo className="h-20 w-36 sm:h-24 sm:w-44" />
             <div className="flex justify-end">
               <button
                 type="button"
                 aria-label="Close menu"
                 onClick={() => setOpen(false)}
-                className="text-primary"
+                className="text-current"
               >
                 <X className="size-6" aria-hidden="true" />
               </button>
@@ -126,15 +126,14 @@ export function Header() {
                 to={item.to}
                 onClick={() => setOpen(false)}
                 activeOptions={{ exact: item.to === "/" }}
-                activeProps={{ className: "text-brass" }}
-                className={`display-caps text-2xl text-primary transition-all duration-500 hover:text-brass sm:text-3xl ${open ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"}`}
+                className={`display-caps text-2xl transition-all duration-500 hover:opacity-70 sm:text-3xl ${open ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"}`}
               >
                 {item.label}
               </Link>
             ))}
           </nav>
 
-          <div className="flex flex-col items-center gap-2 pb-12 text-xs tracking-[0.2em] text-muted-foreground">
+          <div className="flex flex-col items-center gap-2 pb-12 text-xs tracking-[0.2em] text-current/70">
             <a href={`tel:${property.phoneHref}`}>{property.phone}</a>
             <a href={`mailto:${property.email}`}>{property.email}</a>
           </div>
