@@ -154,8 +154,8 @@
   font-family: var(--font-display);
   font-weight: 300;
   text-transform: uppercase;
-  letter-spacing: 0.28em;
-  line-height: 1.25;
+  letter-spacing: 0;
+  line-height: 1.08;
 }
 
 @utility hairline-center {
