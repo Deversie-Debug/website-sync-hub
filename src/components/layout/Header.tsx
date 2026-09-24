@@ -63,7 +63,7 @@ export function Header() {
   return (
     <>
       <header
-        className={`inset-x-0 top-0 transition-[background-color,border-color] duration-300 ${
+        className={`inset-x-0 top-0 transition-[background-color,border-color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
           overHomeHero
             ? "absolute bg-transparent"
             : "fixed border-b border-border bg-background"
@@ -77,8 +77,8 @@ export function Header() {
             onClick={() => setOpen(true)}
             className="group flex h-10 w-10 flex-col justify-center gap-2"
           >
-            <span className="h-0.5 w-7 origin-left bg-current transition-transform duration-300 ease-out group-hover:translate-x-1" />
-            <span className="h-0.5 w-5 origin-left bg-current transition-[width,transform] duration-300 ease-out group-hover:w-7 group-hover:-translate-x-0.5" />
+            <span className="h-0.5 w-7 origin-left bg-current transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-1" />
+            <span className="h-0.5 w-5 origin-left bg-current transition-[width,transform] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:w-7 group-hover:-translate-x-0.5" />
           </button>
 
           <Link to="/" className="no-underline-anim" onClick={() => setOpen(false)}>
@@ -99,7 +99,7 @@ export function Header() {
 
       <div
         aria-hidden={!open}
-        className={`fixed inset-0 z-[60] flex flex-col bg-background text-brass transition-all duration-500 ease-out ${
+        className={`fixed inset-0 z-[60] flex flex-col bg-background text-brass transition-[opacity,transform,visibility] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
           open ? "visible translate-y-0 opacity-100" : "invisible -translate-y-4 opacity-0 pointer-events-none"
         }`}
       >
@@ -126,7 +126,7 @@ export function Header() {
                 to={item.to}
                 onClick={() => setOpen(false)}
                 activeOptions={{ exact: item.to === "/" }}
-                className={`display-caps text-2xl transition-all duration-500 hover:opacity-70 sm:text-3xl ${open ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"}`}
+                className={`display-caps text-2xl transition-[opacity,transform] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:opacity-70 sm:text-3xl ${open ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"}`}
               >
                 {item.label}
               </Link>

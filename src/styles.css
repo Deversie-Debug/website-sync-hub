@@ -50,6 +50,10 @@
 
 :root {
   --radius: 0.25rem;
+  --motion-fast: 280ms;
+  --motion-base: 450ms;
+  --motion-slow: 650ms;
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
   --background: oklch(99.2% 0.005 90);
   --foreground: oklch(32% 0.019 165);
   --card: oklch(100% 0 0);
@@ -101,6 +105,16 @@
     -webkit-font-smoothing: antialiased;
   }
 
+  :where(a, button, input, select, textarea) {
+    transition-duration: var(--motion-base);
+    transition-timing-function: var(--ease-smooth);
+  }
+
+  :where(img[class*="transition"], [class*="group-hover:scale"]) {
+    transition-duration: var(--motion-slow);
+    transition-timing-function: var(--ease-smooth);
+  }
+
   h1,
   h2,
   h3 {
@@ -114,6 +128,29 @@
   html {
     scroll-behavior: auto;
   }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@keyframes soft-reveal {
+  from {
+    opacity: 0;
+    transform: scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@utility animate-soft-reveal {
+  animation: soft-reveal var(--motion-base) var(--ease-smooth) both;
 }
 
 @utility eyebrow {
@@ -180,7 +217,7 @@ a:not([class*="inline-flex"]):not([class*="rounded"]):not(.no-underline-anim) {
   background-repeat: no-repeat;
   background-position: 0 100%;
   background-size: 0% 1px;
-  transition: background-size 0.35s ease;
+  transition: background-size var(--motion-base) var(--ease-smooth);
   padding-bottom: 0.15em;
 }
 
@@ -194,7 +231,7 @@ a:hover:not([class*="inline-flex"]):not([class*="rounded"]):not(.no-underline-an
   background-position: 0 100%;
   background-size: 0% 1px;
   padding-bottom: 0.25rem;
-  transition: background-size 0.35s ease;
+  transition: background-size var(--motion-base) var(--ease-smooth);
 }
 
 .book-now-link:hover {
