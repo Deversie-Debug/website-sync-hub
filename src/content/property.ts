@@ -85,6 +85,7 @@ export type Suite = {
   id: string;
   number: string;
   name: string;
+  units: number;
   size: number;
   sleeps: number;
   view: string;
@@ -95,15 +96,16 @@ export type Suite = {
 
 export const suites: Suite[] = [
   {
-    id: "suite-101",
-    number: "101",
-    name: "Suite 101",
+    id: "junior-suite-shared-pool",
+    number: "Junior",
+    name: "Junior Suite with Shared Pool",
+    units: 5,
     size: 32,
     sleeps: 2,
     view: "Pool & garden",
     blurb:
-      "A ground-level suite opening straight onto the pool terrace, with its own shaded lounger pair a few steps from the water.",
-    highlights: ["Direct pool terrace access", "Double bed & seating area", "Full kitchen"],
+      "A bright, brand-new suite for two, a few steps from the shared swimming pool. Tastefully decorated with a bedroom, sitting area, fully equipped kitchen and a bathroom with shower \u2014 plus your own private entrance and terrace.",
+    highlights: ["Shared swimming pool", "Private entrance & terrace", "Full kitchen", "Free Wi-Fi & Netflix"],
     images: [
       `${CDN}/10010onefour.20240710130727.jpg`,
       `${CDN}/10020onefour.20240710130728.jpg`,
@@ -112,32 +114,16 @@ export const suites: Suite[] = [
     ],
   },
   {
-    id: "suite-102",
-    number: "102",
-    name: "Suite 102",
-    size: 32,
+    id: "superior-suite-private-pool",
+    number: "Superior",
+    name: "Superior Suite with Private Pool",
+    units: 2,
+    size: 38,
     sleeps: 2,
-    view: "Sea glimpse",
+    view: "Sea & private pool",
     blurb:
-      "Quietly set toward the garden side, with a bright sitting area and a private veranda that catches the late afternoon light.",
-    highlights: ["Private veranda", "Garden aspect", "Safe & Netflix TV"],
-    images: [
-      `${CDN}/20010twofive.20240710120750.jpg`,
-      `${CDN}/20030twofive.20240710120705.jpg`,
-      `${CDN}/20040twofive.20240710120740.jpg`,
-      `${CDN}/20060twofive.20240710120748.jpg`,
-    ],
-  },
-  {
-    id: "suite-103",
-    number: "103",
-    name: "Suite 103",
-    size: 32,
-    sleeps: 2,
-    view: "Sea & hills",
-    blurb:
-      "Our most open outlook \u2014 the Ionian sits on the horizon beyond the olive slopes, framed from both the bedroom and the terrace.",
-    highlights: ["Best sea outlook", "Grill on the terrace", "Full kitchen & dining table"],
+      "All the comfort of our Junior Suites with one unforgettable extra: your own private pool on the terrace, looking out toward the Ionian. A quiet, completely private corner of Kefalonia for two.",
+    highlights: ["Private pool on the terrace", "Sea view", "Full kitchen & dining table", "Free Wi-Fi & Netflix"],
     images: [
       `${CDN}/30010three.20240710110724.jpg`,
       `${CDN}/30020three.20240710110734.jpg`,
@@ -146,37 +132,21 @@ export const suites: Suite[] = [
     ],
   },
   {
-    id: "suite-104",
-    number: "104",
-    name: "Suite 104",
-    size: 32,
-    sleeps: 2,
-    view: "Pool & garden",
+    id: "two-bedroom-suite-private-pool",
+    number: "Two Bedroom",
+    name: "Two Bedroom Suite with Private Pool",
+    units: 2,
+    size: 55,
+    sleeps: 4,
+    view: "Sea & private pool",
     blurb:
-      "Mirror of 101 at the far end of the terrace, a touch more secluded, with the same easy step out to the sunbeds.",
-    highlights: ["Secluded pool corner", "Coffee machine & kettle", "Free private parking"],
+      "Our largest suites: two separate bedrooms, a spacious living area and a fully equipped kitchen, opening onto a private pool and terrace. Ideal for families or two couples travelling together.",
+    highlights: ["Two separate bedrooms", "Private pool & terrace", "Sleeps up to 4", "Full kitchen & dining table"],
     images: [
-      `${CDN}/10080onefour.20240710130708.jpg`,
-      `${CDN}/10140onefour.20240710130730.jpg`,
-      `${CDN}/10160onefour.20240710130735.jpg`,
-      `${CDN}/10170onefour.20240710130737.jpg`,
-    ],
-  },
-  {
-    id: "suite-105",
-    number: "105",
-    name: "Suite 105",
-    size: 32,
-    sleeps: 2,
-    view: "Garden",
-    blurb:
-      "Tucked behind the garden hedge for the calmest nights on the property, with a generous shaded outdoor seating set.",
-    highlights: ["Quietest position", "Shaded outdoor seating", "Laundry on request"],
-    images: [
-      `${CDN}/20090twofive.20240710120740.jpg`,
-      `${CDN}/20210twofive.20240710120757.jpg`,
-      `${CDN}/20220twofive.20240710120702.jpg`,
-      `${CDN}/20240twofive.20240710120757.jpg`,
+      `${CDN}/20010twofive.20240710120750.jpg`,
+      `${CDN}/20030twofive.20240710120705.jpg`,
+      `${CDN}/20040twofive.20240710120740.jpg`,
+      `${CDN}/20060twofive.20240710120748.jpg`,
     ],
   },
 ];
@@ -234,7 +204,7 @@ export const faqs = [
   },
   {
     q: "Are the suites suitable for families?",
-    a: "Each suite is designed for two guests. Families are welcome to book adjoining suites \u2014 mention this in your enquiry and we will place you side by side where possible.",
+    a: "Yes. The Junior and Superior Suites are designed for two guests, while the Two Bedroom Suites with private pool sleep up to four \u2014 ideal for families or two couples travelling together.",
   },
   {
     q: "Do you arrange car hire and transfers?",
