@@ -134,7 +134,7 @@ function SuiteDetail() {
           </p>
           <a
             href={`tel:${property.phoneHref}`}
-            className="mt-3 block text-sm text-brass hover:underline"
+            className="mt-3 block w-fit text-sm text-brass"
           >
             {property.phone}
           </a>

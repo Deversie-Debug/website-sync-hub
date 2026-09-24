@@ -68,7 +68,7 @@ function ContactPage() {
             href={property.mapsUrl}
             target="_blank"
             rel="noreferrer"
-            className="mt-5 inline-flex items-center gap-2 text-sm text-brass hover:underline"
+            className="mt-5 inline-flex items-center gap-2 text-sm text-brass"
           >
             Directions <ExternalLink className="size-4" aria-hidden="true" />
           </a>

@@ -204,7 +204,8 @@
 }
 
 
-a:not([class*="inline-flex"]):not([class*="rounded"]):not(.no-underline-anim) {
+a:not([class*="rounded"]):not(.no-underline-anim) {
+  text-decoration: none;
   background-image: linear-gradient(currentColor, currentColor);
   background-repeat: no-repeat;
   background-position: 0 100%;
@@ -213,7 +214,8 @@ a:not([class*="inline-flex"]):not([class*="rounded"]):not(.no-underline-anim) {
   padding-bottom: 0.15em;
 }
 
-a:hover:not([class*="inline-flex"]):not([class*="rounded"]):not(.no-underline-anim) {
+a:hover:not([class*="rounded"]):not(.no-underline-anim) {
+  text-decoration: none;
   background-size: 100% 1px;
 }
 
