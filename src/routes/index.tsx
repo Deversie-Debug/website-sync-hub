@@ -113,7 +113,7 @@ function Index() {
           <h2 className="display-caps mt-8 text-2xl sm:text-3xl lg:text-4xl">The five suites</h2>
           <Link
             to="/suites"
-            className="mt-6 inline-flex items-center gap-2 border-b border-brass pb-1 text-[0.7rem] uppercase tracking-[0.3em] text-brass"
+            className="mt-6 inline-flex items-center gap-2 text-[0.7rem] uppercase tracking-[0.3em] text-brass"
           >
             Compare all suites <ArrowRight className="size-3.5" aria-hidden="true" />
           </Link>
