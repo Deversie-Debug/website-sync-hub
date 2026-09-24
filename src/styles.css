@@ -182,6 +182,17 @@
   );
 }
 
+@media (max-width: 639px) {
+  .subpage-image-scrim {
+    background: linear-gradient(
+      to bottom,
+      color-mix(in oklab, var(--subpage-scrim) 55%, transparent),
+      color-mix(in oklab, var(--subpage-scrim) 38%, transparent) 45%,
+      color-mix(in oklab, var(--subpage-scrim) 78%, transparent)
+    );
+  }
+}
+
 @utility logo-mask {
   background-color: currentColor;
   mask-image: var(--logo-image);
