@@ -220,7 +220,6 @@ function Index() {
                 <img loading="lazy" decoding="async"
                   src={img.src}
                   alt={img.alt}
-                  loading="lazy"
                   className="aspect-square w-full rounded-sm object-cover"
                 />
               </li>
