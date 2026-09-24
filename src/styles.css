@@ -276,6 +276,11 @@ a:hover .menu-link-label {
 }
 
 /* Homepage glass-door welcome */
+html:has(.welcome-doors),
+body:has(.welcome-doors) {
+  overflow: hidden;
+}
+
 .welcome-doors {
   position: fixed;
   inset: 0;
