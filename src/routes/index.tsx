@@ -151,7 +151,7 @@ function Index() {
 
       <section className="bg-primary py-20 text-primary-foreground lg:py-28">
         <div className="mx-auto w-full max-w-2xl px-6 text-center lg:px-8">
-          <p className="eyebrow tracking-[0.4em] text-brass">Book direct</p>
+          <p className="eyebrow tracking-[0.4em] text-primary-foreground">Book direct</p>
           <h2 className="display-caps mt-8 text-2xl sm:text-3xl">Our best rate is the direct one</h2>
           <p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-primary-foreground/80">
             Tell us your dates and we reply personally, usually within 24 hours, with availability

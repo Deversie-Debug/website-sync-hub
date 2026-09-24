@@ -86,24 +86,26 @@ export function SiteExtras() {
         <div
           role="dialog"
           aria-label="Cookie preferences"
-          className="animate-soft-reveal fixed inset-x-4 bottom-4 z-40 mx-auto max-w-xl rounded-sm border border-border bg-background p-5 shadow-lg sm:bottom-6"
+          className="animate-soft-reveal fixed inset-x-4 bottom-4 z-40 mx-auto max-w-md rounded-sm border border-brass/30 bg-background px-6 py-6 shadow-[0_18px_50px_-12px_rgba(0,0,0,0.18)] backdrop-blur sm:bottom-6"
         >
-          <p className="text-sm leading-relaxed text-foreground">
-            We use cookies to understand how visitors use our site and improve your experience.
-            You can accept or decline analytics cookies.
+          <p className="eyebrow hairline-center tracking-[0.35em] text-brass">Cookies</p>
+          <p className="mt-4 text-center text-sm leading-relaxed text-foreground/85">
+            We use cookies to understand how visitors use our site and to improve your
+            experience. You can accept or decline analytics cookies.
           </p>
-          <div className="mt-4 flex justify-end gap-3">
+          <div className="mt-6 flex items-center justify-center gap-6">
             <button
               type="button"
               onClick={() => choose("declined")}
-              className="rounded-sm border border-border px-4 py-2 text-xs font-semibold uppercase tracking-wider text-foreground hover:opacity-70"
+              className="text-xs font-semibold uppercase tracking-[0.18em] text-foreground/70 transition-opacity hover:opacity-60"
             >
               Decline
             </button>
+            <span aria-hidden="true" className="h-4 w-px bg-border" />
             <button
               type="button"
               onClick={() => choose("accepted")}
-              className="rounded-sm bg-primary px-4 py-2 text-xs font-semibold uppercase tracking-wider text-primary-foreground hover:opacity-90"
+              className="rounded-sm bg-primary px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-primary-foreground transition-opacity hover:opacity-90"
             >
               Accept
             </button>
