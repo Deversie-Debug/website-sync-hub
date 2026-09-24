@@ -88,7 +88,7 @@ export function Header() {
           <div className="flex items-center justify-end">
             <Link
               to="/book"
-              className="book-now-link inline-flex text-xs font-bold uppercase tracking-[0.2em] sm:text-sm"
+              className="book-now-link inline-flex text-sm font-bold uppercase tracking-normal sm:text-base"
             >
               Book now
             </Link>
@@ -118,7 +118,7 @@ export function Header() {
             </div>
           </div>
 
-          <nav className="flex flex-1 flex-col items-center justify-center gap-6 px-6 text-center">
+          <nav className="flex flex-1 flex-col items-center justify-center gap-5 px-6 text-center">
             {nav.map((item, i) => (
               <Link
                 style={{ transitionDelay: open ? `${150 + i * 50}ms` : "0ms" }}
@@ -127,7 +127,7 @@ export function Header() {
                 onClick={() => setOpen(false)}
                 activeOptions={{ exact: item.to === "/" }}
                 activeProps={{ className: "text-brass" }}
-                className={`display-caps text-xl text-primary transition-all duration-500 hover:text-brass sm:text-2xl ${open ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"}`}
+                className={`display-caps text-2xl text-primary transition-all duration-500 hover:text-brass sm:text-3xl ${open ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"}`}
               >
                 {item.label}
               </Link>
