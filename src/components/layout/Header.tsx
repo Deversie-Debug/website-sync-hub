@@ -58,7 +58,7 @@ export function Header() {
   }, []);
 
   const overHomeHero = isHome && !pastHero;
-  const tone = overHomeHero ? "text-primary-foreground image-copy-readable" : "text-foreground";
+  const tone = overHomeHero ? "text-primary-foreground image-copy-readable" : "text-brass";
 
   return (
     <>
