@@ -52,7 +52,7 @@ export function ImageLightbox({
       role="dialog"
       aria-modal="true"
       aria-label="Photo viewer"
-      className="fixed inset-0 z-[100] grid grid-rows-[auto_minmax(0,1fr)_auto] bg-lightbox-backdrop p-3 sm:p-5"
+      className="animate-soft-reveal fixed inset-0 z-[100] grid grid-rows-[auto_minmax(0,1fr)_auto] bg-lightbox-backdrop p-3 sm:p-5"
       onMouseDown={(event) => {
         if (event.currentTarget === event.target) onClose();
       }}
@@ -85,7 +85,7 @@ export function ImageLightbox({
         <img
           src={image.src}
           alt={image.alt}
-          className="max-h-full min-h-0 w-full object-contain"
+          className="animate-soft-reveal max-h-full min-h-0 w-full object-contain"
         />
 
         {hasMultipleImages ? (
