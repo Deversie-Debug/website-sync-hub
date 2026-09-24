@@ -5,7 +5,7 @@ import { suites, amenityGroups, pageImages } from "@/content/property";
 
 const title = "The Suites — Ionian Treasure Suites, Pessada";
 const description =
-  "Five brand-new 32 m² suites for two, each with a private entrance, terrace and fully equipped kitchen, around a quiet pool garden in Pessada, Kefalonia.";
+  "Nine brand-new suites in three types — Junior Suites with shared pool, Superior Suites and Two Bedroom Suites with private pools — in Pessada, Kefalonia.";
 
 export const Route = createFileRoute("/suites/")({
   head: () => ({
@@ -28,8 +28,8 @@ function SuitesIndex() {
     <>
       <PageHeader
         eyebrow="Accommodation"
-        title="Five suites, one quiet pool garden"
-        description="Every suite is 32 m², brand new, and designed for two guests — with its own private entrance, terrace and fully equipped kitchen. What changes between them is the outlook and how close you sit to the water."
+        title="Nine suites, three ways to stay"
+        description="Choose between five Junior Suites around the shared pool, two Superior Suites with a private pool, and two Two Bedroom Suites with a private pool — all brand new, with private entrances, terraces and fully equipped kitchens."
         image={pageImages.suites}
         imageAlt="Suite terrace with a view over the Ionian sea"
       />
@@ -48,7 +48,7 @@ function SuitesIndex() {
                 className="block aspect-4/3 w-full self-start object-cover lg:aspect-auto lg:h-full lg:min-h-72 lg:self-stretch"
               />
               <div className="flex flex-col justify-center p-8 lg:p-12">
-                <p className="eyebrow text-brass">Suite {suite.number}</p>
+                <p className="eyebrow text-brass">{suite.units} {suite.units === 1 ? "suite" : "suites"}</p>
                 <h2 className="mt-3 text-3xl">{suite.name}</h2>
                 <p className="mt-3 text-sm text-muted-foreground">
                   Size: {suite.size} m² · Sleeps: {suite.sleeps} · View: {suite.view}
