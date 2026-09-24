@@ -431,7 +431,11 @@ body:has(.welcome-doors) {
 }
 
 .welcome-doors:hover .welcome-enter {
-  transform: translateY(0.35rem);
+  transform: translate(-50%, 0.35rem);
+}
+
+.welcome-doors.is-opening .welcome-enter {
+  opacity: 0;
 }
 
 .welcome-doors.is-opening {
