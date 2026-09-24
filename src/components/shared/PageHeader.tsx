@@ -16,7 +16,7 @@ export function PageHeader({
       <img fetchPriority="high" decoding="async" src={image} alt={imageAlt} className="absolute inset-0 size-full object-cover" />
       <div aria-hidden="true" className="subpage-image-scrim absolute inset-0" />
       <div aria-hidden="true" className="pointer-events-none absolute inset-4 border border-primary-foreground/15" />
-      <div className="relative mx-auto grid min-h-[70vh] w-full max-w-7xl content-center justify-items-center px-6 py-28 text-center lg:px-8">
+      <div className="relative mx-auto grid min-h-[80svh] w-full max-w-7xl content-end justify-items-center px-6 pb-24 pt-40 text-center sm:min-h-[70vh] sm:content-center sm:py-28 lg:px-8">
         <div className="image-copy-readable max-w-3xl">
           <div className="mx-auto mb-8 h-px w-10 bg-current opacity-60" />
           <p className="eyebrow font-semibold tracking-[0.32em]">{eyebrow}</p>
