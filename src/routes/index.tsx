@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
+import { useEffect } from "react";
 import {
   property,
   heroImage,
@@ -31,6 +32,13 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  useEffect(() => {
+    if (window.location.hash === "#overview") {
+      window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+      window.scrollTo({ top: 0, behavior: "instant" });
+    }
+  }, []);
+
   return (
     <>
       <section className="sticky top-0 isolate z-0 h-dvh min-h-dvh overflow-hidden">
