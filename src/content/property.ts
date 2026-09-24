@@ -265,7 +265,7 @@ export const experiences = [
     title: "Market mornings, terrace dinners",
     category: "Food & wine",
     distance: "In your suite",
-    text: "Every suite has a full kitchen and a grill. Buy fish and vegetables in Argostoli in the morning, then cook and eat outside as the light drops behind the hills.",
+    text: "Superior and Two Bedroom Suites have their own kitchen. Buy fish and vegetables in Argostoli in the morning, then cook and eat in as the light drops behind the hills.",
   },
 ];
 
