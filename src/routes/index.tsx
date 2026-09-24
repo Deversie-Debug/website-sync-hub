@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
+import { useEffect } from "react";
 import {
   property,
   heroImage,
@@ -31,6 +32,13 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  useEffect(() => {
+    if (window.location.hash === "#overview") {
+      window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+      window.scrollTo({ top: 0, behavior: "instant" });
+    }
+  }, []);
+
   return (
     <>
       <section className="sticky top-0 isolate z-0 h-dvh min-h-dvh overflow-hidden">
@@ -41,7 +49,11 @@ function Index() {
         />
         <div className="absolute inset-0 bg-hero-wash" aria-hidden="true" />
         <a
-          href="#overview"
+          href="/"
+          onClick={(event) => {
+            event.preventDefault();
+            document.getElementById("overview-section")?.scrollIntoView({ behavior: "smooth" });
+          }}
           aria-label="Scroll to explore Ionian Treasure Suites"
           className="absolute bottom-9 left-1/2 z-[2] -translate-x-1/2 pb-1 text-[0.65rem] font-medium uppercase tracking-[0.3em] text-primary-foreground image-copy-readable"
         >
@@ -50,7 +62,7 @@ function Index() {
       </section>
       <div className="relative z-10 bg-background shadow-[0_-12px_30px_-12px_oklch(20%_0.02_180/0.25)]">
 
-      <section id="overview" className="mx-auto w-full max-w-7xl scroll-mt-20 px-6 py-20 lg:px-8 lg:py-28">
+      <section id="overview-section" className="mx-auto w-full max-w-7xl scroll-mt-20 px-6 py-20 lg:px-8 lg:py-28">
         <p className="eyebrow hairline-center mx-auto text-center tracking-[0.4em] text-brass">Overview</p>
         <h2 className="display-caps mx-auto mt-8 max-w-2xl text-balance text-center text-2xl sm:text-3xl lg:text-4xl">
           A privileged corner of Kefalonia
