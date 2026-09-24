@@ -67,7 +67,7 @@ function SuiteDetail() {
         <p className="eyebrow mt-10 text-brass">{suite.units} {suite.units === 1 ? "suite" : "suites"} available</p>
         <h1 className="mt-4 text-4xl sm:text-5xl">{suite.name}</h1>
         <p className="mt-4 text-sm text-muted-foreground">
-          {suite.size} m² · Sleeps {suite.sleeps} · {suite.view}
+          Up to {suite.sleeps} guests · {suite.pool}
         </p>
       </section>
 

@@ -3,17 +3,18 @@ const CDN = "https://de9ar5iu9yk2d.cloudfront.net/Portals/0/UltraMediaGallery/71
 export const property = {
   name: "Ionian Treasure Suites",
   tagline: "Pessada, Kefalonia, Greece",
-  operator: "Selected Hideaways",
-  phone: "+30 22861 86603",
-  phoneHref: "+302286186603",
+  phone: "+30 698 995 3758",
+  phoneHref: "+306989953758",
   email: "info@ioniantreasuresuites.com",
-  address: "Pessada, Kefalonia 28100, Ionian Islands, Greece",
+  address: "Pessada, 28100 Kefalonia, Greece",
   mapsUrl: "https://www.google.com/maps/search/?api=1&query=Pessada%2C+Kefalonia%2C+Greece",
   reservationUrl: "https://ioniantreasuresuites.reserve-online.net/accommodation/suite",
   coverImage: "https://www.ioniantreasuresuites.com/images/ioniantreasuresuitescover3.jpg",
   checkIn: "15:00",
   checkOut: "11:00",
   suiteCount: 9,
+  season: "1 April \u2013 31 October",
+  licence: "1363681",
 };
 
 export const heroImage = `${CDN}/00010pool.20240710120716.jpg`;
@@ -27,58 +28,24 @@ export const pageImages = {
 };
 
 export const intro = [
-  "\u201cIonian Treasure Suites\u201d is in a beautiful location on Kefalonia island, in the village of Pessada.",
-  "The complex offers its guests nine brand-new suites in three types \u2014 Junior Suites with a shared pool, Superior Suites with a private pool, and Two Bedroom Suites with a private pool. All are tastefully decorated and fully equipped with modern amenities: air-conditioning, a sitting area, a bathroom with shower, free Wi-Fi and a dining table in the kitchen.",
-  "\u201cIonian Treasure Suites\u201d also features a swimming pool, a garden, a lovely view of the sea, parking and a private entrance.",
-  "The accommodation is in a privileged location \u2014 just 600 metres from beautiful Pessada Beach, and close to the village port with seasonal ferries to Zakynthos. Argostoli, Kefalonia's capital, is a ten-minute drive away, and guests have a choice of many sandy, organised beaches nearby.",
+  "\u201cIonian Treasure Suites\u201d is in the village of Pessada on the island of Kefalonia.",
+  "The property offers nine suites in three types \u2014 five Junior Suites with a shared pool, two Superior Suites with a private pool and two Two Bedroom Suites with a private pool. Every suite has air conditioning, a sitting area with sofa bed, a bathroom with shower, a flat-screen TV, coffee facilities and free Wi-Fi.",
+  "Guests enjoy concierge service, pool towels, a safe deposit box, satellite TV and Wi-Fi throughout. We are open from 1 April to 31 October.",
 ];
 
 export const facilities = [
-  "Air conditioning",
-  "Garden",
-  "Swimming pool",
+  "Concierge",
   "Pool towels",
-  "Sunbeds",
-  "Outdoor furniture",
-  "Free Wi-Fi",
-  "TV with Netflix",
-  "Laundry service (on request)",
-  "Private entrance",
-  "Private parking (free)",
-  "Non-smoking",
+  "Safe deposit box",
+  "Satellite TV",
+  "Wi-Fi internet access",
 ];
 
-export const amenityGroups: Record<string, string[]> = {
-  Sleeping: [
-    "Bedroom with one large double bed",
-    "Linen provided",
-    "Wardrobe / closet",
-    "Safe",
-  ],
-  Living: [
-    "Seating area with sofa",
-    "TV with Netflix",
-    "Free Wi-Fi",
-    "Air conditioning (2 units)",
-  ],
-  Kitchen: [
-    "Fully equipped kitchen & kitchenware",
-    "Stovetop, refrigerator, microwave",
-    "Coffee machine & electric kettle",
-    "Grill and dining table",
-  ],
-  Bathroom: [
-    "Bathroom with shower",
-    "Free toiletries",
-    "Hairdryer",
-    "Pool towels",
-  ],
-  Practical: [
-    "Private entrance",
-    "Private parking (free)",
-    "Laundry on request",
-    "Non-smoking",
-  ],
+export const amenityGroups: Record<string, string[]] = {
+  Comfort: ["Air conditioning", "Sitting area", "Sofa bed", "Flat-screen TV"],
+  Connectivity: ["Free Wi-Fi internet access", "ADSL internet connection"],
+  Bathroom: ["Bathroom with shower", "Bath amenities", "Bathrobes and slippers", "Hairdryer"],
+  Practical: ["Coffee facilities", "Iron & ironing board", "Safe deposit box", "Pool towels", "Pool view"],
 };
 
 export type Suite = {
@@ -86,13 +53,14 @@ export type Suite = {
   number: string;
   name: string;
   units: number;
-  size: number;
   sleeps: number;
-  view: string;
+  pool: string;
   blurb: string;
   highlights: string[];
   images: string[];
 };
+
+const WH = "https://cdn.webhotelier.net/photos/w=1600";
 
 export const suites: Suite[] = [
   {
@@ -100,17 +68,18 @@ export const suites: Suite[] = [
     number: "Junior",
     name: "Junior Suite with Shared Pool",
     units: 5,
-    size: 32,
-    sleeps: 2,
-    view: "Pool & garden",
+    sleeps: 4,
+    pool: "Shared pool",
     blurb:
-      "A bright, brand-new suite for two, a few steps from the shared swimming pool. Tastefully decorated with a bedroom, sitting area, fully equipped kitchen and a bathroom with shower \u2014 plus your own private entrance and terrace.",
-    highlights: ["Shared swimming pool", "Private entrance & terrace", "Full kitchen", "Free Wi-Fi & Netflix"],
+      "A suite for up to four guests with a pool view and access to the shared swimming pool. It has a sitting area with sofa bed, a bathroom with shower, coffee facilities, a flat-screen TV and free Wi-Fi.",
+    highlights: ["Shared swimming pool", "Pool view", "Sofa bed", "Up to 4 guests"],
     images: [
-      `${CDN}/10010onefour.20240710130727.jpg`,
-      `${CDN}/10020onefour.20240710130728.jpg`,
-      `${CDN}/10040onefour.20240710130725.jpg`,
-      `${CDN}/10060onefour.20240710130737.jpg`,
+      `${WH}/ioniantr-junior/L1960295.jpg`,
+      `${WH}/ioniantr-junior/L1960283.jpg`,
+      `${WH}/ioniantr-junior/L1960284.jpg`,
+      `${WH}/ioniantr-junior/L1960286.jpg`,
+      `${WH}/ioniantr-junior/L1960285.jpg`,
+      `${WH}/ioniantr-junior/L1960287.jpg`,
     ],
   },
   {
@@ -118,17 +87,18 @@ export const suites: Suite[] = [
     number: "Superior",
     name: "Superior Suite with Private Pool",
     units: 2,
-    size: 38,
-    sleeps: 2,
-    view: "Sea & private pool",
+    sleeps: 4,
+    pool: "Private pool",
     blurb:
-      "All the comfort of our Junior Suites with one unforgettable extra: your own private pool on the terrace, looking out toward the Ionian. A quiet, completely private corner of Kefalonia for two.",
-    highlights: ["Private pool on the terrace", "Sea view", "Full kitchen & dining table", "Free Wi-Fi & Netflix"],
+      "A suite for up to four guests with its own private pool and a kitchen. It has a sitting area with sofa bed, a bathroom with shower, coffee facilities, a flat-screen TV and free Wi-Fi.",
+    highlights: ["Private pool", "Kitchen", "Sofa bed", "Up to 4 guests"],
     images: [
-      `${CDN}/30010three.20240710110724.jpg`,
-      `${CDN}/30020three.20240710110734.jpg`,
-      `${CDN}/30030three.20240710110729.jpg`,
-      `${CDN}/30050three.20240710110747.jpg`,
+      `${WH}/ioniantr-super/L1960292.jpg`,
+      `${WH}/ioniantr-super/L1960288.jpg`,
+      `${WH}/ioniantr-super/L1960291.jpg`,
+      `${WH}/ioniantr-super/L1960294.jpg`,
+      `${WH}/ioniantr-super/L1960289.jpg`,
+      `${WH}/ioniantr-super/L1960297.jpg`,
     ],
   },
   {
@@ -136,17 +106,18 @@ export const suites: Suite[] = [
     number: "Two Bedroom",
     name: "Two Bedroom Suite with Private Pool",
     units: 2,
-    size: 55,
-    sleeps: 4,
-    view: "Sea & private pool",
+    sleeps: 5,
+    pool: "Private pool",
     blurb:
-      "Our largest suites: two separate bedrooms, a spacious living area and a fully equipped kitchen, opening onto a private pool and terrace. Ideal for families or two couples travelling together.",
-    highlights: ["Two separate bedrooms", "Private pool & terrace", "Sleeps up to 4", "Full kitchen & dining table"],
+      "Our two-bedroom suites sleep up to five guests, with a private pool and a kitchen. A sitting area with sofa bed, a bathroom with shower, coffee facilities, a flat-screen TV and free Wi-Fi complete the space.",
+    highlights: ["Two bedrooms", "Private pool", "Kitchen", "Up to 5 guests"],
     images: [
-      `${CDN}/20010twofive.20240710120750.jpg`,
-      `${CDN}/20030twofive.20240710120705.jpg`,
-      `${CDN}/20040twofive.20240710120740.jpg`,
-      `${CDN}/20060twofive.20240710120748.jpg`,
+      `${WH}/ioniantr-twobed/L1960298.jpg`,
+      `${WH}/ioniantr-twobed/L1960300.jpg`,
+      `${WH}/ioniantr-twobed/L1960303.jpg`,
+      `${WH}/ioniantr-twobed/L1960306.jpg`,
+      `${WH}/ioniantr-twobed/L1960310.jpg`,
+      `${WH}/ioniantr-twobed/L1960312.jpg`,
     ],
   },
 ];
@@ -160,15 +131,15 @@ export const galleryImages = [
   { src: `${CDN}/00150pool.20240710120737.jpg`, alt: "Loungers and shade sails beside the pool", category: "Pool & grounds" },
   { src: `${CDN}/00160pool.20240710120719.jpg`, alt: "Pool and suite facades in warm afternoon light", category: "Pool & grounds" },
   { src: `${CDN}/00210pool.20240710120715.jpg`, alt: "Garden planting framing the pool deck", category: "Pool & grounds" },
-  { src: `${CDN}/10010onefour.20240710130727.jpg`, alt: "Suite bedroom with large double bed", category: "Suites" },
-  { src: `${CDN}/10040onefour.20240710130725.jpg`, alt: "Suite seating area with sofa", category: "Suites" },
-  { src: `${CDN}/10160onefour.20240710130735.jpg`, alt: "Fully equipped suite kitchen with dining table", category: "Suites" },
-  { src: `${CDN}/20030twofive.20240710120705.jpg`, alt: "Bright suite interior with garden view", category: "Suites" },
-  { src: `${CDN}/20220twofive.20240710120702.jpg`, alt: "Bathroom with walk-in shower", category: "Suites" },
-  { src: `${CDN}/30020three.20240710110734.jpg`, alt: "Suite terrace with outdoor furniture and sea view", category: "Suites" },
-  { src: `${CDN}/30050three.20240710110747.jpg`, alt: "Suite bedroom looking out toward the Ionian sea", category: "Suites" },
-  { src: `${CDN}/30130three.20240710110745.jpg`, alt: "Detail of suite decoration and lighting", category: "Suites" },
-  { src: `${CDN}/30340three.20240710120707.jpg`, alt: "Evening view from a suite veranda", category: "Suites" },
+  { src: `https://cdn.webhotelier.net/photos/w=1600/ioniantr-junior/L1960283.jpg`, alt: "Junior Suite interior", category: "Suites" },
+  { src: `https://cdn.webhotelier.net/photos/w=1600/ioniantr-junior/L1960284.jpg`, alt: "Junior Suite sitting area", category: "Suites" },
+  { src: `https://cdn.webhotelier.net/photos/w=1600/ioniantr-junior/L1960286.jpg`, alt: "Junior Suite with pool view", category: "Suites" },
+  { src: `https://cdn.webhotelier.net/photos/w=1600/ioniantr-super/L1960288.jpg`, alt: "Superior Suite interior", category: "Suites" },
+  { src: `https://cdn.webhotelier.net/photos/w=1600/ioniantr-super/L1960291.jpg`, alt: "Superior Suite private pool", category: "Suites" },
+  { src: `https://cdn.webhotelier.net/photos/w=1600/ioniantr-super/L1960294.jpg`, alt: "Superior Suite details", category: "Suites" },
+  { src: `https://cdn.webhotelier.net/photos/w=1600/ioniantr-twobed/L1960300.jpg`, alt: "Two Bedroom Suite interior", category: "Suites" },
+  { src: `https://cdn.webhotelier.net/photos/w=1600/ioniantr-twobed/L1960303.jpg`, alt: "Two Bedroom Suite bedroom", category: "Suites" },
+  { src: `https://cdn.webhotelier.net/photos/w=1600/ioniantr-twobed/L1960306.jpg`, alt: "Two Bedroom Suite private pool", category: "Suites" },
   { src: `${CDN}/02010reception.20240718100720.jpg`, alt: "Reception lounge of Ionian Treasure Suites", category: "Reception" },
   { src: `${CDN}/02090reception.20240718100740.jpg`, alt: "Seating in the reception area", category: "Reception" },
   { src: `${CDN}/02160reception.20240718100741.jpg`, alt: "Reception desk and stone detailing", category: "Reception" },
@@ -199,12 +170,12 @@ export const faqs = [
     a: "Rates are quoted on request because they vary by season and length of stay. Booking direct with us always gets you our best available rate.",
   },
   {
-    q: "Is parking available?",
-    a: "Yes. Private on-site parking is free for all guests, and each suite has its own private entrance.",
+    q: "When are you open?",
+    a: "We operate from 1 April to 31 October.",
   },
   {
     q: "Are the suites suitable for families?",
-    a: "Yes. The Junior and Superior Suites are designed for two guests, while the Two Bedroom Suites with private pool sleep up to four \u2014 ideal for families or two couples travelling together.",
+    a: "Yes. Junior and Superior Suites sleep up to four guests, and the Two Bedroom Suites with private pool sleep up to five.",
   },
   {
     q: "Do you arrange car hire and transfers?",
@@ -299,10 +270,10 @@ export const experiences = [
 ];
 
 export const included = [
-  { title: "Swimming pool & sunbeds", text: "A private pool terrace with loungers, parasols and pool towels for every suite." },
-  { title: "600 m to Pessada Beach", text: "A short walk downhill to the cove, with many more organised beaches nearby." },
-  { title: "Fully equipped kitchens", text: "Stovetop, refrigerator, microwave, coffee machine, grill and a dining table." },
-  { title: "Free Wi-Fi & Netflix", text: "Fast wireless internet throughout and a smart TV with Netflix in each suite." },
-  { title: "Free private parking", text: "On-site parking and a private entrance to every suite. Car hire arranged." },
-  { title: "Brand-new interiors", text: "Tastefully decorated 32 m\u00b2 suites with air conditioning, safe and walk-in shower." },
+  { title: "Shared & private pools", text: "Junior Suites share a pool; Superior and Two Bedroom Suites have their own private pool." },
+  { title: "Pool towels", text: "Pool towels provided for every guest." },
+  { title: "Coffee facilities", text: "Coffee facilities in every suite, plus a kitchen in Superior and Two Bedroom Suites." },
+  { title: "Free Wi-Fi & satellite TV", text: "Free Wi-Fi internet access and a flat-screen TV with satellite channels." },
+  { title: "Concierge", text: "Our concierge is happy to help you plan your days on Kefalonia." },
+  { title: "Comfort in every suite", text: "Air conditioning, safe deposit box, sofa bed, bathrobes and slippers." },
 ];

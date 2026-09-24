@@ -29,7 +29,7 @@ function SuitesIndex() {
       <PageHeader
         eyebrow="Accommodation"
         title="Nine suites, three ways to stay"
-        description="Choose between five Junior Suites around the shared pool, two Superior Suites with a private pool, and two Two Bedroom Suites with a private pool — all brand new, with private entrances, terraces and fully equipped kitchens."
+        description="Choose between five Junior Suites around the shared pool, two Superior Suites with a private pool, and two Two Bedroom Suites with a private pool — each with air conditioning, a sofa bed, free Wi-Fi and a pool view."
         image={pageImages.suites}
         imageAlt="Suite terrace with a view over the Ionian sea"
       />
@@ -51,7 +51,7 @@ function SuitesIndex() {
                 <p className="eyebrow text-brass">{suite.units} {suite.units === 1 ? "suite" : "suites"}</p>
                 <h2 className="mt-3 text-3xl">{suite.name}</h2>
                 <p className="mt-3 text-sm text-muted-foreground">
-                  Size: {suite.size} m² · Sleeps: {suite.sleeps} · View: {suite.view}
+                  Up to {suite.sleeps} guests · {suite.pool}
                 </p>
                 <p className="mt-5 text-sm leading-relaxed text-muted-foreground">{suite.blurb}</p>
                 <ul className="mt-5 flex flex-wrap gap-3">
