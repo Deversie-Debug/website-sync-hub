@@ -36,7 +36,7 @@ function GalleryPage() {
       <PageHeader
         eyebrow="Gallery"
         title="The pool, the garden, the suites"
-        description="Twenty photographs of the property as it is — taken across the terrace, the reception and the suites."
+        description={`${galleryImages.length} photographs of the property as it is — taken across the terrace, the reception and the suites.`}
         image={pageImages.gallery}
         imageAlt="Pool and suite facades in warm afternoon light"
       />
