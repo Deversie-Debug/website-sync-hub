@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
+import logo from "@/assets/ionian-treasure-logo.png";
 import {
   property,
   heroImage,
@@ -40,6 +41,11 @@ function Index() {
           className="absolute inset-0 size-full object-cover"
         />
         <div className="absolute inset-0 bg-hero-wash" aria-hidden="true" />
+        <img
+          src={logo}
+          alt="Ionian Treasure"
+          className="absolute left-1/2 top-1/2 z-[2] w-52 -translate-x-1/2 -translate-y-1/2 object-contain brightness-0 invert sm:w-64 lg:w-72"
+        />
         <a
           href="#overview"
           aria-label="Scroll to explore Ionian Treasure Suites"
