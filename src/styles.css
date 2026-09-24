@@ -45,6 +45,7 @@
   --color-nav: var(--nav);
   --color-nav-border: var(--nav-border);
   --color-nav-foreground: var(--nav-foreground);
+  --color-hero-wash: var(--hero-wash);
 }
 
 :root {
@@ -80,6 +81,7 @@
   --nav: oklch(52% 0.068 195);
   --nav-border: oklch(99% 0.004 90 / 0.14);
   --nav-foreground: oklch(97.5% 0.005 90);
+  --hero-wash: oklch(86% 0.045 225 / 0.13);
 }
 
 @layer base {
