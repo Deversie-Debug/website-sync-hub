@@ -351,6 +351,7 @@ a:hover .menu-link-label {
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: translateY(-2rem);
 }
 
 .welcome-handle {
@@ -373,6 +374,7 @@ a:hover .menu-link-label {
 
 .welcome-copy {
   display: flex;
+  transform: translateY(-2rem);
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -380,6 +382,7 @@ a:hover .menu-link-label {
 
 .welcome-enter {
   display: flex;
+  margin-top: 2rem;
   flex-direction: column;
   align-items: center;
   gap: 0.65rem;
