@@ -45,7 +45,7 @@ function SuitesIndex() {
                 src={suite.images[0]}
                 alt={suite.name}
                 loading={i === 0 ? "eager" : "lazy"}
-                className="aspect-4/3 h-full min-h-72 w-full object-cover lg:aspect-auto"
+                className="block aspect-4/3 w-full self-start object-cover lg:aspect-auto lg:h-full lg:min-h-72 lg:self-stretch"
               />
               <div className="flex flex-col justify-center p-8 lg:p-12">
                 <p className="eyebrow text-brass">Suite {suite.number}</p>
