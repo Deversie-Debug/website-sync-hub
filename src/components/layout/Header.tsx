@@ -51,37 +51,46 @@ export function Header() {
             : "fixed border-b border-border bg-background/95 backdrop-blur-sm"
         } ${open ? "z-50" : overHomeHero ? "z-[5]" : "z-40"}`}
       >
-        <div
-          className={`mx-auto grid h-24 w-full max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-6 lg:px-8 ${tone}`}
-        >
-
+        <div className={`mx-auto w-full max-w-7xl px-6 py-5 lg:px-8 ${tone}`}>
+          <div className="grid min-h-20 grid-cols-[1fr_auto_1fr] items-center border-y border-current/20 py-3 lg:min-h-24">
           <button
             type="button"
             aria-label="Open menu"
             onClick={() => setOpen(true)}
-            className="flex h-10 w-10 flex-col justify-center gap-2"
+            className="flex h-10 w-10 flex-col justify-center gap-2 lg:hidden"
           >
             <span className="h-0.5 w-7 bg-current" />
             <span className="h-0.5 w-5 bg-current" />
           </button>
 
+          <nav className="hidden items-center gap-9 text-[0.6rem] font-medium uppercase tracking-[0.25em] lg:flex">
+            <Link to="/suites" className="transition-opacity hover:opacity-70">Suites</Link>
+            <Link to="/experiences" className="transition-opacity hover:opacity-70">Island guide</Link>
+          </nav>
+
           <Link to="/" className="no-underline-anim" onClick={() => setOpen(false)}>
             <img
               src={logo}
               alt="Ionian Treasure"
-              className={`size-20 object-contain transition-[filter] duration-300 sm:size-24 ${
+              className={`size-20 object-contain transition-[filter] duration-300 lg:size-24 ${
                 overHomeHero ? "brightness-0 invert" : "brightness-0"
               }`}
             />
           </Link>
 
-          <div className="flex items-center justify-end gap-4 text-[0.6rem] uppercase tracking-[0.2em]">
-            <a href={`tel:${property.phoneHref}`} aria-label={`Call ${property.phone}`}>
+          <div className="flex items-center justify-end gap-4 text-[0.6rem] uppercase tracking-[0.22em] lg:gap-8">
+            <Link to="/gallery" className="hidden transition-opacity hover:opacity-70 lg:inline">Gallery</Link>
+            <Link to="/contact" className="hidden transition-opacity hover:opacity-70 lg:inline">Contact</Link>
+            <a href={`tel:${property.phoneHref}`} aria-label={`Call ${property.phone}`} className="lg:hidden">
               <Phone className="size-3.5" aria-hidden="true" />
             </a>
-            <Link to="/book" className="hidden hover:opacity-70 sm:inline">
+            <Link
+              to="/book"
+              className="hidden border border-current/40 px-6 py-3 transition-colors duration-500 hover:bg-primary-foreground hover:text-primary lg:inline-flex"
+            >
               Book now
             </Link>
+          </div>
           </div>
         </div>
       </header>
