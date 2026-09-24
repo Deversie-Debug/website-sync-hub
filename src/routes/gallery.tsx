@@ -6,7 +6,7 @@ import { galleryImages, galleryCategories, pageImages } from "@/content/property
 
 const title = "Gallery — Ionian Treasure Suites, Pessada";
 const description =
-  "Photographs of the swimming pool, garden, reception and the five suites at Ionian Treasure Suites in Pessada, Kefalonia.";
+  "Photographs of the swimming pool, garden, reception and the suites at Ionian Treasure Suites in Pessada, Kefalonia.";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -36,7 +36,7 @@ function GalleryPage() {
       <PageHeader
         eyebrow="Gallery"
         title="The pool, the garden, the suites"
-        description="Twenty photographs of the property as it is — taken across the terrace, the reception and each of the five suites."
+        description="Twenty photographs of the property as it is — taken across the terrace, the reception and the suites."
         image={pageImages.gallery}
         imageAlt="Pool and suite facades in warm afternoon light"
       />

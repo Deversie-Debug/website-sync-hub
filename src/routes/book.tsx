@@ -47,7 +47,7 @@ function BookPage() {
       <PageHeader
         eyebrow="Reservations"
         title="Book direct with us"
-        description="Five suites means we answer every enquiry ourselves. Tell us when you would like to come and we will do the rest."
+        description="Nine suites means we answer every enquiry ourselves. Tell us when you would like to come and we will do the rest."
         image={pageImages.book}
         imageAlt="Loungers and shade sails beside the pool"
       />
