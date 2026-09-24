@@ -57,44 +57,52 @@ export function Header() {
     };
   }, []);
 
-  const overHomeHero = isHome && !pastHero;
-  const tone = overHomeHero ? "text-primary-foreground image-copy-readable" : "text-brass";
+  const headerContent = (tone: string) => (
+    <div className={`w-full py-5 ${tone}`}>
+      <div className="grid min-h-20 w-full grid-cols-[1fr_auto_1fr] items-center border-y border-current/20 px-6 py-3 lg:min-h-24 lg:px-10">
+        <button
+          type="button"
+          aria-label="Open menu"
+          onClick={() => setOpen(true)}
+          className="group flex h-10 w-10 flex-col justify-center gap-2"
+        >
+          <span className="h-0.5 w-7 origin-left bg-current transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-1" />
+          <span className="h-0.5 w-5 origin-left bg-current transition-[width,transform] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:w-7 group-hover:-translate-x-0.5" />
+        </button>
+
+        <Link to="/" className="no-underline-anim" onClick={() => setOpen(false)}>
+          <BrandLogo className="h-20 w-36 lg:h-24 lg:w-44" />
+        </Link>
+
+        <div className="flex items-center justify-end">
+          <Link
+            to="/book"
+            className="book-now-link inline-flex text-sm font-bold uppercase tracking-normal sm:text-base"
+          >
+            Book now
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <>
+      {isHome && (
+        <header className="absolute inset-x-0 top-0 z-[5] bg-transparent">
+          {headerContent("text-primary-foreground image-copy-readable")}
+        </header>
+      )}
+
       <header
-        className={`inset-x-0 top-0 transition-[background-color,border-color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-          overHomeHero
-            ? "absolute bg-transparent"
-            : "fixed border-b border-border bg-background"
-        } ${open ? "z-50" : overHomeHero ? "z-[5]" : "z-40"}`}
+        aria-hidden={isHome && !pastHero}
+        className={`fixed inset-x-0 top-0 border-b border-border bg-background transition-[opacity,transform] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          isHome && !pastHero
+            ? "pointer-events-none -translate-y-6 opacity-0"
+            : "translate-y-0 opacity-100"
+        } ${open ? "z-50" : "z-40"}`}
       >
-        <div className={`w-full py-5 ${tone}`}>
-          <div className="grid min-h-20 w-full grid-cols-[1fr_auto_1fr] items-center border-y border-current/20 px-6 py-3 lg:min-h-24 lg:px-10">
-          <button
-            type="button"
-            aria-label="Open menu"
-            onClick={() => setOpen(true)}
-            className="group flex h-10 w-10 flex-col justify-center gap-2"
-          >
-            <span className="h-0.5 w-7 origin-left bg-current transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-1" />
-            <span className="h-0.5 w-5 origin-left bg-current transition-[width,transform] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:w-7 group-hover:-translate-x-0.5" />
-          </button>
-
-          <Link to="/" className="no-underline-anim" onClick={() => setOpen(false)}>
-            <BrandLogo className="h-20 w-36 lg:h-24 lg:w-44" />
-          </Link>
-
-          <div className="flex items-center justify-end">
-            <Link
-              to="/book"
-              className="book-now-link inline-flex text-sm font-bold uppercase tracking-normal sm:text-base"
-            >
-              Book now
-            </Link>
-          </div>
-          </div>
-        </div>
+        {headerContent("text-brass")}
       </header>
 
       <div
