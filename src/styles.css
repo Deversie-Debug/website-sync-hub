@@ -46,6 +46,7 @@
   --color-nav-border: var(--nav-border);
   --color-nav-foreground: var(--nav-foreground);
   --color-hero-wash: var(--hero-wash);
+  --color-subpage-scrim: var(--subpage-scrim);
 }
 
 :root {
@@ -86,6 +87,7 @@
   --nav-border: oklch(99% 0.004 90 / 0.14);
   --nav-foreground: oklch(97.5% 0.005 90);
   --hero-wash: oklch(86% 0.045 225 / 0.13);
+  --subpage-scrim: oklch(22% 0.025 180);
 }
 
 @layer base {
@@ -169,6 +171,15 @@
 
 @utility image-copy-readable {
   color: var(--primary-foreground);
+}
+
+@utility subpage-image-scrim {
+  background: linear-gradient(
+    to bottom,
+    color-mix(in oklab, var(--subpage-scrim) 48%, transparent),
+    color-mix(in oklab, var(--subpage-scrim) 14%, transparent) 45%,
+    color-mix(in oklab, var(--subpage-scrim) 62%, transparent)
+  );
 }
 
 @utility logo-mask {
