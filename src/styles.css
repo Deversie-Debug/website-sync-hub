@@ -333,7 +333,7 @@ a:hover .menu-link-label {
 
 .welcome-emblem {
   position: absolute;
-  top: 46%;
+  top: 34%;
   display: flex;
   width: min(72vw, 28rem);
   transform: translate(-50%, -50%);
@@ -370,9 +370,22 @@ a:hover .menu-link-label {
   left: 1.25rem;
 }
 
+.welcome-copy {
+  position: absolute;
+  top: 61%;
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  transform: translateX(-50%);
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: opacity 300ms ease, transform 500ms var(--ease-smooth);
+}
+
 .welcome-enter {
   position: absolute;
-  bottom: 9%;
+  top: 71%;
   left: 50%;
   z-index: 2;
   display: flex;
@@ -389,10 +402,10 @@ a:hover .menu-link-label {
 
 .welcome-enter-line {
   display: block;
-  width: 1px;
-  height: 2rem;
+  width: 3rem;
+  height: 1px;
   background-color: currentColor;
-  transform-origin: top;
+  transform-origin: center;
   animation: welcome-line 1800ms ease-in-out infinite;
 }
 
@@ -419,9 +432,14 @@ a:hover .menu-link-label {
   transform: translateX(-50%) translateY(1rem);
 }
 
+.welcome-doors.is-opening .welcome-copy {
+  opacity: 0;
+  transform: translateX(-50%) translateY(1rem);
+}
+
 @keyframes welcome-line {
-  0%, 100% { transform: scaleY(0.35); opacity: 0.45; }
-  50% { transform: scaleY(1); opacity: 1; }
+  0%, 100% { transform: scaleX(0.4); opacity: 0.45; }
+  50% { transform: scaleX(1); opacity: 1; }
 }
 
 @media (max-width: 639px) {
