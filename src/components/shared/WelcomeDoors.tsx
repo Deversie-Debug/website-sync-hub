@@ -38,12 +38,6 @@ export function WelcomeDoors() {
   const emblem = (
     <span className="welcome-emblem" aria-hidden="true">
       <span style={logoStyle} className="logo-mask block h-24 w-28 sm:h-32 sm:w-36" />
-      <span className="mt-4 whitespace-nowrap text-[0.65rem] font-medium uppercase tracking-[0.24em] sm:text-xs">
-        Ionian Treasure
-      </span>
-      <span className="mt-2 whitespace-nowrap text-[0.52rem] uppercase tracking-[0.35em] opacity-75 sm:text-[0.6rem]">
-        Suites · Kefalonia
-      </span>
     </span>
   );
 
@@ -63,6 +57,14 @@ export function WelcomeDoors() {
         <span className="welcome-glass-lines" aria-hidden="true" />
         {emblem}
         <span className="welcome-handle welcome-handle-right" aria-hidden="true" />
+      </span>
+      <span className="welcome-copy" aria-hidden="true">
+        <span className="whitespace-nowrap text-[0.65rem] font-medium uppercase tracking-[0.24em] sm:text-xs">
+          Ionian Treasure
+        </span>
+        <span className="mt-2 whitespace-nowrap text-[0.52rem] uppercase tracking-[0.35em] opacity-75 sm:text-[0.6rem]">
+          Suites · Kefalonia
+        </span>
       </span>
       <span className="welcome-enter" aria-hidden="true">
         <span>Enter</span>
