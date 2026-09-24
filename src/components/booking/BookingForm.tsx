@@ -80,7 +80,7 @@ export function BookingForm({ defaultSuite }: { defaultSuite?: string }) {
             <option>No preference — recommend one for me</option>
             {suites.map((s) => (
               <option key={s.id} value={s.name}>
-                {s.name} · {s.size} m² · {s.view}
+                {s.name} · up to {s.sleeps} guests
               </option>
             ))}
             <option>Two adjoining suites</option>

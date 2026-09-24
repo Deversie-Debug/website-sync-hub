@@ -6,7 +6,7 @@ import { property, faqs, pageImages } from "@/content/property";
 
 const title = "Contact & FAQ — Ionian Treasure Suites, Pessada";
 const description =
-  "Call, email or send an enquiry to Ionian Treasure Suites in Pessada, Kefalonia. Managed by Selected Hideaways — a real person replies, usually within 24 hours.";
+  "Call, email or send an enquiry to Ionian Treasure Suites in Pessada, Kefalonia. A real person replies, usually within 24 hours.";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -30,7 +30,7 @@ function ContactPage() {
       <PageHeader
         eyebrow="Contact"
         title="Talk to us directly"
-        description="Ionian Treasure Suites is managed by Selected Hideaways. Write, call, or send an enquiry and a real person will answer you."
+        description="Write, call, or send an enquiry and a real person will answer you."
         image={pageImages.contact}
         imageAlt="Reception lounge of Ionian Treasure Suites"
       />

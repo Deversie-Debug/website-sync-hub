@@ -17,10 +17,10 @@ export function Footer() {
         <div className="sm:col-span-2 lg:col-span-1">
           <p className="eyebrow text-brass">Ionian Treasure Suites</p>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-            Nine brand-new suites — some with private pools — in the village of
-            Pessada, Kefalonia — 600 metres from the beach.
+            Nine suites — some with private pools — in the village of
+            Pessada, Kefalonia.
           </p>
-          <p className="mt-4 text-sm text-muted-foreground">Managed by {property.operator}</p>
+          <p className="mt-4 text-sm text-muted-foreground">Open {property.season} · Licence (MHTE) {property.licence}</p>
         </div>
 
         <div>

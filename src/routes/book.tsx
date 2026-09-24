@@ -82,20 +82,20 @@ function BookPage() {
               </div>
               <div>
                 <dt className="text-muted-foreground">Occupancy</dt>
-                <dd>Each suite sleeps 2 guests</dd>
+                <dd>Up to 4 guests (Junior, Superior) · up to 5 (Two Bedroom)</dd>
               </div>
               <div>
                 <dt className="text-muted-foreground">Rates</dt>
                 <dd>On request, by season and length of stay</dd>
               </div>
               <div>
-                <dt className="text-muted-foreground">Parking</dt>
-                <dd>Free, on site</dd>
+                <dt className="text-muted-foreground">Open</dt>
+                <dd>{property.season}</dd>
               </div>
             </dl>
 
             <p className="mt-8 text-sm text-muted-foreground">
-              Prefer to talk? Call or email {property.operator} directly.
+              Prefer to talk? Call or email us directly.
             </p>
             <a href={`tel:${property.phoneHref}`} className="mt-3 block w-fit text-sm text-brass">
               {property.phone}

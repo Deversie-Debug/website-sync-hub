@@ -16,7 +16,7 @@ import {
 
 const title = "Ionian Treasure Suites — Pool Suites in Pessada, Kefalonia";
 const description =
-  "Nine brand-new suites — some with private pools — in Pessada, Kefalonia, 600 m from the beach and 10 minutes from Argostoli. Book direct for our best rate.";
+  "Nine suites in Pessada, Kefalonia — Junior Suites with a shared pool, Superior and Two Bedroom Suites with private pools. Open April to October. Book direct.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -129,7 +129,7 @@ function Index() {
               <img loading="lazy" decoding="async" src={suite.images[0]} alt={suite.name} className="aspect-4/3 w-full object-cover" />
               <div className="flex flex-1 flex-col p-8">
                 <p className="eyebrow text-muted-foreground">
-                  {suite.size} m² · Sleeps {suite.sleeps} · {suite.view}
+                  Up to {suite.sleeps} guests · {suite.pool}
                 </p>
                 <h3 className="mt-3 text-2xl">{suite.name}</h3>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
