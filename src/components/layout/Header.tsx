@@ -58,7 +58,7 @@ export function Header() {
   }, []);
 
   const overHomeHero = isHome && !pastHero;
-  const tone = overHomeHero ? "text-primary-foreground image-copy-readable" : "text-primary";
+  const tone = overHomeHero ? "text-primary-foreground image-copy-readable" : "text-brass";
 
   return (
     <>
@@ -75,10 +75,10 @@ export function Header() {
             type="button"
             aria-label="Open menu"
             onClick={() => setOpen(true)}
-            className="flex h-10 w-10 flex-col justify-center gap-2"
+            className="group flex h-10 w-10 flex-col justify-center gap-2"
           >
-            <span className="h-0.5 w-7 bg-current" />
-            <span className="h-0.5 w-5 bg-current" />
+            <span className="h-0.5 w-7 origin-left bg-current transition-transform duration-300 ease-out group-hover:translate-x-1" />
+            <span className="h-0.5 w-5 origin-left bg-current transition-[width,transform] duration-300 ease-out group-hover:w-7 group-hover:-translate-x-0.5" />
           </button>
 
           <Link to="/" className="no-underline-anim" onClick={() => setOpen(false)}>
@@ -88,7 +88,7 @@ export function Header() {
           <div className="flex items-center justify-end">
             <Link
               to="/book"
-              className="inline-flex text-xs font-semibold uppercase tracking-[0.2em] transition-opacity duration-300 hover:opacity-70 sm:text-sm"
+              className="book-now-link inline-flex text-xs font-bold uppercase tracking-[0.2em] sm:text-sm"
             >
               Book now
             </Link>
