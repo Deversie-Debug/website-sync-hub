@@ -13,7 +13,7 @@ export function PageHeader({
 }) {
   return (
     <section className="relative isolate overflow-hidden">
-      <img src={image} alt={imageAlt} className="absolute inset-0 size-full object-cover" />
+      <img fetchPriority="high" decoding="async" src={image} alt={imageAlt} className="absolute inset-0 size-full object-cover" />
       <div aria-hidden="true" className="subpage-image-scrim absolute inset-0" />
       <div aria-hidden="true" className="pointer-events-none absolute inset-4 border border-primary-foreground/15" />
       <div className="relative mx-auto grid min-h-[70vh] w-full max-w-7xl content-center justify-items-center px-6 py-28 text-center lg:px-8">
