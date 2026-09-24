@@ -88,11 +88,7 @@ export function Header() {
             </a>
             <Link
               to="/book"
-              className={`hidden border px-6 py-3 transition-colors duration-500 lg:inline-flex ${
-                overHomeHero
-                  ? "border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-                  : "border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground"
-              }`}
+              className="hidden border border-current/50 px-6 py-3 transition-opacity duration-300 hover:opacity-70 lg:inline-flex"
             >
               Book now
             </Link>
