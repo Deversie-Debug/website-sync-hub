@@ -1,7 +1,7 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import type { CSSProperties } from "react";
 import { useEffect, useState } from "react";
-import { Phone, X } from "lucide-react";
+import { X } from "lucide-react";
 import { property } from "@/content/property";
 import monogram from "@/assets/ionian-treasure-monogram.png";
 
@@ -75,30 +75,20 @@ export function Header() {
             type="button"
             aria-label="Open menu"
             onClick={() => setOpen(true)}
-            className="flex h-10 w-10 flex-col justify-center gap-2 lg:hidden"
+            className="flex h-10 w-10 flex-col justify-center gap-2"
           >
             <span className="h-0.5 w-7 bg-current" />
             <span className="h-0.5 w-5 bg-current" />
           </button>
 
-          <nav className="hidden items-center gap-9 text-[0.6rem] font-medium uppercase tracking-[0.25em] lg:flex">
-            <Link to="/suites" className="transition-opacity hover:opacity-70">Suites</Link>
-            <Link to="/experiences" className="transition-opacity hover:opacity-70">Island guide</Link>
-          </nav>
-
           <Link to="/" className="no-underline-anim" onClick={() => setOpen(false)}>
             <BrandLogo className="h-20 w-36 lg:h-24 lg:w-44" />
           </Link>
 
-          <div className="flex items-center justify-end gap-4 text-[0.6rem] uppercase tracking-[0.22em] lg:gap-8">
-            <Link to="/gallery" className="hidden transition-opacity hover:opacity-70 lg:inline">Gallery</Link>
-            <Link to="/contact" className="hidden transition-opacity hover:opacity-70 lg:inline">Contact</Link>
-            <a href={`tel:${property.phoneHref}`} aria-label={`Call ${property.phone}`} className="lg:hidden">
-              <Phone className="size-3.5" aria-hidden="true" />
-            </a>
+          <div className="flex items-center justify-end">
             <Link
               to="/book"
-              className="hidden border border-current/50 px-6 py-3 transition-opacity duration-300 hover:opacity-70 lg:inline-flex"
+              className="inline-flex text-xs font-semibold uppercase tracking-[0.2em] transition-opacity duration-300 hover:opacity-70 sm:text-sm"
             >
               Book now
             </Link>
