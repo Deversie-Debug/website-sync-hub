@@ -140,7 +140,6 @@
 
 @utility image-copy-readable {
   color: var(--primary-foreground);
-  text-shadow: 0 1px 3px oklch(18% 0.02 180 / 0.9), 0 2px 12px oklch(18% 0.02 180 / 0.65);
 }
 
 @utility logo-mask {
@@ -186,5 +185,18 @@ a:not([class*="inline-flex"]):not([class*="rounded"]):not(.no-underline-anim) {
 }
 
 a:hover:not([class*="inline-flex"]):not([class*="rounded"]):not(.no-underline-anim) {
+  background-size: 100% 1px;
+}
+
+.book-now-link {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1px;
+  padding-bottom: 0.25rem;
+  transition: background-size 0.35s ease;
+}
+
+.book-now-link:hover {
   background-size: 100% 1px;
 }
