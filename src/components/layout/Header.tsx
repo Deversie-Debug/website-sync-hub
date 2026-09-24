@@ -107,8 +107,10 @@ export function Header() {
 
       <div
         aria-hidden={!open}
-        className={`fixed inset-0 z-[60] flex flex-col bg-background text-brass transition-[opacity,transform,visibility] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-          open ? "visible translate-y-0 opacity-100" : "invisible -translate-y-4 opacity-0 pointer-events-none"
+        className={`fixed inset-0 z-[60] flex flex-col bg-background text-brass transition-[clip-path,opacity,visibility] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          open
+            ? "visible [clip-path:inset(0_0_0_0)] opacity-100"
+            : "invisible pointer-events-none [clip-path:inset(0_0_100%_0)] opacity-0"
         }`}
       >
           <div className="grid h-28 w-full grid-cols-[1fr_auto_1fr] items-center border-b border-border px-6 lg:px-10">
@@ -119,7 +121,7 @@ export function Header() {
                 type="button"
                 aria-label="Close menu"
                 onClick={() => setOpen(false)}
-                className="text-current"
+                className={`text-current transition-[opacity,transform] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${open ? "rotate-0 opacity-100" : "-rotate-45 opacity-0"}`}
               >
                 <X className="size-6" aria-hidden="true" />
               </button>
@@ -129,12 +131,12 @@ export function Header() {
           <nav className="flex flex-1 flex-col items-center justify-center gap-5 px-6 text-center">
             {nav.map((item, i) => (
               <Link
-                style={{ transitionDelay: open ? `${150 + i * 50}ms` : "0ms" }}
+                style={{ transitionDelay: open ? `${220 + i * 70}ms` : "0ms" }}
                 key={item.to}
                 to={item.to}
                 onClick={() => setOpen(false)}
                 activeOptions={{ exact: item.to === "/" }}
-                className={`display-caps text-2xl transition-[opacity,transform] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:opacity-70 sm:text-3xl ${open ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"}`}
+                className={`display-caps text-2xl transition-[opacity,transform] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:opacity-70 sm:text-3xl ${open ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"}`}
               >
                 {item.label}
               </Link>
