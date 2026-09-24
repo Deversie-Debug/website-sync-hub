@@ -15,7 +15,7 @@ const nav = [
 
 export function Header() {
   const [open, setOpen] = useState(false);
-  const [mode, setMode] = useState<"top" | "stuck" | "hidden">("top");
+  const [pastHero, setPastHero] = useState(false);
   const isHome = useLocation({ select: (l) => l.pathname === "/" });
 
   useEffect(() => {
@@ -25,50 +25,30 @@ export function Header() {
     };
   }, [open]);
 
-  const [animate, setAnimate] = useState(false);
-
   useEffect(() => {
-    let last = window.scrollY;
-    let current: "top" | "stuck" | "hidden" = "top";
-    const set = (next: "top" | "stuck" | "hidden") => {
-      if (next === current) return;
-      // Only animate when the light bar is already in play; switching from the
-      // transparent top header straight to hidden should be instant (no flash).
-      setAnimate(current !== "top" && next !== "top");
-      current = next;
-      setMode(next);
-    };
     const onScroll = () => {
-      const y = window.scrollY;
-      const delta = y - last;
-      last = y;
-      if (y < 120) {
-        if (current !== "top" && delta < -4) set("stuck");
-      } else if (delta > 4) {
-        set("hidden");
-      } else if (delta < -4) {
-        set("stuck");
-      }
-      if (y <= 0) set("top");
+      setPastHero(window.scrollY >= window.innerHeight - 80);
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
   }, []);
 
-  const atTop = mode === "top";
-  const tone = atTop ? "text-primary-foreground image-copy-readable" : "text-primary";
+  const overHomeHero = isHome && !pastHero;
+  const tone = overHomeHero ? "text-primary-foreground image-copy-readable" : "text-primary";
 
   return (
     <>
       <header
-        className={`inset-x-0 top-0 ${animate ? "transition-[transform,opacity] duration-400 ease-out" : ""} ${
-          atTop
+        className={`inset-x-0 top-0 transition-[background-color,border-color] duration-300 ${
+          overHomeHero
             ? "absolute bg-transparent"
-            : `fixed border-b border-border bg-background/95 backdrop-blur-sm ${
-                mode === "hidden" && !open ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
-              }`
-        } ${open ? "z-50" : atTop && isHome ? "z-[5]" : "z-40"}`}
+            : "fixed border-b border-border bg-background/95 backdrop-blur-sm"
+        } ${open ? "z-50" : overHomeHero ? "z-[5]" : "z-40"}`}
       >
         <div
           className={`mx-auto grid h-20 w-full max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-6 lg:px-8 ${tone}`}
@@ -78,10 +58,10 @@ export function Header() {
             type="button"
             aria-label="Open menu"
             onClick={() => setOpen(true)}
-            className="flex w-10 flex-col gap-1.5"
+            className="flex h-10 w-10 flex-col justify-center gap-2"
           >
-            <span className="h-px w-6 bg-current" />
-            <span className="h-px w-4 bg-current" />
+            <span className="h-0.5 w-7 bg-current" />
+            <span className="h-0.5 w-5 bg-current" />
           </button>
 
           <Link to="/" className="no-underline-anim text-center leading-tight" onClick={() => setOpen(false)}>

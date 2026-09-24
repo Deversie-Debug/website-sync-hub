@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
+import { ArrowDown, ArrowRight } from "lucide-react";
 import {
   property,
   heroImage,
@@ -39,10 +39,17 @@ function Index() {
           alt="Sunbeds and parasols along the swimming pool"
           className="absolute inset-0 size-full object-cover"
         />
+        <a
+          href="#overview"
+          aria-label="Scroll to explore Ionian Treasure Suites"
+          className="no-underline-anim absolute bottom-8 left-1/2 z-[2] flex size-12 -translate-x-1/2 items-center justify-center rounded-full border border-primary-foreground/70 bg-background/20 text-primary-foreground shadow-sm backdrop-blur-sm transition-colors hover:bg-background/35 motion-safe:animate-bounce motion-reduce:animate-none"
+        >
+          <ArrowDown className="size-5" aria-hidden="true" />
+        </a>
       </section>
       <div className="relative z-10 bg-background shadow-[0_-12px_30px_-12px_oklch(20%_0.02_180/0.25)]">
 
-      <section className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
+      <section id="overview" className="mx-auto w-full max-w-7xl scroll-mt-20 px-6 py-20 lg:px-8 lg:py-28">
         <p className="eyebrow hairline-center mx-auto text-center tracking-[0.4em] text-brass">Overview</p>
         <h2 className="display-caps mx-auto mt-8 max-w-2xl text-balance text-center text-2xl sm:text-3xl lg:text-4xl">
           A privileged corner of Kefalonia
