@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { useEffect } from "react";
+import { WelcomeDoors } from "@/components/shared/WelcomeDoors";
 import {
   property,
   heroImage,
@@ -43,6 +44,7 @@ function Index() {
 
   return (
     <>
+      <WelcomeDoors />
       <section className="sticky top-0 isolate z-0 h-dvh min-h-dvh overflow-hidden">
         <img fetchPriority="high" decoding="async"
           src={heroImage}
