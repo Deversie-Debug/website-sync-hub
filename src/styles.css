@@ -143,6 +143,14 @@
   text-shadow: 0 1px 3px oklch(18% 0.02 180 / 0.9), 0 2px 12px oklch(18% 0.02 180 / 0.65);
 }
 
+@utility logo-mask {
+  background-color: currentColor;
+  mask-image: var(--logo-image);
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+}
+
 @utility display-caps {
   font-family: var(--font-display);
   font-weight: 300;

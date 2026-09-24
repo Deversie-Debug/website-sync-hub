@@ -1,4 +1,5 @@
 import { Link, useLocation } from "@tanstack/react-router";
+import type { CSSProperties } from "react";
 import { useEffect, useState } from "react";
 import { Phone, X } from "lucide-react";
 import { property } from "@/content/property";
@@ -13,6 +14,8 @@ const nav = [
   { to: "/contact", label: "Contact" },
   { to: "/book", label: "Book direct" },
 ] as const;
+
+const logoStyle = { "--logo-image": `url(${logo})` } as CSSProperties;
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -69,12 +72,11 @@ export function Header() {
           </nav>
 
           <Link to="/" className="no-underline-anim" onClick={() => setOpen(false)}>
-            <img
-              src={logo}
-              alt="Ionian Treasure"
-              className={`h-20 w-36 object-contain transition-[filter] duration-300 lg:h-24 lg:w-44 ${
-                overHomeHero ? "brightness-0 invert" : "brightness-0"
-              }`}
+            <span
+              role="img"
+              aria-label="Ionian Treasure"
+              style={logoStyle}
+              className="logo-mask block h-20 w-36 lg:h-24 lg:w-44"
             />
           </Link>
 
@@ -103,7 +105,12 @@ export function Header() {
       >
           <div className="grid h-28 w-full grid-cols-[1fr_auto_1fr] items-center border-b border-border px-6 lg:px-10">
             <span />
-            <img src={logo} alt="Ionian Treasure" className="h-20 w-36 object-contain brightness-0 sm:h-24 sm:w-44" />
+            <span
+              role="img"
+              aria-label="Ionian Treasure"
+              style={logoStyle}
+              className="logo-mask block h-20 w-36 text-primary sm:h-24 sm:w-44"
+            />
             <div className="flex justify-end">
               <button
                 type="button"
