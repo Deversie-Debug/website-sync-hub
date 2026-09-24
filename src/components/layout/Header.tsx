@@ -2,6 +2,7 @@ import { Link, useLocation } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Phone, X } from "lucide-react";
 import { property } from "@/content/property";
+import logo from "@/assets/ionian-treasure-logo.png";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -65,10 +66,7 @@ export function Header() {
           </button>
 
           <Link to="/" className="no-underline-anim text-center leading-tight" onClick={() => setOpen(false)}>
-            <span className="display-caps block text-sm sm:text-base">Ionian Treasure</span>
-            <span className="mt-1 block text-[0.55rem] uppercase tracking-[0.4em] opacity-80">
-              Suites · Kefalonia
-            </span>
+            <img src={logo} alt="Ionian Treasure" className="h-16 w-28 object-contain sm:w-32" />
           </Link>
 
           <div className="flex items-center justify-end gap-4 text-[0.6rem] uppercase tracking-[0.2em]">
@@ -90,9 +88,7 @@ export function Header() {
       >
           <div className="mx-auto grid h-20 w-full max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-6 lg:px-8">
             <span />
-            <span className="display-caps text-center text-sm text-primary sm:text-base">
-              Ionian Treasure
-            </span>
+            <img src={logo} alt="Ionian Treasure" className="h-16 w-28 object-contain sm:w-32" />
             <div className="flex justify-end">
               <button
                 type="button"
