@@ -9,11 +9,11 @@ export const property = {
   email: "info@ioniantreasuresuites.com",
   address: "Pessada, Kefalonia 28100, Ionian Islands, Greece",
   mapsUrl: "https://www.google.com/maps/search/?api=1&query=Pessada%2C+Kefalonia%2C+Greece",
-  reservationUrl: "http://www.clickhere.gr/hotel-res/cthtlresct.asp?id=3933000",
+  reservationUrl: "https://ioniantreasuresuites.reserve-online.net/accommodation/suite",
   coverImage: "https://www.ioniantreasuresuites.com/images/ioniantreasuresuitescover3.jpg",
   checkIn: "15:00",
   checkOut: "11:00",
-  suiteCount: 5,
+  suiteCount: 9,
 };
 
 export const heroImage = `${CDN}/00010pool.20240710120716.jpg`;
@@ -28,7 +28,7 @@ export const pageImages = {
 
 export const intro = [
   "\u201cIonian Treasure Suites\u201d is in a beautiful location on Kefalonia island, in the village of Pessada.",
-  "The complex offers its guests five brand-new suites that accommodate two persons each. All are tastefully decorated and fully equipped with modern amenities: air-conditioning, a bedroom, a sitting area, a bathroom with shower, free Wi-Fi and a dining table in the kitchen.",
+  "The complex offers its guests nine brand-new suites in three types \u2014 Junior Suites with a shared pool, Superior Suites with a private pool, and Two Bedroom Suites with a private pool. All are tastefully decorated and fully equipped with modern amenities: air-conditioning, a sitting area, a bathroom with shower, free Wi-Fi and a dining table in the kitchen.",
   "\u201cIonian Treasure Suites\u201d also features a swimming pool, a garden, a lovely view of the sea, parking and a private entrance.",
   "The accommodation is in a privileged location \u2014 just 600 metres from beautiful Pessada Beach, and close to the village port with seasonal ferries to Zakynthos. Argostoli, Kefalonia's capital, is a ten-minute drive away, and guests have a choice of many sandy, organised beaches nearby.",
 ];
