@@ -3,7 +3,7 @@ import type { CSSProperties } from "react";
 import { useEffect, useState } from "react";
 import { Phone, X } from "lucide-react";
 import { property } from "@/content/property";
-import logo from "@/assets/ionian-treasure-logo-linear.png";
+import monogram from "@/assets/ionian-treasure-monogram.png";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -15,7 +15,22 @@ const nav = [
   { to: "/book", label: "Book direct" },
 ] as const;
 
-const logoStyle = { "--logo-image": `url(${logo})` } as CSSProperties;
+const logoStyle = { "--logo-image": `url(${monogram})` } as CSSProperties;
+
+function BrandLogo({ className = "" }: { className?: string }) {
+  return (
+    <span className={`flex flex-col items-center justify-center ${className}`}>
+      <span
+        aria-hidden="true"
+        style={logoStyle}
+        className="logo-mask block h-14 w-16 shrink-0 lg:h-16 lg:w-20"
+      />
+      <span className="mt-1 whitespace-nowrap text-[0.52rem] font-medium uppercase leading-none tracking-[0.14em] lg:text-[0.58rem]">
+        Ionian Treasure
+      </span>
+    </span>
+  );
+}
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -51,7 +66,7 @@ export function Header() {
         className={`inset-x-0 top-0 transition-[background-color,border-color] duration-300 ${
           overHomeHero
             ? "absolute bg-transparent"
-            : "fixed border-b border-border bg-background/95 backdrop-blur-sm"
+            : "fixed border-b border-border bg-background"
         } ${open ? "z-50" : overHomeHero ? "z-[5]" : "z-40"}`}
       >
         <div className={`w-full py-5 ${tone}`}>
@@ -72,12 +87,7 @@ export function Header() {
           </nav>
 
           <Link to="/" className="no-underline-anim" onClick={() => setOpen(false)}>
-            <span
-              role="img"
-              aria-label="Ionian Treasure"
-              style={logoStyle}
-              className="logo-mask block h-20 w-36 lg:h-24 lg:w-44"
-            />
+            <BrandLogo className="h-20 w-36 lg:h-24 lg:w-44" />
           </Link>
 
           <div className="flex items-center justify-end gap-4 text-[0.6rem] uppercase tracking-[0.22em] lg:gap-8">
@@ -105,12 +115,7 @@ export function Header() {
       >
           <div className="grid h-28 w-full grid-cols-[1fr_auto_1fr] items-center border-b border-border px-6 lg:px-10">
             <span />
-            <span
-              role="img"
-              aria-label="Ionian Treasure"
-              style={logoStyle}
-              className="logo-mask block h-20 w-36 text-primary sm:h-24 sm:w-44"
-            />
+            <BrandLogo className="h-20 w-36 text-primary sm:h-24 sm:w-44" />
             <div className="flex justify-end">
               <button
                 type="button"
