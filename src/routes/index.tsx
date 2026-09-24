@@ -16,7 +16,7 @@ import {
 
 const title = "Ionian Treasure Suites — Pool Suites in Pessada, Kefalonia";
 const description =
-  "Five brand-new sea-view suites with a swimming pool and garden in Pessada, Kefalonia — 600 m from the beach, 10 minutes from Argostoli. Book direct for our best rate.";
+  "Nine brand-new suites — some with private pools — in Pessada, Kefalonia, 600 m from the beach and 10 minutes from Argostoli. Book direct for our best rate.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -114,7 +114,7 @@ function Index() {
       <section className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
         <div className="text-center">
           <p className="eyebrow hairline-center tracking-[0.4em] text-brass">Accommodation</p>
-          <h2 className="display-caps mt-8 text-2xl sm:text-3xl lg:text-4xl">The five suites</h2>
+          <h2 className="display-caps mt-8 text-2xl sm:text-3xl lg:text-4xl">The suites</h2>
           <Link
             to="/suites"
             className="mt-6 inline-flex items-center gap-2 text-[0.7rem] uppercase tracking-[0.3em] text-brass"
