@@ -9,6 +9,7 @@ export function WelcomeDoors() {
   const [visible, setVisible] = useState(true);
   const [opening, setOpening] = useState(false);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const previousOverflow = useRef("");
 
   useEffect(() => {
     if (sessionStorage.getItem(WELCOME_KEY) === "true") {
@@ -16,10 +17,10 @@ export function WelcomeDoors() {
       return;
     }
 
-    const previousOverflow = document.body.style.overflow;
+    previousOverflow.current = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     return () => {
-      document.body.style.overflow = previousOverflow;
+      document.body.style.overflow = previousOverflow.current;
       if (closeTimer.current) clearTimeout(closeTimer.current);
     };
   }, []);
@@ -28,9 +29,11 @@ export function WelcomeDoors() {
     if (opening) return;
     sessionStorage.setItem(WELCOME_KEY, "true");
     setOpening(true);
-    document.body.style.overflow = "";
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    closeTimer.current = setTimeout(() => setVisible(false), reducedMotion ? 100 : 1850);
+    closeTimer.current = setTimeout(() => {
+      setVisible(false);
+      document.body.style.overflow = previousOverflow.current;
+    }, reducedMotion ? 100 : 1850);
   };
 
   if (!visible) return null;
