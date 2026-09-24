@@ -2,7 +2,7 @@ import { Link, useLocation } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Phone, X } from "lucide-react";
 import { property } from "@/content/property";
-import logo from "@/assets/ionian-treasure-symbol.png";
+import logo from "@/assets/ionian-treasure-logo-linear.png";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -51,8 +51,8 @@ export function Header() {
             : "fixed border-b border-border bg-background/95 backdrop-blur-sm"
         } ${open ? "z-50" : overHomeHero ? "z-[5]" : "z-40"}`}
       >
-        <div className={`mx-auto w-full max-w-7xl px-6 py-5 lg:px-8 ${tone}`}>
-          <div className="grid min-h-20 grid-cols-[1fr_auto_1fr] items-center border-y border-current/20 py-3 lg:min-h-24">
+        <div className={`w-full py-5 ${tone}`}>
+          <div className="grid min-h-20 w-full grid-cols-[1fr_auto_1fr] items-center border-y border-current/20 px-6 py-3 lg:min-h-24 lg:px-10">
           <button
             type="button"
             aria-label="Open menu"
@@ -72,7 +72,7 @@ export function Header() {
             <img
               src={logo}
               alt="Ionian Treasure"
-              className={`size-20 object-contain transition-[filter] duration-300 lg:size-24 ${
+              className={`h-20 w-36 object-contain transition-[filter] duration-300 lg:h-24 lg:w-44 ${
                 overHomeHero ? "brightness-0 invert" : "brightness-0"
               }`}
             />
@@ -101,9 +101,9 @@ export function Header() {
           open ? "visible translate-y-0 opacity-100" : "invisible -translate-y-4 opacity-0 pointer-events-none"
         }`}
       >
-          <div className="mx-auto grid h-24 w-full max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-6 lg:px-8">
+          <div className="grid h-28 w-full grid-cols-[1fr_auto_1fr] items-center border-b border-border px-6 lg:px-10">
             <span />
-            <img src={logo} alt="Ionian Treasure" className="size-20 object-contain brightness-0 sm:size-24" />
+            <img src={logo} alt="Ionian Treasure" className="h-20 w-36 object-contain brightness-0 sm:h-24 sm:w-44" />
             <div className="flex justify-end">
               <button
                 type="button"
