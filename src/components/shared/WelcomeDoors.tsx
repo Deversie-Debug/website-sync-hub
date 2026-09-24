@@ -70,10 +70,10 @@ export function WelcomeDoors() {
             Suites · Kefalonia
           </span>
         </span>
-        <span className="welcome-enter">
-          <span>Enter</span>
-          <span className="welcome-enter-line" />
-        </span>
+      </span>
+      <span className="welcome-enter" aria-hidden="true">
+        <span>Enter</span>
+        <span className="welcome-enter-line" />
       </span>
     </button>
   );
