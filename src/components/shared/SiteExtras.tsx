@@ -27,24 +27,30 @@ function useScrollReveal() {
   const { pathname } = useLocation();
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const els = Array.from(
-      document.querySelectorAll<HTMLElement>("main section:not(:first-of-type) > *"),
-    ).filter((el) => el.getBoundingClientRect().top > window.innerHeight * 0.9);
-    const io = new IntersectionObserver(
-      (entries) =>
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add("is-visible");
-            io.unobserve(e.target);
-          }
-        }),
-      { rootMargin: "0px 0px -8% 0px" },
-    );
-    els.forEach((el) => {
-      el.classList.add("reveal");
-      io.observe(el);
-    });
-    return () => io.disconnect();
+    let io: IntersectionObserver | undefined;
+    const timer = window.setTimeout(() => {
+      const els = Array.from(
+        document.querySelectorAll<HTMLElement>("main section:not(:first-of-type) > *"),
+      ).filter((el) => el.getBoundingClientRect().top > window.innerHeight * 0.9);
+      io = new IntersectionObserver(
+        (entries) =>
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("is-visible");
+              io?.unobserve(e.target);
+            }
+          }),
+        { rootMargin: "0px 0px -8% 0px" },
+      );
+      els.forEach((el) => {
+        el.classList.add("reveal");
+        io?.observe(el);
+      });
+    }, 100);
+    return () => {
+      window.clearTimeout(timer);
+      io?.disconnect();
+    };
   }, [pathname]);
 }
 
