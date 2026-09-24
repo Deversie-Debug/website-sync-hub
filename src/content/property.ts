@@ -9,7 +9,7 @@ export const property = {
   address: "Pessada, 28100 Kefalonia, Greece",
   mapsUrl: "https://www.google.com/maps/search/?api=1&query=Pessada%2C+Kefalonia%2C+Greece",
   reservationUrl: "https://ioniantreasuresuites.reserve-online.net/accommodation/suite",
-  coverImage: "https://www.ioniantreasuresuites.com/images/ioniantreasuresuitescover3.jpg",
+  coverImage: `${CDN}/00010pool.20240710120716.jpg`,
   checkIn: "15:00",
   checkOut: "11:00",
   suiteCount: 9,

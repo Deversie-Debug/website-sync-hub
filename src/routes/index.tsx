@@ -24,9 +24,11 @@ export const Route = createFileRoute("/")({
       { title },
       { name: "description", content: description },
       { property: "og:title", content: title },
+      { property: "og:type", content: "website" },
       { property: "og:url", content: "https://ioniantreasuresuites.com/" },
       { property: "og:description", content: description },
       { property: "og:image", content: property.coverImage },
+      { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: property.coverImage },
     ],
     links: [{ rel: "canonical", href: "https://ioniantreasuresuites.com/" }],
@@ -46,6 +48,7 @@ function Index() {
     <>
       <WelcomeDoors />
       <section className="sticky top-0 isolate z-0 h-svh min-h-svh overflow-hidden sm:h-dvh sm:min-h-dvh">
+        <h1 className="sr-only">Ionian Treasure Suites in Pessada, Kefalonia</h1>
         <img fetchPriority="high" decoding="async"
           src={heroImage}
           alt="Sunbeds and parasols along the swimming pool"
