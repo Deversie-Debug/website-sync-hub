@@ -229,3 +229,16 @@ a:hover:not([class*="inline-flex"]):not([class*="rounded"]):not(.no-underline-an
 .book-now-link:hover {
   background-size: 100% 1px;
 }
+
+.menu-link-label {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1px;
+  padding-bottom: 0.15em;
+  transition: background-size var(--motion-base) var(--ease-smooth) 0ms;
+}
+
+a:hover .menu-link-label {
+  background-size: 100% 1px;
+}

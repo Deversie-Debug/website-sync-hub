@@ -136,9 +136,9 @@ export function Header() {
                 to={item.to}
                 onClick={() => setOpen(false)}
                 activeOptions={{ exact: item.to === "/" }}
-                className={`display-caps text-2xl transition-[opacity,transform] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:opacity-70 sm:text-3xl ${open ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"}`}
+                className={`no-underline-anim display-caps text-2xl transition-[opacity,transform] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:opacity-70 sm:text-3xl ${open ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"}`}
               >
-                {item.label}
+                <span className="menu-link-label">{item.label}</span>
               </Link>
             ))}
           </nav>
