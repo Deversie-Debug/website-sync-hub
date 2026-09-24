@@ -3,7 +3,7 @@ import { useLocation } from "@tanstack/react-router";
 import { ArrowUp } from "lucide-react";
 
 const CONSENT_KEY = "it-cookie-consent";
-const GA_ID = import.meta.env.VITE_GA_ID as string | undefined;
+const GA_ID = import.meta.env['VITE_GA_ID'] as string | undefined;
 
 function loadAnalytics() {
   if (!GA_ID || document.getElementById("ga-script")) return;
