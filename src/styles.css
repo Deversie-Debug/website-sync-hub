@@ -301,8 +301,11 @@ a:hover .menu-link-label {
   overflow: hidden;
   background-color: color-mix(in oklab, var(--primary) 69%, transparent);
   backdrop-filter: blur(15px) saturate(115%);
-  transition: transform 1400ms var(--ease-smooth), opacity 1050ms var(--ease-smooth);
-  will-change: transform;
+  transition:
+    transform 1750ms cubic-bezier(0.65, 0, 0.2, 1),
+    opacity 1400ms cubic-bezier(0.4, 0, 0.2, 1),
+    backdrop-filter 1400ms cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
 }
 
 .welcome-door-left {
@@ -349,7 +352,11 @@ a:hover .menu-link-label {
   backdrop-filter: blur(24px) saturate(125%);
   box-shadow: 0 1.25rem 3.5rem color-mix(in oklab, var(--foreground) 18%, transparent), inset 0 0 0 1px color-mix(in oklab, var(--primary-foreground) 8%, transparent);
   text-align: center;
-  transition: opacity 300ms ease, transform 500ms var(--ease-smooth);
+  transition:
+    opacity 650ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 850ms var(--ease-smooth),
+    backdrop-filter 850ms var(--ease-smooth);
+  will-change: transform, opacity;
 }
 
 .welcome-emblem {
@@ -415,18 +422,21 @@ a:hover .menu-link-label {
 }
 
 .welcome-doors.is-opening .welcome-door-left {
-  transform: translateX(-101%) rotateY(-7deg);
-  opacity: 0.78;
+  transform: translate3d(-101%, 0, 0) rotateY(-5deg);
+  opacity: 0.7;
+  backdrop-filter: blur(8px) saturate(108%);
 }
 
 .welcome-doors.is-opening .welcome-door-right {
-  transform: translateX(101%) rotateY(7deg);
-  opacity: 0.78;
+  transform: translate3d(101%, 0, 0) rotateY(5deg);
+  opacity: 0.7;
+  backdrop-filter: blur(8px) saturate(108%);
 }
 
 .welcome-doors.is-opening .welcome-mark {
   opacity: 0;
-  transform: translateX(-50%) translateY(1rem);
+  transform: translate3d(-50%, 0.75rem, 0) scale(0.985);
+  backdrop-filter: blur(12px) saturate(110%);
 }
 
 @keyframes welcome-line {

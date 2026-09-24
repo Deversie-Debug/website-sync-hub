@@ -30,7 +30,7 @@ export function WelcomeDoors() {
     setOpening(true);
     document.body.style.overflow = "";
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    closeTimer.current = setTimeout(() => setVisible(false), reducedMotion ? 100 : 1500);
+    closeTimer.current = setTimeout(() => setVisible(false), reducedMotion ? 100 : 1850);
   };
 
   if (!visible) return null;
