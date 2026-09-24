@@ -42,9 +42,9 @@ function Index() {
         <a
           href="#overview"
           aria-label="Scroll to explore Ionian Treasure Suites"
-          className="no-underline-anim absolute bottom-8 left-1/2 z-[2] flex size-12 -translate-x-1/2 items-center justify-center rounded-full border border-primary-foreground/70 bg-background/20 text-primary-foreground shadow-sm backdrop-blur-sm transition-colors hover:bg-background/35 motion-safe:animate-bounce motion-reduce:animate-none"
+          className="group no-underline-anim absolute bottom-8 left-1/2 z-[2] flex size-12 -translate-x-1/2 items-center justify-center rounded-full border border-primary-foreground/70 bg-background/20 text-primary-foreground shadow-sm backdrop-blur-sm transition-colors hover:bg-background/35"
         >
-          <ArrowDown className="size-5" aria-hidden="true" />
+          <ArrowDown className="size-5 transition-transform duration-300 group-hover:translate-y-1 motion-safe:animate-bounce motion-reduce:animate-none" aria-hidden="true" />
         </a>
       </section>
       <div className="relative z-10 bg-background shadow-[0_-12px_30px_-12px_oklch(20%_0.02_180/0.25)]">
