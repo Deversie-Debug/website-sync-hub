@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowDown, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import {
   property,
   heroImage,
@@ -39,12 +39,13 @@ function Index() {
           alt="Sunbeds and parasols along the swimming pool"
           className="absolute inset-0 size-full object-cover"
         />
+        <div className="absolute inset-0 bg-hero-wash" aria-hidden="true" />
         <a
           href="#overview"
           aria-label="Scroll to explore Ionian Treasure Suites"
-          className="group no-underline-anim absolute bottom-8 left-1/2 z-[2] flex size-12 -translate-x-1/2 items-center justify-center rounded-full border border-primary-foreground/70 bg-background/20 text-primary-foreground shadow-sm backdrop-blur-sm transition-colors hover:bg-background/35"
+          className="absolute bottom-9 left-1/2 z-[2] -translate-x-1/2 pb-1 text-[0.65rem] font-medium uppercase tracking-[0.3em] text-primary-foreground image-copy-readable"
         >
-          <ArrowDown className="size-5 transition-transform duration-300 group-hover:translate-y-1 motion-safe:animate-bounce motion-reduce:animate-none" aria-hidden="true" />
+          Scroll for more
         </a>
       </section>
       <div className="relative z-10 bg-background shadow-[0_-12px_30px_-12px_oklch(20%_0.02_180/0.25)]">
