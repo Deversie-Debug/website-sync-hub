@@ -1,7 +1,7 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import type { CSSProperties } from "react";
 import { useEffect, useState } from "react";
-import { X } from "lucide-react";
+import { Phone, X } from "lucide-react";
 import { property } from "@/content/property";
 import monogram from "@/assets/ionian-treasure-monogram.png";
 
@@ -74,7 +74,15 @@ export function Header() {
           <BrandLogo className="h-20 w-36 lg:h-24 lg:w-44" />
         </Link>
 
-        <div className="flex items-center justify-end">
+        <div className="flex items-center justify-end gap-4">
+          <a
+            href={`tel:${property.phoneHref}`}
+            aria-label={`Call us at ${property.phone}`}
+            className="no-underline-anim inline-flex transition-opacity duration-300 hover:opacity-70"
+          >
+            <Phone className="size-4 sm:size-[1.1rem]" aria-hidden="true" />
+          </a>
+          <span aria-hidden="true" className="h-5 w-px bg-current/40" />
           <Link
             to="/book"
             className="book-now-link inline-flex text-sm font-bold uppercase tracking-normal sm:text-base"
