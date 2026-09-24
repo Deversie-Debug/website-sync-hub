@@ -331,21 +331,26 @@ a:hover .menu-link-label {
   border: 1px solid color-mix(in oklab, var(--primary-foreground) 12%, transparent);
 }
 
-.welcome-emblem {
+.welcome-mark {
   position: absolute;
-  top: 34%;
+  top: 29%;
+  left: 50%;
+  z-index: 3;
   display: flex;
-  width: min(72vw, 28rem);
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1.35rem;
   text-align: center;
-  transition: opacity 500ms ease;
+  filter: drop-shadow(0 1px 2px color-mix(in oklab, var(--foreground) 16%, transparent));
+  transition: opacity 300ms ease, transform 500ms var(--ease-smooth);
 }
 
-.welcome-door-left .welcome-emblem {
-  left: 50%;
+.welcome-emblem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .welcome-handle {
@@ -367,33 +372,22 @@ a:hover .menu-link-label {
 }
 
 .welcome-copy {
-  position: absolute;
-  top: 49%;
-  left: 25%;
-  z-index: 2;
   display: flex;
-  transform: translateX(-50%);
   flex-direction: column;
   align-items: center;
   text-align: center;
-  transition: opacity 300ms ease, transform 500ms var(--ease-smooth);
 }
 
 .welcome-enter {
-  position: absolute;
-  top: 59%;
-  left: 25%;
-  z-index: 2;
   display: flex;
-  transform: translateX(-50%);
   flex-direction: column;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.65rem;
   font-size: 0.65rem;
   font-weight: 500;
   letter-spacing: 0.32em;
   text-transform: uppercase;
-  transition: opacity 300ms ease, transform 500ms var(--ease-smooth);
+  transition: transform 500ms var(--ease-smooth);
 }
 
 .welcome-enter-line {
@@ -406,7 +400,7 @@ a:hover .menu-link-label {
 }
 
 .welcome-doors:hover .welcome-enter {
-  transform: translateX(-50%) translateY(0.35rem);
+  transform: translateY(0.35rem);
 }
 
 .welcome-doors.is-opening {
@@ -423,12 +417,7 @@ a:hover .menu-link-label {
   opacity: 0.78;
 }
 
-.welcome-doors.is-opening .welcome-enter {
-  opacity: 0;
-  transform: translateX(-50%) translateY(1rem);
-}
-
-.welcome-doors.is-opening .welcome-copy {
+.welcome-doors.is-opening .welcome-mark {
   opacity: 0;
   transform: translateX(-50%) translateY(1rem);
 }
