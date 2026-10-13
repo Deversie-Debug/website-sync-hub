@@ -228,7 +228,7 @@ export function Header() {
 
           <div className="flex flex-col items-center gap-2 pb-12 text-xs tracking-[0.2em] text-current/70">
             <a href={`tel:${property.phoneHref}`}>{property.phone}</a>
-            <WhatsAppLink brand={false} />
+            <WhatsAppLink />
             <a href={`mailto:${property.email}`}>{property.email}</a>
           </div>
       </div>
