@@ -5,6 +5,7 @@ export const property = {
   tagline: "Pessada, Kefalonia, Greece",
   phone: "+30 698 995 3758",
   phoneHref: "+306989953758",
+  whatsappHref: "https://wa.me/306989953758",
   email: "info@ioniantreasuresuites.com",
   address: "Pessada, 28100 Kefalonia, Greece",
   mapsUrl: "https://www.google.com/maps/search/?api=1&query=Pessada%2C+Kefalonia%2C+Greece",

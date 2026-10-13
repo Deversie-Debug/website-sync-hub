@@ -1,3 +1,4 @@
+import { WhatsAppLink } from "@/components/shared/WhatsApp";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
@@ -142,6 +143,7 @@ function SuiteDetail() {
           >
             {property.phone}
           </a>
+          <WhatsAppLink className="mt-1 w-fit text-sm text-brass" />
         </aside>
       </section>
 

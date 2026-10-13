@@ -1,3 +1,4 @@
+import { WhatsAppLink } from "@/components/shared/WhatsApp";
 import { Link } from "@tanstack/react-router";
 import { property, partners } from "@/content/property";
 
@@ -43,6 +44,9 @@ export function Footer() {
               <a href={`tel:${property.phoneHref}`} className="hover:text-foreground">
                 {property.phone}
               </a>
+            </li>
+            <li>
+              <WhatsAppLink className="hover:text-foreground" />
             </li>
             <li>
               <a href={`mailto:${property.email}`} className="hover:text-foreground">
