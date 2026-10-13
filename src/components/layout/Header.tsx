@@ -90,7 +90,7 @@ export function Header() {
   }, []);
 
   const headerContent = (tone: string) => (
-    <div className={`w-full py-5 ${tone}`}>
+    <div className={`relative w-full py-5 ${tone}`}>
       <div className="grid min-h-20 w-full grid-cols-[1fr_auto_1fr] items-center border-y border-current/20 px-6 py-3 lg:min-h-24 lg:px-10">
         <button
           type="button"
@@ -107,7 +107,7 @@ export function Header() {
         </Link>
 
         <div className="flex items-center justify-end gap-4">
-          <div data-contact-menu className="relative">
+          <span data-contact-menu className="relative inline-flex">
             <button
               type="button"
               aria-label="Ways to reach us"
@@ -118,44 +118,7 @@ export function Header() {
             >
               <Phone className="size-4 sm:size-[1.1rem]" aria-hidden="true" />
             </button>
-
-            <div
-              className={`absolute right-0 top-[calc(100%+0.85rem)] w-60 origin-top-right rounded-sm border border-border bg-background p-1.5 text-brass shadow-[0_22px_45px_-28px_oklch(20%_0.02_180/0.5)] transition-[opacity,transform,visibility] duration-[var(--motion-base)] ease-[var(--ease-smooth)] ${
-                contactOpen
-                  ? "visible translate-y-0 opacity-100"
-                  : "invisible pointer-events-none -translate-y-2 opacity-0"
-              }`}
-            >
-              <a
-                href={`tel:${property.phoneHref}`}
-                onClick={() => setContactOpen(false)}
-                className="flex items-center gap-3 rounded-sm px-3 py-2.5 text-sm transition-colors duration-[var(--motion-fast)] hover:bg-accent"
-              >
-                <Phone className="size-4 shrink-0" aria-hidden="true" />
-                <span className="flex flex-col leading-tight">
-                  <span className="text-[0.6rem] font-medium uppercase tracking-[0.18em] text-muted-foreground">
-                    Call
-                  </span>
-                  <span>{property.phone}</span>
-                </span>
-              </a>
-              <a
-                href={property.whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setContactOpen(false)}
-                className="mt-0.5 flex items-center gap-3 rounded-sm px-3 py-2.5 text-sm transition-colors duration-[var(--motion-fast)] hover:bg-accent"
-              >
-                <WhatsAppIcon className="size-4 shrink-0 text-whatsapp" />
-                <span className="flex flex-col leading-tight">
-                  <span className="text-[0.6rem] font-medium uppercase tracking-[0.18em] text-muted-foreground">
-                    WhatsApp
-                  </span>
-                  <span>Chat with us</span>
-                </span>
-              </a>
-            </div>
-          </div>
+          </span>
           <span aria-hidden="true" className="h-5 w-px bg-current/40" />
           <Link
             to="/book"
@@ -164,6 +127,44 @@ export function Header() {
             Book now
           </Link>
         </div>
+      </div>
+
+      <div
+        data-contact-menu
+        className={`absolute right-6 top-[calc(100%-0.9rem)] w-60 origin-top-right rounded-sm border border-border bg-background p-1.5 text-brass shadow-[0_22px_45px_-28px_oklch(20%_0.02_180/0.5)] transition-[opacity,transform,visibility] duration-[var(--motion-base)] ease-[var(--ease-smooth)] lg:right-10 ${
+          contactOpen
+            ? "visible translate-y-0 opacity-100"
+            : "invisible pointer-events-none -translate-y-2 opacity-0"
+        }`}
+      >
+        <a
+          href={`tel:${property.phoneHref}`}
+          onClick={() => setContactOpen(false)}
+          className="flex items-center gap-3 rounded-sm px-3 py-2.5 text-sm transition-colors duration-[var(--motion-fast)] hover:bg-accent"
+        >
+          <Phone className="size-4 shrink-0" aria-hidden="true" />
+          <span className="flex flex-col leading-tight">
+            <span className="text-[0.6rem] font-medium uppercase tracking-[0.18em] text-muted-foreground">
+              Call
+            </span>
+            <span>{property.phone}</span>
+          </span>
+        </a>
+        <a
+          href={property.whatsappHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => setContactOpen(false)}
+          className="mt-0.5 flex items-center gap-3 rounded-sm px-3 py-2.5 text-sm transition-colors duration-[var(--motion-fast)] hover:bg-accent"
+        >
+          <WhatsAppIcon className="size-4 shrink-0 text-whatsapp" />
+          <span className="flex flex-col leading-tight">
+            <span className="text-[0.6rem] font-medium uppercase tracking-[0.18em] text-muted-foreground">
+              WhatsApp
+            </span>
+            <span>Chat with us</span>
+          </span>
+        </a>
       </div>
     </div>
   );
