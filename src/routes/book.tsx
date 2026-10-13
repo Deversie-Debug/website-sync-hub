@@ -1,3 +1,4 @@
+import { WhatsAppLink } from "@/components/shared/WhatsApp";
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { BookingForm } from "@/components/booking/BookingForm";
@@ -102,6 +103,7 @@ function BookPage() {
             <a href={`tel:${property.phoneHref}`} className="mt-3 block w-fit text-sm text-brass">
               {property.phone}
             </a>
+            <WhatsAppLink className="mt-1 w-fit text-sm text-brass" />
             <a href={`mailto:${property.email}`} className="mt-1 block w-fit text-sm text-brass">
               {property.email}
             </a>

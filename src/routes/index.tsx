@@ -1,3 +1,4 @@
+import { WhatsAppLink } from "@/components/shared/WhatsApp";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { useEffect } from "react";
@@ -172,6 +173,7 @@ function Index() {
             <a href={`tel:${property.phoneHref}`} className="text-sm">
               {property.phone}
             </a>
+            <WhatsAppLink className="text-sm" />
           </div>
         </div>
       </section>

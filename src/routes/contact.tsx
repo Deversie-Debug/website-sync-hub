@@ -1,3 +1,4 @@
+import { WhatsAppLink } from "@/components/shared/WhatsApp";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ExternalLink } from "lucide-react";
 import { PageHeader } from "@/components/shared/PageHeader";
@@ -47,6 +48,9 @@ function ContactPage() {
                 <a href={`tel:${property.phoneHref}`} className="hover:text-brass">
                   {property.phone}
                 </a>
+              </dd>
+              <dd className="mt-1">
+                <WhatsAppLink className="hover:text-brass" />
               </dd>
             </div>
             <div>
