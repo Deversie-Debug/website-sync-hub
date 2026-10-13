@@ -39,6 +39,7 @@
   --color-sea-foreground: var(--sea-foreground);
   --color-brass: var(--brass);
   --color-brass-foreground: var(--brass-foreground);
+  --color-whatsapp: var(--whatsapp);
   --color-lightbox-backdrop: var(--lightbox-backdrop);
   --color-lightbox-control: var(--lightbox-control);
   --color-lightbox-control-foreground: var(--lightbox-control-foreground);
@@ -79,6 +80,7 @@
   --sea: oklch(68% 0.078 205);
   --sea-foreground: oklch(26% 0.03 200);
   --brass: oklch(60% 0.1 78);
+  --whatsapp: #25D366;
   --brass-foreground: oklch(24% 0.02 80);
   --lightbox-backdrop: oklch(15% 0.012 180 / 0.94);
   --lightbox-control: oklch(99% 0.004 90 / 0.94);
