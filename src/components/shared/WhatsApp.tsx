@@ -9,7 +9,7 @@ export function WhatsAppIcon({ className = "size-4" }: { className?: string }) {
 }
 
 /** Small WhatsApp chat link shown next to the phone number. */
-export function WhatsAppLink({ className = "", label = true }: { className?: string; label?: boolean }) {
+export function WhatsAppLink({ className = "", label = true, brand = true }: { className?: string; label?: boolean; brand?: boolean }) {
   return (
     <a
       href={property.whatsappHref}
@@ -18,7 +18,7 @@ export function WhatsAppLink({ className = "", label = true }: { className?: str
       aria-label={`Chat with us on WhatsApp at ${property.phone}`}
       className={`inline-flex items-center gap-1.5 ${className}`}
     >
-      <WhatsAppIcon className="size-4 shrink-0" />
+      <WhatsAppIcon className={`size-4 shrink-0 ${brand ? "text-whatsapp" : ""}`} />
       {label && <span>WhatsApp</span>}
     </a>
   );

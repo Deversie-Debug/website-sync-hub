@@ -83,7 +83,7 @@ export function Header() {
           >
             <Phone className="size-4 sm:size-[1.1rem]" aria-hidden="true" />
           </a>
-          <WhatsAppLink label={false} className="no-underline-anim transition-opacity duration-300 hover:opacity-70 [&_svg]:sm:size-[1.1rem]" />
+          <WhatsAppLink brand={false} label={false} className="no-underline-anim transition-opacity duration-300 hover:opacity-70 [&_svg]:sm:size-[1.1rem]" />
           <span aria-hidden="true" className="h-5 w-px bg-current/40" />
           <Link
             to="/book"
@@ -155,7 +155,7 @@ export function Header() {
 
           <div className="flex flex-col items-center gap-2 pb-12 text-xs tracking-[0.2em] text-current/70">
             <a href={`tel:${property.phoneHref}`}>{property.phone}</a>
-            <WhatsAppLink />
+            <WhatsAppLink brand={false} />
             <a href={`mailto:${property.email}`}>{property.email}</a>
           </div>
       </div>
