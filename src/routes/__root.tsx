@@ -108,6 +108,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           email: property.email,
           numberOfRooms: property.suiteCount,
           address: { "@type": "PostalAddress", addressLocality: "Pessada", addressRegion: "Kefalonia", postalCode: "28100", addressCountry: "GR" },
+          geo: { "@type": "GeoCoordinates", latitude: property.latitude, longitude: property.longitude },
+          hasMap: property.mapsUrl,
           amenityFeature: ["Swimming pool", "Concierge", "Free Wi-Fi", "Air conditioning"].map((name) => ({ "@type": "LocationFeatureSpecification", name, value: true })),
         }),
       },
