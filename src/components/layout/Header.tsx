@@ -1,4 +1,4 @@
-import { WhatsAppLink } from "@/components/shared/WhatsApp";
+import { WhatsAppIcon, WhatsAppLink } from "@/components/shared/WhatsApp";
 import { Link, useLocation } from "@tanstack/react-router";
 import type { CSSProperties } from "react";
 import { useEffect, useState } from "react";
@@ -36,7 +36,9 @@ function BrandLogo({ className = "" }: { className?: string }) {
 export function Header() {
   const [open, setOpen] = useState(false);
   const [pastHero, setPastHero] = useState(false);
-  const isHome = useLocation({ select: (l) => l.pathname === "/" });
+  const [contactOpen, setContactOpen] = useState(false);
+  const pathname = useLocation({ select: (l) => l.pathname });
+  const isHome = pathname === "/";
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -44,6 +46,35 @@ export function Header() {
       document.body.style.overflow = "";
     };
   }, [open]);
+
+  useEffect(() => {
+    setContactOpen(false);
+  }, [pathname, open]);
+
+  useEffect(() => {
+    if (!contactOpen) return;
+    const onDown = (e: PointerEvent) => {
+      const target = e.target as Node | null;
+      const inside =
+        target !== null &&
+        Array.from(document.querySelectorAll("[data-contact-menu]")).some((el) =>
+          el.contains(target),
+        );
+      if (!inside) setContactOpen(false);
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setContactOpen(false);
+    };
+    const onScroll = () => setContactOpen(false);
+    document.addEventListener("pointerdown", onDown);
+    document.addEventListener("keydown", onKey);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      document.removeEventListener("pointerdown", onDown);
+      document.removeEventListener("keydown", onKey);
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, [contactOpen]);
 
   useEffect(() => {
     const onScroll = () => {
@@ -59,7 +90,7 @@ export function Header() {
   }, []);
 
   const headerContent = (tone: string) => (
-    <div className={`w-full py-5 ${tone}`}>
+    <div className={`relative w-full py-5 ${tone}`}>
       <div className="grid min-h-20 w-full grid-cols-[1fr_auto_1fr] items-center border-y border-current/20 px-6 py-3 lg:min-h-24 lg:px-10">
         <button
           type="button"
@@ -76,14 +107,18 @@ export function Header() {
         </Link>
 
         <div className="flex items-center justify-end gap-4">
-          <a
-            href={`tel:${property.phoneHref}`}
-            aria-label={`Call us at ${property.phone}`}
-            className="no-underline-anim inline-flex transition-opacity duration-300 hover:opacity-70"
-          >
-            <Phone className="size-4 sm:size-[1.1rem]" aria-hidden="true" />
-          </a>
-          <WhatsAppLink brand={false} label={false} className="no-underline-anim transition-opacity duration-300 hover:opacity-70 [&_svg]:sm:size-[1.1rem]" />
+          <span data-contact-menu className="relative inline-flex">
+            <button
+              type="button"
+              aria-label="Ways to reach us"
+              aria-expanded={contactOpen}
+              aria-haspopup="true"
+              onClick={() => setContactOpen((v) => !v)}
+              className={`no-underline-anim inline-flex size-9 items-center justify-center rounded-full border border-current/30 transition-[background-color,border-color] duration-[var(--motion-fast)] ease-[var(--ease-smooth)] hover:bg-current/10 ${contactOpen ? "bg-current/10" : ""}`}
+            >
+              <Phone className="size-4 sm:size-[1.1rem]" aria-hidden="true" />
+            </button>
+          </span>
           <span aria-hidden="true" className="h-5 w-px bg-current/40" />
           <Link
             to="/book"
@@ -92,6 +127,44 @@ export function Header() {
             Book now
           </Link>
         </div>
+      </div>
+
+      <div
+        data-contact-menu
+        className={`absolute right-6 top-[calc(100%-0.9rem)] w-60 origin-top-right rounded-sm border border-border bg-background p-1.5 text-brass shadow-[0_22px_45px_-28px_oklch(20%_0.02_180/0.5)] transition-[opacity,transform,visibility] duration-[var(--motion-base)] ease-[var(--ease-smooth)] lg:right-10 ${
+          contactOpen
+            ? "visible translate-y-0 opacity-100"
+            : "invisible pointer-events-none -translate-y-2 opacity-0"
+        }`}
+      >
+        <a
+          href={`tel:${property.phoneHref}`}
+          onClick={() => setContactOpen(false)}
+          className="flex items-center gap-3 rounded-sm px-3 py-2.5 text-sm transition-colors duration-[var(--motion-fast)] hover:bg-accent"
+        >
+          <Phone className="size-4 shrink-0" aria-hidden="true" />
+          <span className="flex flex-col leading-tight">
+            <span className="text-[0.6rem] font-medium uppercase tracking-[0.18em] text-muted-foreground">
+              Call
+            </span>
+            <span>{property.phone}</span>
+          </span>
+        </a>
+        <a
+          href={property.whatsappHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => setContactOpen(false)}
+          className="mt-0.5 flex items-center gap-3 rounded-sm px-3 py-2.5 text-sm transition-colors duration-[var(--motion-fast)] hover:bg-accent"
+        >
+          <WhatsAppIcon className="size-4 shrink-0 text-whatsapp" />
+          <span className="flex flex-col leading-tight">
+            <span className="text-[0.6rem] font-medium uppercase tracking-[0.18em] text-muted-foreground">
+              WhatsApp
+            </span>
+            <span>Chat with us</span>
+          </span>
+        </a>
       </div>
     </div>
   );
