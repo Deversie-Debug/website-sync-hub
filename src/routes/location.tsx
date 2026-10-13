@@ -45,7 +45,7 @@ function LocationPage() {
               <h3 className="text-xl">By air</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 Kefalonia International Airport (EFL) is a 20-minute drive away. We can arrange a
-                private transfer, or have a hire car waiting for you at arrivals.
+                private transfer to meet you at arrivals.
               </p>
             </div>
             <div className="rounded-sm border border-border bg-card p-8">
@@ -91,8 +91,8 @@ function LocationPage() {
 
       <section className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
         <p className="eyebrow hairline-center text-center tracking-[0.4em] text-brass">Practical help</p>
-        <h2 className="display-caps mx-auto mt-8 max-w-2xl text-center text-3xl sm:text-4xl">Cars, transfers and our sister property</h2>
-        <ul className="mt-8 grid gap-8 md:grid-cols-2">
+        <h2 className="display-caps mx-auto mt-8 max-w-2xl text-center text-3xl sm:text-4xl">Our sister property</h2>
+        <ul className="mx-auto mt-8 grid max-w-2xl gap-8">
           {partners.map((p) => (
             <li key={p.name} className="rounded-sm border border-border bg-card p-8">
               <h3 className="text-xl">{p.name}</h3>
