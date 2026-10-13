@@ -177,8 +177,8 @@ export const faqs = [
     a: "Yes. Junior and Superior Suites sleep up to four guests, and the Two Bedroom Suites with private pool sleep up to five.",
   },
   {
-    q: "Do you arrange car hire and transfers?",
-    a: "We work with Drive Kefalonia for rental cars and can organise airport transfers. Add the request to your booking enquiry.",
+    q: "Do you arrange airport transfers?",
+    a: "Yes, we can organise airport transfers. Add the request to your booking enquiry.",
   },
 ];
 
@@ -188,12 +188,6 @@ export const partners = [
     description: "Our sister property \u2014 self-catering villas elsewhere on Kefalonia.",
     url: "https://www.ioniantreasurevillas.com/",
     image: "https://www.ioniantreasuresuites.com/images/ioniantreasurevillas_thumb.jpg",
-  },
-  {
-    name: "Drive Kefalonia Rent-a-Car",
-    description: "Island car hire, delivered to the property or the airport.",
-    url: "https://www.drivekefalonia.com/",
-    image: "https://www.ioniantreasuresuites.com/images/drivekefalonia.jpg",
   },
 ];
 

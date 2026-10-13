@@ -237,7 +237,7 @@ function Index() {
 
       <section className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
         <p className="eyebrow hairline-center text-center tracking-[0.4em] text-brass">Also from us</p>
-        <ul className="mt-12 grid gap-8 md:grid-cols-2">
+        <ul className="mx-auto mt-12 grid max-w-2xl gap-8">
           {partners.map((p) => (
             <li key={p.name} className="rounded-sm border border-border bg-card p-8">
               <h3 className="text-xl">{p.name}</h3>
