@@ -15,3 +15,185 @@
 # Server-side rendering runs as a Netlify Function written by the build
 # (.netlify/functions-internal). Static files are served first, the function
 # only handles requests that aren't a real file.
+
+# Old website (.asp pages) still listed on Google → send visitors to the new home page
+
+[[redirects]]
+  from = "/index.asp"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/default.asp"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en.asp"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/el.asp"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pt.asp"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cn.asp"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ru.asp"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/de.asp"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/it.asp"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/fr.asp"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es.asp"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nl.asp"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pl.asp"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cz.asp"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sk.asp"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/hu.asp"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ro.asp"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/bg.asp"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/tr.asp"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/se.asp"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/dk.asp"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/no.asp"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/fi.asp"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/jp.asp"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/kr.asp"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar.asp"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/he.asp"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sr.asp"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/hr.asp"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/*.asp"
+  to = "/"
+  status = 301
+  force = true
