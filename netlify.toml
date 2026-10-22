@@ -191,9 +191,3 @@
   to = "/"
   status = 301
   force = true
-
-[[redirects]]
-  from = "/*.asp"
-  to = "/"
-  status = 301
-  force = true
