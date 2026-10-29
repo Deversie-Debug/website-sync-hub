@@ -74,8 +74,8 @@ export const suites: Suite[] = [
     sleeps: 4,
     pool: "Shared pool",
     blurb:
-      "A suite for up to four guests with a pool view and access to the shared swimming pool. It has a sitting area with sofa bed, a bathroom with shower, coffee facilities, a flat-screen TV and free Wi-Fi.",
-    highlights: ["Shared swimming pool", "Pool view", "Sofa bed", "Up to 4 guests"],
+      "A suite for up to four guests with a pool view and access to the shared swimming pool. It has a kitchenette with cooktop and microwave, a sitting area with sofa bed, a bathroom with shower, coffee facilities, a flat-screen TV and free Wi-Fi.",
+    highlights: ["Shared swimming pool", "Pool view", "Kitchenette", "Up to 4 guests"],
     images: [
       `${WH}/ioniantr-junior/L1960295.jpg`,
       `${WH}/ioniantr-junior/L1960283.jpg`,
@@ -93,8 +93,8 @@ export const suites: Suite[] = [
     sleeps: 4,
     pool: "Private pool",
     blurb:
-      "A suite for up to four guests with its own private pool and a kitchen. It has a sitting area with sofa bed, a bathroom with shower, coffee facilities, a flat-screen TV and free Wi-Fi.",
-    highlights: ["Private pool", "Kitchen", "Sofa bed", "Up to 4 guests"],
+      "A suite for up to four guests with its own private pool and a fully equipped kitchen. It has a sitting area with sofa bed, a bathroom with shower, coffee facilities, a flat-screen TV and free Wi-Fi.",
+    highlights: ["Private pool", "Fully equipped kitchen", "Sofa bed", "Up to 4 guests"],
     images: [
       `${WH}/ioniantr-super/L1960292.jpg`,
       `${WH}/ioniantr-super/L1960288.jpg`,
@@ -112,8 +112,8 @@ export const suites: Suite[] = [
     sleeps: 5,
     pool: "Private pool",
     blurb:
-      "Our two-bedroom suites sleep up to five guests, with a private pool and a kitchen. A sitting area with sofa bed, a bathroom with shower, coffee facilities, a flat-screen TV and free Wi-Fi complete the space.",
-    highlights: ["Two bedrooms", "Private pool", "Kitchen", "Up to 5 guests"],
+      "Our two-bedroom suites sleep up to five guests, with a private pool and a fully equipped kitchen. A sitting area with sofa bed, a bathroom with shower, coffee facilities, a flat-screen TV and free Wi-Fi complete the space.",
+    highlights: ["Two bedrooms", "Private pool", "Fully equipped kitchen", "Up to 5 guests"],
     images: [
       `${WH}/ioniantr-twobed/L1960298.jpg`,
       `${WH}/ioniantr-twobed/L1960300.jpg`,
@@ -260,14 +260,14 @@ export const experiences = [
     title: "Market mornings, terrace dinners",
     category: "Food & wine",
     distance: "In your suite",
-    text: "Superior and Two Bedroom Suites have their own kitchen. Buy fish and vegetables in Argostoli in the morning, then cook and eat in as the light drops behind the hills.",
+    text: "Superior and Two Bedroom Suites have a fully equipped kitchen. Buy fish and vegetables in Argostoli in the morning, then cook and eat in as the light drops behind the hills.",
   },
 ];
 
 export const included = [
   { title: "Shared & private pools", text: "Junior Suites share a pool; Superior and Two Bedroom Suites have their own private pool." },
   { title: "Pool towels", text: "Pool towels provided for every guest." },
-  { title: "Coffee facilities", text: "Coffee facilities in every suite, plus a kitchen in Superior and Two Bedroom Suites." },
+  { title: "Coffee facilities", text: "Coffee facilities in every suite, a kitchenette with cooktop and microwave in Junior Suites, and a fully equipped kitchen in Superior and Two Bedroom Suites." },
   { title: "Free Wi-Fi & satellite TV", text: "Free Wi-Fi internet access and a flat-screen TV with satellite channels." },
   { title: "Concierge", text: "Our concierge is happy to help you plan your days on Kefalonia." },
   { title: "Comfort in every suite", text: "Air conditioning, safe deposit box, sofa bed, bathrobes and slippers." },
