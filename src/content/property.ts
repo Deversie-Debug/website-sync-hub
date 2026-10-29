@@ -77,7 +77,7 @@ export const suites: Suite[] = [
     blurb:
       "A suite for up to four guests with a pool view and access to the shared swimming pool. It has a kitchenette with cooktop and microwave, a sitting area with sofa bed, a bathroom with shower, coffee facilities, a flat-screen TV and free Wi-Fi.",
     highlights: ["Shared swimming pool", "Pool view", "Kitchenette", "Up to 4 guests"],
-    kitchen: ["Kitchenette", "Cooktop", "Microwave"],
+    kitchen: ["Kitchenette", "Cooktop", "Microwave", "Fridge"],
     images: [
       `${WH}/ioniantr-junior/L1960295.jpg`,
       `${WH}/ioniantr-junior/L1960283.jpg`,
@@ -97,7 +97,7 @@ export const suites: Suite[] = [
     blurb:
       "A suite for up to four guests with its own private pool and a fully equipped kitchen. It has a sitting area with sofa bed, a bathroom with shower, coffee facilities, a flat-screen TV and free Wi-Fi.",
     highlights: ["Private pool", "Fully equipped kitchen", "Sofa bed", "Up to 4 guests"],
-    kitchen: ["Fully equipped kitchen"],
+    kitchen: ["Fully equipped kitchen", "Oven", "Cooktop", "Fridge"],
     images: [
       `${WH}/ioniantr-super/L1960292.jpg`,
       `${WH}/ioniantr-super/L1960288.jpg`,
@@ -117,7 +117,7 @@ export const suites: Suite[] = [
     blurb:
       "Our two-bedroom suites sleep up to five guests, with a private pool and a fully equipped kitchen. A sitting area with sofa bed, a bathroom with shower, coffee facilities, a flat-screen TV and free Wi-Fi complete the space.",
     highlights: ["Two bedrooms", "Private pool", "Fully equipped kitchen", "Up to 5 guests"],
-    kitchen: ["Fully equipped kitchen"],
+    kitchen: ["Fully equipped kitchen", "Oven", "Cooktop", "Fridge"],
     images: [
       `${WH}/ioniantr-twobed/L1960298.jpg`,
       `${WH}/ioniantr-twobed/L1960300.jpg`,
