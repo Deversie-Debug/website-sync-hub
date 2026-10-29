@@ -113,7 +113,7 @@ function SuiteDetail() {
               <div key={group} className="rounded-sm border border-border bg-card p-8">
                 <h2 className="text-xl">{group}</h2>
                 <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-                  {items.map((item) => (
+                  {(group === "Practical" ? [...suite.kitchen, ...items] : items).map((item) => (
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
